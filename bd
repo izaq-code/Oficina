@@ -1,0 +1,39 @@
+CREATE TABLE login (
+cod_oficina int PRIMARY KEY,
+email Varchar(120),
+senha  Varchar(120)
+);
+
+CREATE TABLE carro (
+cod_veiculo int PRIMARY KEY,
+nome_proprietario varchar(80),
+cpf_proprietario varchar(25),
+fabricante varchar(30),
+marca Varchar(30),
+modelo Varchar(30),
+motorizacao int,
+combustivel varchar(30),
+cambio varchar(30),
+cor Varchar(120),
+placa Varchar(120),
+chassi Varchar(120),
+hodômetro Varchar(120),
+Orçamento Varchar(120),
+Peças_danificadas Varchar(120)
+);
+
+CREATE TABLE carro_fotos (
+cod_fotos_veiculo int PRIMARY KEY,
+
+chassi Varchar(120),
+hodômetro Varchar(120),
+Frente Varchar(120),
+Trasseira Varchar(120),
+lateral_direita Varchar(120),
+Lateral_esquerda Varchar(120),
+Motor Varchar(120),
+Peças_danificadas Varchar(120),
+Orçamento Varchar(120),
+cod_veiculo int,
+FOREIGN KEY (cod_veiculo) REFERENCES carro(cod_veiculo)
+);
