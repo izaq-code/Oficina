@@ -5,7 +5,7 @@ include_once("conexao.php");
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $sql = mysqli_query($conexao,"SELECT cod_paciente cod, nome_paciente nome FROM dados_paciente");
+    $sql = mysqli_query($conexao,"SELECT cod_veiculo cod, marca nome FROM dados_paciente");
 
     $resultado = array();
 
