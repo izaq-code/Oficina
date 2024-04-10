@@ -10,7 +10,7 @@ Este repositório contém o código-fonte do site (SEMNOME). Você pode visualiz
 
 ## Formularios 
 
-- **Formularios**: Explore nosso vasto formulario seleção de informações
+- **Formularios**: Explore nosso vasto formulario de seleção de informações
 
 ## Como Contribuir
 
