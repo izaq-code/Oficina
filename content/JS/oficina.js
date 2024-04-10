@@ -1,21 +1,22 @@
-$(document).ready(function () {
-    $('#cadastrar').submit(function (e) {
-        e.preventDefault();
+document.getElementById('nome').addEventListener('change', function () {
 
-        var formData = $(this).serialize();
+        var selecionado = this.value;
+
+        $(document).ready(function () {
 
         $.ajax({
             type: 'POST',
-            url: './PHP/cadastro.php',
-            data: formData,
+            url: './PHP/oficina.php',
+            data: {
+                selecionado: selecionado
+            },
             dataType: 'json',
             success: function(data){
                 mostrar(data);
-                alert('Cadastrado com sucesso');
             },
             error: function(xhr, status, error) {
                 var errorMessage = xhr.status + ': ' + xhr.statusText;
-                console.error('Erro ao cadastrar:', errorMessage); // Exibe o erro no console
+                console.error('Erro ao cadastdddrar:', errorMessage); // Exibe o erro no console
                 alert('Erro ao cadastrar: ' + errorMessage);
             }
         })
@@ -23,19 +24,16 @@ $(document).ready(function () {
 })
 
 function mostrar(data) {
-    $('#Nome_paciente').val(data[0].nome_paciente);
-    $('#cpf').val(data[0].cpf_paciente);
-    $('#rg').val(data[0].rg_paciente);
-    $('#data').val(data[0].data_nascimento);
-    $('#nome_responsavel').val(data[0].nome_responsavel);
-    $('#Telefone').val(data[0].telefone_paciente);
-    $('#carterinha').val(data[0]. carteira_convenio);
-    $('#Nacionalidade').val(data[0].nacionalidade_paciente);
-    $('#Contato_emergencia').val(data[0].contato_emergencia);
-    $('#cpf_responsavel').val(data[0].cpf_responsavel);
-    $('#cep').val(data[0].cep_paciente);
-    $('#estado_civil').val(data[0].estado_civil);
-    $('#sexo').val(data[0].sexo);
-    $('#tipo_sanguineo').val(data[0].tipo_sanguineo);
-    $('#Numero_responsavel').val(data[0].numero_responsavel);
+    $('#nome_proprietario').val(data[0].nome_proprietario);
+    $('#cpf_proprietario').val(data[0].cpf_proprietario);
+    $('#fabricante').val(data[0].fabricante);
+    $('#marca').val(data[0].marca);
+    $('#modelo').val(data[0].modelo);
+    $('#motorizacao').val(data[0].motorizacao);
+    $('#combustivel').val(data[0].combustivel);
+    $('#cambio').val(data[0].cambio);
+    $('#cor').val(data[0].cor);
+    $('#placa').val(data[0].placa);
+    $('#chassi').val(data[0].chassi);
+    $('#hodometro').val(data[0].hodometro);
 }
