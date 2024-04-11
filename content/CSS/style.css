@@ -77,6 +77,7 @@ body {
 
 form .page .field input,
 form .page .field select {
+
     width: 100%;
     max-width: 300px;
     height: 45px;
@@ -675,8 +676,8 @@ form .page .field button:hover {
 
 
     position: absolute;
-margin-top: -40px;
-margin-left: 150px;
+    margin-top: -40px;
+    margin-left: 150px;
 
 }
 
@@ -742,9 +743,6 @@ margin-left: 150px;
     margin-left: 150px;
 
 }
-
-
-
 
 
 :root {
@@ -896,7 +894,7 @@ nav a {
     bottom: 1px;
     left: 50%;
     transform: translateX(80%);
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255);
     color: var(--bg-color-);
     padding: 5px 10px;
     border-radius: 5px;
@@ -912,6 +910,17 @@ nav a {
     opacity: 1;
 }
 
+input.error {
+    border: 1px solid red;
+  }
+  
+  .foto-container.error {
+    border: 1px solid red;
+    padding: 10px; /* Exemplo de estilo adicional para o contêiner de foto */
+  }
+  
+
+
 #con::after {
     font-weight: bolder;
     content: "Formulario";
@@ -919,7 +928,7 @@ nav a {
     bottom: 1px;
     left: -25%;
     transform: translateX(80%);
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255);
     color: var(--bg-color-);
     padding: 5px 10px;
     border-radius: 5px;
@@ -958,7 +967,247 @@ nav a {
     opacity: 1;
 }
 
+
+
+
+.label9 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    position: absolute;
+    margin-top: -28px;
+    margin-left: -525px;
+
+}
+
+.label10 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    position: absolute;
+    margin-top: -73px;
+    margin-left: 259px;
+
+}
+
+.label20 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    position: absolute;
+    margin-top: -73px;
+    margin-left: 159px;
+
+}
+
+.label22 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 58px;
+}
+
+
+.label11 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: -608px;
+
+}
+
+.label12 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 158px;
+}
+
+.label13{
+
+    font-weight: 500;
+    margin-bottom: 5px;
+    position: absolute;
+    margin-top: -78px;
+    margin-left: -50px;
+
+
+}
+
+.label14 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    position: absolute;
+    margin-top: -28px;
+    margin-left: -630px;
+
+}
+
+.label15 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    position: absolute;
+    margin-top: -73px;
+    margin-left: 109px;
+}
+
+.label16 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: -595px;
+}
+
+.label17 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 68px;
+}
+
+
+
+.label18 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    position: absolute;
+    margin-top: -28px;
+    margin-left: -630px;
+
+}
+
+.label19 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    position: absolute;
+    margin-top: -73px;
+    margin-left: 50px;
+}
+
+.label23 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: -595px;
+}
+
+.label24 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 99px;
+}
+
+
+
+#nome_proprietario {
+
+    position: absolute;
+    margin-left: -400px;
+}
+
+
+#cpf_proprietario {
+
+    position: absolute;
+    margin-left: 300px;
+    top: 280px;
+
+}
+
+.cpf_proprietario{
+    margin-right: -100px;
+margin-top: 44px;
+
+}
+
+#fabricante {
+
+    position: absolute;
+    margin-left: -400px;
+    margin-top: 60px;
+}
+
+
+#marca {
+
+    position: absolute;
+    margin-left: 300px;
+    top: 428px;
+}
+
+.marca{
+
+margin-right: -95px;
+    margin-top: 48px;
+
+}
+
+#nome{
+
+    position: absolute;
+  margin-top: -50px;
+  margin-right: 20px;
+
+}
+
+#modelo{
+    position: absolute;
+    margin-left: -400px;
+
+}
+#motorizacao{
+    position: absolute;
+    margin-left: 300px;
+    top: 280px;
+
+}
+#combustivel{
+
+    position: absolute;
+    margin-left: -400px;
+    margin-top: 60px;
+}
+#cambio{
+
+position: absolute;
+margin-left: 300px;
+top: 428px;
+
+}
+
+
+#cor{
+    position: absolute;
+    margin-left: -400px;
+
+}
+#placa{
+    position: absolute;
+    margin-left: 300px;
+    top: 280px;
+    
+}
+#chassi{
+    position: absolute;
+    margin-left: -400px;
+    margin-top: 60px;
+
+}
+#hodometro{
+    position: absolute;
+    margin-left: 300px;
+    top: 428px;
+    
+
+}
+
 @media screen and (max-width: 1078px) {
+
     header,
     .hd,
     .hd1 {
@@ -989,6 +1238,7 @@ nav a {
 }
 
 @media screen and (min-width: 768px) {
+
     header,
     .hd,
     .hd1 {
@@ -1019,6 +1269,7 @@ nav a {
 }
 
 @media screen and (max-width: 375px) {
+
     header,
     .hd,
     .hd1 {
@@ -1049,6 +1300,7 @@ nav a {
 }
 
 @media screen and (min-width: 1024px) {
+
     header,
     .hd,
     .hd1 {
@@ -1079,6 +1331,7 @@ nav a {
 }
 
 @media screen and (max-width: 320px) {
+
     header,
     .hd,
     .hd1 {
@@ -1109,12 +1362,20 @@ nav a {
 }
 
 @media screen and (min-width: 1440px) {
+    .hd1{
+        margin-right: 1380px;
+        width: 3%;
+        padding: 5px;
+     
+
+    }
     header,
-    .hd,
-    .hd1 {
-        margin-right: 1780px;
-        width: 2%;
-        padding: 2px;
+    .hd
+     {
+        margin-right: 1380px;
+        width: 3%;
+        padding: 5px;
+     height: 55px;
     }
 
     #bnte {
@@ -1139,6 +1400,7 @@ nav a {
 }
 
 @media screen and (min-width: 2560px) {
+
     header,
     .hd,
     .hd1 {

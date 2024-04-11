@@ -12,59 +12,106 @@ const bullet = [...document.querySelectorAll(".step .bullet")];
 let max = 4;
 let current = 1;
 
-nextBtnFirst.addEventListener("click", function(){
-  slidePage.style.marginLeft = "-25%";
+function validateFields() {
+  const currentPage = document.querySelector(`.page:nth-child(${current})`);
+  const inputFields = currentPage.querySelectorAll('input[type="text"], input[type="number"]');
+  let isValid = true;
+
+
+  inputFields.forEach((input) => {
+    if (!input.value.trim()) {
+      isValid = false;
+      return;
+    }
+  });
+
+
+  const fotoContainers = currentPage.querySelectorAll('.foto-container');
+  fotoContainers.forEach((container) => {
+    const inputFile = container.querySelector('.foto__input');
+    if (inputFile && !inputFile.files.length) {
+      isValid = false;
+      return; 
+    }
+  });
+
+  return isValid;
+}
+
+
+function goToNextStep() {
+
+  if (!validateFields()) {
+    alert("Por favor, preencha todos os campos obrigatórios.");
+    return;
+  }
+
+
+  slidePage.style.marginLeft = `-${current * 25}%`;
   bullet[current - 1].classList.add("active");
   progressCheck[current - 1].classList.add("active");
   progressText[current - 1].classList.add("active");
   current += 1;
-});
-nextBtnSec.addEventListener("click", function(){
-  slidePage.style.marginLeft = "-50%";
-  bullet[current - 1].classList.add("active");
-  progressCheck[current - 1].classList.add("active");
-  progressText[current - 1].classList.add("active");
-  current += 1;
-});
-nextBtnThird.addEventListener("click", function(){
-  slidePage.style.marginLeft = "-75%";
-  bullet[current - 1].classList.add("active");
-  progressCheck[current - 1].classList.add("active");
-  progressText[current - 1].classList.add("active");
-  current += 1;
-});
-submitBtn.addEventListener("click", function(){
-  bullet[current - 1].classList.add("active");
-  progressCheck[current - 1].classList.add("active");
-  progressText[current - 1].classList.add("active");
-  current += 1;
-  setTimeout(function(){
-    alert("Your Form Successfully Signed up");
-    location.reload();
-  },800);
+}
+
+
+nextBtnFirst.addEventListener("click", function(event) {
+  event.preventDefault();
+  goToNextStep();
 });
 
-prevBtnSec.addEventListener("click", function(){
-  slidePage.style.marginLeft = "0%";
+nextBtnSec.addEventListener("click", function(event) {
+  event.preventDefault(); 
+  goToNextStep();
+});
+
+nextBtnThird.addEventListener("click", function(event) {
+  event.preventDefault(); 
+  goToNextStep();
+});
+
+
+function goToPrevStep() {
+  slidePage.style.marginLeft = `-${(current - 2) * 25}%`;
   bullet[current - 2].classList.remove("active");
   progressCheck[current - 2].classList.remove("active");
   progressText[current - 2].classList.remove("active");
   current -= 1;
+}
+
+prevBtnSec.addEventListener("click", function(event) {
+  event.preventDefault(); 
+  goToPrevStep();
 });
-prevBtnThird.addEventListener("click", function(){
-  slidePage.style.marginLeft = "-25%";
-  bullet[current - 2].classList.remove("active");
-  progressCheck[current - 2].classList.remove("active");
-  progressText[current - 2].classList.remove("active");
-  current -= 1;
+
+prevBtnThird.addEventListener("click", function(event) {
+  event.preventDefault(); 
+  goToPrevStep();
 });
-prevBtnFourth.addEventListener("click", function(){
-  slidePage.style.marginLeft = "-50%";
-  bullet[current - 2].classList.remove("active");
-  progressCheck[current - 2].classList.remove("active");
-  progressText[current - 2].classList.remove("active");
-  current -= 1;
+
+prevBtnFourth.addEventListener("click", function(event) {
+  event.preventDefault(); 
+  goToPrevStep();
 });
+
+
+submitBtn.addEventListener("click", function(event) {
+  event.preventDefault(); 
+  
+
+  if (!validateFields()) {
+    alert("Por favor, preencha todos os campos obrigatórios.");
+    return;
+  }
+
+
+  setTimeout(function() {
+    alert("Enviado com sucesso");
+     location.reload(); 
+  }, 800);
+});
+
+
 
 window.addEventListener("DOMContentLoaded", function () {
   const fotoContainers = document.querySelectorAll('.foto-container');
