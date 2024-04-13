@@ -1,0 +1,45 @@
+CREATE DATABASE Oficina;
+
+CREATE TABLE login (
+cod_oficina int AUTO_INCREMENT PRIMARY KEY,
+email Varchar(120),
+senha  Varchar(120)
+);
+
+CREATE TABLE carro (
+cod_veiculo int  AUTO_INCREMENT PRIMARY KEY,
+nome_proprietario varchar(80),
+cpf_proprietario varchar(25),
+fabricante varchar(30),
+marca Varchar(30),
+modelo Varchar(30),
+motorizacao int,
+combustivel varchar(30),
+cambio varchar(30),
+cor Varchar(120),
+placa Varchar(120),
+chassi Varchar(120),
+hodometro Varchar(120),
+Orcamento Varchar(120),
+Pecas_danificadas Varchar(120)
+);
+
+CREATE TABLE carro_fotos (
+cod_fotos_veiculo int AUTO_INCREMENT PRIMARY KEY,
+chassi Varchar(120),
+hodometro Varchar(120),
+Frente Varchar(120),
+Trasseira Varchar(120),
+lateral_direita Varchar(120),
+Lateral_esquerda Varchar(120),
+Motor Varchar(120),
+Pecas_danificadas Varchar(120),
+Orcamento Varchar(120),
+cod_veiculo int,
+FOREIGN KEY (cod_veiculo) REFERENCES carro(cod_veiculo)
+);
+
+
+INSERT INTO carro (nome_proprietario, cpf_proprietario, fabricante, marca, modelo, motorizacao, combustivel, cambio, cor, placa, chassi, hodometro, Orcamento, Pecas_danificadas) VALUES
+('João da Silva', '123.456.789-00', 'Chevrolet', 'Onix', 'LTZ', 1.6, 'Gasolina', 'Automático', 'Prata', 'ABC-1234', '12345678901234567', '10000', 'R$1000', 'Amortecedor dianteiro quebrado'),
+('Maria Oliveira', '987.654.321-00', 'Ford', 'Ka', 'SE', 1.0, 'Flex', 'Manual', 'Branco', 'XYZ-5678', '76543210987654321', '20000', 'R$1500', 'Farol esquerdo trincado, para-choque arranhado');
