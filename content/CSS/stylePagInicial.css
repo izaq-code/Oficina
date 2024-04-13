@@ -6,7 +6,6 @@
     font-family: 'Inter', sans-serif;
 }
 
-/* Tela Inicial */
 #telainicial {
     background-image: url('../img/fundo.avif');
     background-size: cover;
@@ -186,20 +185,4 @@ header {
         background-position: center;
         background-attachment: fixed;
     }
-}
-
-
-/* Tela formulario */
-#telaformulario {
-    padding: 1.5em 10em
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-}
-
-.form-group label {
-    margin-bottom: 5px;
 }
