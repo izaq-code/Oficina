@@ -14,10 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     ");
 
 
-    $resultado = array(); // Array para armazenar os resultados
+    $resultado = array();
 
     while ($row = mysqli_fetch_assoc($sql)) {
-        $resultado[] = $row; // Adiciona cada linha ao array de resultados
+        $resultado[] = $row; 
     }
 
     echo json_encode($resultado, JSON_UNESCAPED_SLASHES);
