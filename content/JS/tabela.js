@@ -4,7 +4,7 @@ function tabela(){
     $(document).ready(function(){
         $.ajax({
             type: 'POST',
-            url: './PHP/tabela.php',
+            url: '../PHP/tabela.php',
             contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
             dataType: 'json',
             success: function(data){

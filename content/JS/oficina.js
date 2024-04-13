@@ -6,7 +6,7 @@ document.getElementById('nome').addEventListener('change', function () {
 
         $.ajax({
             type: 'POST',
-            url: './PHP/oficina.php',
+            url: '../PHP/oficina.php',
             data: {
                 selecionado: selecionado
             },

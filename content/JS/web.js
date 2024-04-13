@@ -5,7 +5,6 @@ const nextBtnSec = document.querySelector(".next-1");
 const prevBtnThird = document.querySelector(".prev-2");
 const nextBtnThird = document.querySelector(".next-2");
 const prevBtnFourth = document.querySelector(".prev-3");
-const submitBtn = document.querySelector(".submit");
 const progressText = [...document.querySelectorAll(".step p")];
 const progressCheck = [...document.querySelectorAll(".step .check")];
 const bullet = [...document.querySelectorAll(".step .bullet")];
@@ -95,22 +94,6 @@ prevBtnFourth.addEventListener("click", function(event) {
 });
 
 
-submitBtn.addEventListener("click", function(event) {
-  event.preventDefault(); 
-  
-
-  if (!validateFields()) {
-    alert("Por favor, preencha todos os campos obrigatórios.");
-    return;
-  }
-
-
-  setTimeout(function() {
-    alert("Enviado com sucesso");
-     location.reload(); 
-  }, 800);
-});
-
 
 
 window.addEventListener("DOMContentLoaded", function () {
@@ -175,6 +158,7 @@ window.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   var button = document.getElementById("bnte");
   var header = document.getElementById("header");
@@ -208,3 +192,4 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   }
 });
+

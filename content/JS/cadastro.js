@@ -5,8 +5,8 @@ $(document).ready(function () {
         var formData = $(this).serialize();
 
         $.ajax({
+            url: '../PHP/cadastro.php',
             type: 'POST',
-            url: './PHP/cadastro.php',
             data: formData,
             success: function(response){
                 console.log('Resposta do servidor:', response); // Verifica a resposta do servidor
