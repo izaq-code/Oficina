@@ -5,6 +5,7 @@ $(document).ready(function () {
         var formData = new FormData();
         var numFiles = 8;
 
+        // Adiciona as imagens ao FormData
         for (var i = 1; i <= numFiles; i++) {
             var inputName = 'foto__input' + i;
             var inputFile = document.getElementById(inputName);
@@ -15,6 +16,12 @@ $(document).ready(function () {
             }
 
             formData.append(inputName, inputFile.files[0]);
+        }
+
+        // Adiciona o arquivo PDF ao FormData
+        var pdfFile = document.getElementById('pdfFile');
+        if (pdfFile.files.length > 0) {
+            formData.append('pdfFile', pdfFile.files[0]);
         }
 
         $.ajax({
@@ -32,6 +39,7 @@ $(document).ready(function () {
                     var imagePath = '../upload/' + inputFile.files[0].name;
                     var imageElement = $('<img>').attr('src', imagePath).addClass('uploaded-image');
                 }
+                location.reload();  
             },
             error: function (xhr, status, error) {
                 $('#mensagem').text('Erro ao enviar as imagens: ' + error);
