@@ -1209,10 +1209,9 @@ input.error {
 }
 
 
-/* eduarda */
-
 
 #body1 {
+    
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -1226,8 +1225,8 @@ input.error {
     width: 800px;
     height: 500px;
     background-color: rgb(45, 45, 45);
-    margin-top: 150px;
-    margin-left: 335px;
+    transform: translate(70%, 40%);
+
 }
 
 #faixa1 {
@@ -1244,6 +1243,7 @@ input.error {
     text-align: left;
     margin-top: 50px;
     position: absolute;
+
 }
 
 .header1 h1 {
@@ -1307,8 +1307,7 @@ input.error {
     width: 800px;
     height: 500px;
     background-color: rgb(45, 45, 45);
-    margin-top: 150px;
-    margin-left: 335px;
+    transform: translate(70%, 40%);
 }
 
 #faixa2 {
@@ -1388,8 +1387,7 @@ input.error {
     width: 800px;
     height: 500px;
     background-color: rgb(45, 45, 45);
-    margin-top: 150px;
-    margin-left: 335px;
+    transform: translate(70%, 40%);
 }
 
 #faixa3 {
@@ -1573,8 +1571,7 @@ input.error {
     width: 800px;
     height: 500px;
     background-color: rgb(45, 45, 45);
-    margin-top: 150px;
-    margin-left: 335px;
+    transform: translate(70%, 40%);
 }
 
 #faixa4 {
@@ -1759,8 +1756,7 @@ input.error {
     width: 800px;
     height: 500px;
     background-color: rgb(45, 45, 45);
-    margin-top: 150px;
-    margin-left: 335px;
+    transform: translate(70%, 40%);
 }
 
 #faixa5 {
@@ -1917,7 +1913,7 @@ input.error {
 .text-container5 {
     margin-left: 345px;
     float: right;
-    width: 100%;
+    width: 130%;
     padding: 20px;
     border-radius: 10px;
 }
@@ -1944,8 +1940,7 @@ input.error {
     width: 800px;
     height: 500px;
     background-color: rgb(45, 45, 45);
-    margin-top: 150px;
-    margin-left: 335px;
+    transform: translate(70%, 40%);
 }
 
 #faixa6 {
@@ -2100,9 +2095,9 @@ input.error {
 }
 
 .text-container6 {
-    margin-right: 345px;
+    margin-right: 10px;
     float: right;
-    width: 90%;
+    width: 130%;
     padding: 20px;
     border-radius: 10px;
 }
