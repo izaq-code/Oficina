@@ -11,6 +11,7 @@ $(document).ready(function () {
             success: function(response){
                 console.log('Resposta do servidor:', response); // Verifica a resposta do servidor
                 alert('Cadastrado com sucesso');
+                location.reload();  
             },
             error: function(xhr, status, error) {
                 var errorMessage = xhr.status + ': ' + xhr.statusText;
