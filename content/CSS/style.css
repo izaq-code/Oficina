@@ -171,9 +171,9 @@ form .page .field button:hover {
     position: absolute;
     content: '';
     bottom: 9px;
-    right: -410px;
+    right: -435px;
     height: 3px;
-    width: 410px;
+    width: 435px;
     background: #737373;
 }
 
@@ -335,9 +335,9 @@ form .page .field button:hover {
 }
 
 .foto6 {
-    margin-left: -660px;
+    margin-left: -620px;
     position: absolute;
-    margin-top: 155px;
+    margin-top: 199px;
     border-radius: 10px;
     width: 150px;
     height: 150px;
@@ -355,9 +355,9 @@ form .page .field button:hover {
 }
 
 .foto7 {
-    margin-left: 360px;
+    margin-left: -620px;
     position: absolute;
-    margin-top: 155px;
+    margin-top: 199px;
     border-radius: 10px;
     width: 150px;
     height: 150px;
@@ -657,13 +657,14 @@ position: absolute;
 }
 
 #remover6 {
-    margin-top: 265px;
-    margin-right: 150px;
+
+    margin-top: 311px;
+    margin-left: -605px;
 }
 
 #remover7 {
-    margin-top: 265px;
-    margin-right:300px;
+    margin-top: 311px;
+    margin-left:-605px;
 }
 
 #remover8 {
@@ -720,8 +721,8 @@ position: absolute;
 
 
     position: absolute;
-    margin-top: 123px;
-    margin-left: 360px;
+    margin-top: 165px;
+    margin-left: -610px;
 
 }
 
@@ -729,8 +730,8 @@ position: absolute;
 
 
     position: absolute;
-    margin-top: 123px;
-    margin-left: 360px;
+    margin-top: 170px;
+    margin-left: -615px;
 
 }
 
@@ -2135,37 +2136,259 @@ position: absolute;
 }
 
 
-@media screen and (min-width: 1024px) {
+@media (max-width: 2560px) {
 
-    .header,
-    .hd,
-    .hd1 {
-        margin-right: 1400px;
-        width: 3%;
-        padding: 5px;
-        padding-bottom: 50px;
+    .foto {
+
+        margin-left: 260px;
+
     }
+    
+    .foto2 {
+    
+        margin-left: 260px;
 
-    #bnte {
-        margin-left: 2px;
     }
+    
+    .foto3 {
+        margin-left: 260px;
 
+    }
+    
+    .foto4 {
+        margin-left: 260px;
+
+    }
+    
+    .foto5 {
+        margin-left: -720px;
+
+    }
+    
+    .foto6 {
+        margin-left: -720px;
+
+    }
+    
+    .foto7 {
+        margin-left: 260px;
+        margin-top: 150px;
+    }
+    
+    .foto8 {
+        margin-left: 260px; 
+
+}
+
+
+
+}
+
+/* Para telas de 16 polegadas até 27 polegadas */
+/* Para telas de 16 polegadas até 27 polegadas */
+@media (min-width: 1660px) {
+
+
+ 
+
+    /* Ajustes específicos para a barra de navegação (se houver) */
     .nav {
-        margin-bottom: 20px;
+        margin-bottom: 20px; /* Espaçamento inferior da navegação */
     }
 
     .nav a {
         display: block;
-        margin-bottom: 30px;
-        position: relative;
-        top: 100px;
-        margin-left: -4px;
+        margin-bottom: 30px; /* Espaçamento entre itens de navegação */
+        margin-left: -5px;
     }
 
-    #cons {
-        margin-left: 1px;
+    /* Ajuste no posicionamento de elementos específicos */
+    .header,
+    .hd,
+    .hd1 {
+        margin-right: 1500px; /* Margem direita ajustada */
+        width: 3%; /* Largura ajustada */
+        padding: 5px; /* Preenchimento ajustado */
+        padding-bottom: 50px; /* Preenchimento inferior ajustado */
     }
+
+    /* Ajuste no posicionamento do botão 'bnte' */
+    #bnte {
+        margin-left: 2px; /* Margem esquerda ajustada */
+    }
+
+    /* Ajuste no posicionamento do elemento com id 'cons' */
+    #cons {
+        margin-left: 1px; /* Margem esquerda ajustada */
+    }
+
+    /* Ajuste na estilização dos bullets da barra de progresso */
+    .progress-bar .step .bullet:before,
+    .progress-bar .step .bullet:after {
+        right: -372px; /* Posição ajustada */
+        width: 372px; /* Largura dos bullets ajustada */
+    }
+
+
+
+    .foto {
+
+        margin-left: 260px;
+
+    }
+    
+    .foto2 {
+    
+        margin-left: 260px;
+
+    }
+    
+    .foto3 {
+        margin-left: 260px;
+
+    }
+    
+    .foto4 {
+        margin-left: 260px;
+
+    }
+    
+    .foto5 {
+        margin-left: -720px;
+
+    }
+    
+    .foto6 {
+        margin-left: -720px;
+
+    }
+    
+    .foto7 {
+        margin-left: 260px;
+        margin-top: 150px;
+    }
+    
+    .foto8 {
+        margin-left: 260px; 
+
 }
+
+.remover-foto {
+
+    margin-left: 260px;
+
+
+
+}
+
+#remover5 {
+
+    margin-left: -710px;
+}
+
+#remover6 {
+ margin-top: 310px;
+    margin-left: -720px;
+}
+
+#remover7 {
+    margin-top: 260px;
+       margin-left: 270px;
+   }
+   
+
+
+.label1 {
+
+
+
+    margin-left: 260px;
+
+}
+
+.label2 {
+
+
+
+    margin-left: 260px;
+}
+
+.label3 {
+
+
+    margin-left: 260px;
+
+}
+
+.label4 {
+
+    margin-left: 260px;
+
+}
+
+.label5 {
+
+
+    margin-left: -717px;
+
+}
+
+.label6 {
+
+
+    margin-left: -717px;
+
+}
+
+.label7 {
+
+
+margin-top: 120px;
+    margin-left: 260px;
+
+}
+
+.label8 {
+
+    margin-left: 260px;
+
+}
+
+
+
+}
+
+
+
+
+/* Ajustes para telas menores que 1366px */
+@media (max-width: 1366px) {
+    .container {
+        padding: 50px 25px 10px 25px; 
+    }
+
+  
+}
+
+/* Ajustes para telas menores que 1200px */
+@media (max-width: 1200px) {
+    .container {
+        padding: 50px 15px 10px 15px;
+    }
+
+  
+}
+
+/* Ajustes para telas menores que 768px (como tablets e dispositivos móveis) */
+@media (max-width: 768px) {
+    .form-outer form .page {
+        width: 100%; 
+        max-width: 100%; 
+    }
+
+
+}
+    
 
 /*Tela inicial*/
 #telainicial {
