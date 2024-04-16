@@ -7,6 +7,8 @@
     <title>Entrando administrador</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../CSS/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body id="body1">
@@ -14,14 +16,15 @@
     <div id="conteiner5">
         <div class="header5">
             <div class="left-div5">
-                <form>
+                <form id="entre_adm">
                     <div class="form-container5">
                         <div class="input-group5">
                             <label for="email">Ra:</label>
-                            <input type="text" placeholder="" required>
+                            <input name="ra" type="text" placeholder="" required>
                             <label for="email">Senha:</label>
-                            <input type="password" placeholder="" required><br>
-                            <a href="entre.html"><button class="button5">ENTRE</button></a>
+                            <input name="senha" type="password" placeholder="" required><br>
+                            <div id="resposta_login"></div>
+                            <button type="submit" class="button5">ENTRE</button>
                         </div>
                     </div>
                 </form>
@@ -44,5 +47,7 @@
     </div>
 
 </body>
+
+<script src="../JS/login_adm.js"></script>
 
 </html>
