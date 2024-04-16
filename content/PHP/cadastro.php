@@ -20,8 +20,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pecas_danificadas = $_POST['pecas_danificadas'];
 
     $sql = "INSERT INTO carro (nome_proprietario, cpf_proprietario, fabricante, marca,
-     modelo, motorizacao, combustivel, cambio, cor, placa, chassi, hodometro, orcamento, pecas_danificadas) 
-        VALUES ('$nome_proprietario', '$cpf_proprietario', '$fabricante', '$marca', '$modelo', $motorizacao, '$combustivel', '$cambio', '$cor', '$placa', '$chassi', '$hodometro', '$orcamento', '$pecas_danificadas')";
+     modelo, motorizacao, combustivel, cambio, cor, placa, chassi, hodometro, orcamento, pecas_danificadas, status_veiculo) 
+        VALUES ('$nome_proprietario', '$cpf_proprietario', '$fabricante', '$marca', '$modelo', $motorizacao,
+         '$combustivel', '$cambio', '$cor', '$placa', '$chassi', '$hodometro', '$orcamento', '$pecas_danificadas', 'aberto')";
 
 
 
