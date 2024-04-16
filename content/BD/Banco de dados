@@ -35,7 +35,8 @@ placa Varchar(120),
 chassi Varchar(120),
 hodometro Varchar(120),
 Orcamento Varchar(120),
-Pecas_danificadas Varchar(120)
+Pecas_danificadas Varchar(120),
+status_veiculo varchar(15)
 );
 
 CREATE TABLE carro_fotos (
@@ -58,9 +59,9 @@ CREATE UNIQUE INDEX um_cadastro ON login_adm (cod_ra);
 
 
 
-INSERT INTO carro (nome_proprietario, cpf_proprietario, fabricante, marca, modelo, motorizacao, combustivel, cambio, cor, placa, chassi, hodometro, Orcamento, Pecas_danificadas) VALUES
-('João da Silva', '123.456.789-00', 'Chevrolet', 'Onix', 'LTZ', 1.6, 'Gasolina', 'Automático', 'Prata', 'ABC-1234', '12345678901234567', '10000', 'R$1000', 'Amortecedor dianteiro quebrado'),
-('Maria Oliveira', '987.654.321-00', 'Ford', 'Ka', 'SE', 1.0, 'Flex', 'Manual', 'Branco', 'XYZ-5678', '76543210987654321', '20000', 'R$1500', 'Farol esquerdo trincado, para-choque arranhado');
+INSERT INTO carro (nome_proprietario, cpf_proprietario, fabricante, marca, modelo, motorizacao, combustivel, cambio, cor, placa, chassi, hodometro, Orcamento, Pecas_danificadas, status_veiculo) VALUES
+('João da Silva', '123.456.789-00', 'Chevrolet', 'Onix', 'LTZ', 1.6, 'Gasolina', 'Automático', 'Prata', 'ABC-1234', '12345678901234567', '10000', 'R$1000', 'Amortecedor dianteiro quebrado', 'aberto'),
+('Maria Oliveira', '987.654.321-00', 'Ford', 'Ka', 'SE', 1.0, 'Flex', 'Manual', 'Branco', 'XYZ-5678', '76543210987654321', '20000', 'R$1500', 'Farol esquerdo trincado, para-choque arranhado', 'aberto');
 
 INSERT INTO RA (RA, nome_funcionario) VALUES 
 ('RA123', 'João Silva'),
