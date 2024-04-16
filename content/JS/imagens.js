@@ -24,6 +24,11 @@ $(document).ready(function () {
             formData.append('pdfFile', pdfFile.files[0]);
         }
 
+        var cod = document.getElementById('nome').value;
+        console.log(cod);
+
+        formData.append('cod', cod);
+
         $.ajax({
             url: '../PHP/upload.php',
             type: 'POST',
@@ -39,7 +44,7 @@ $(document).ready(function () {
                     var imagePath = '../upload/' + inputFile.files[0].name;
                     var imageElement = $('<img>').attr('src', imagePath).addClass('uploaded-image');
                 }
-                location.reload();  
+                //location.reload();  
             },
             error: function (xhr, status, error) {
                 $('#mensagem').text('Erro ao enviar as imagens: ' + error);
