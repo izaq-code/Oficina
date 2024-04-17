@@ -1,5 +1,7 @@
 CREATE DATABASE Oficina;
 
+USE Oficina;
+
 CREATE TABLE RA (
     cod_ra int AUTO_INCREMENT PRIMARY KEY,
     RA VARCHAR(120),
