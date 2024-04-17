@@ -17,24 +17,37 @@ function exibir(){
 function exibir(data){
     
    console.log(data);
+
+   q = $('#informacao-aberta');
+   q.empty();
+
+   q.append(solicitacao[0].aberta);
+
+   w = $('#informacao-concluida');
+   w.empty();
+
+   w.append(solicitacao[0].finalizada);
+
    
-   t = $(#mostrar);
-   t.empty;
+   t = $('#mostrar');
+   t.empty();
    
    var i = 1;
    
-   data.forEach(){
+   data.forEach(function(e){
       
       let adicionar = (
-      "<div class='status'>" +
-      "<h1> Solicitação " + i +
-      "</h1>" +
-      "</div>"
+      "<div class='status'>" 
+      + "<h1> Solicitação " + i + "</h1><br>" 
+      + "<h6 class='negro'> Modelo: </h6> <p>" + e['modelo'] + "</p><br>" 
+      + "<h6 class='negro'> Sinistro: </6> <p>" + e['sinistro'] + "</p> <br><br>"
+      + "<h6 class='negro'> Status: </h6> <p>" + e['status_veiculo'] + "</p>"
+      +"</div>"
       )
       
       i++;
       
       t.append(adicionar);
-   }
+   });
    
 }
