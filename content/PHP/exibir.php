@@ -13,6 +13,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             FROM carro    
 ")
 
+$solicitacao = array();
+
+
+while($row = mysqli_fetch_array($informacoes)) {
+        $solicitacao[] = $row;
+    }
+    
+$exibicao = array();
+    
+while($row = mysqli_fetch_array($sql)) {
+        $exibicao[] = $row;
+    }
+
 $tiago = array(
     'solicitacao' => $solicitacao
     'exibicao' => $exibicao
