@@ -18,4 +18,23 @@ function exibir(data){
     
    console.log(data);
    
+   t = $(#mostrar);
+   t.empty;
+   
+   var i = 1;
+   
+   data.forEach(){
+      
+      let adicionar = (
+      "<div class='status'>" +
+      "<h1> Solicitação " + i +
+      "</h1>" +
+      "</div>"
+      )
+      
+      i++;
+      
+      t.append(adicionar);
+   }
+   
 }
