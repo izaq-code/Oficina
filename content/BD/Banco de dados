@@ -25,7 +25,9 @@ CREATE TABLE login_seguradora (
 CREATE TABLE carro (
 cod_veiculo int  AUTO_INCREMENT PRIMARY KEY,
 nome_proprietario varchar(80),
+sinistro varchar(40),
 cpf_proprietario varchar(25),
+data_abertura datetime,
 fabricante varchar(30),
 marca Varchar(30),
 modelo Varchar(30),
@@ -61,9 +63,9 @@ CREATE UNIQUE INDEX um_cadastro ON login_adm (cod_ra);
 
 
 
-INSERT INTO carro (nome_proprietario, cpf_proprietario, fabricante, marca, modelo, motorizacao, combustivel, cambio, cor, placa, chassi, hodometro, Orcamento, Pecas_danificadas, status_veiculo) VALUES
-('João da Silva', '123.456.789-00', 'Chevrolet', 'Onix', 'LTZ', 1.6, 'Gasolina', 'Automático', 'Prata', 'ABC-1234', '12345678901234567', '10000', 'R$1000', 'Amortecedor dianteiro quebrado', 'aberto'),
-('Maria Oliveira', '987.654.321-00', 'Ford', 'Ka', 'SE', 1.0, 'Flex', 'Manual', 'Branco', 'XYZ-5678', '76543210987654321', '20000', 'R$1500', 'Farol esquerdo trincado, para-choque arranhado', 'aberto');
+INSERT INTO carro (nome_proprietario, cpf_proprietario, fabricante, marca, modelo, motorizacao, combustivel, cambio, cor, placa, chassi, hodometro, Orcamento, Pecas_danificadas, sinistro, status_veiculo) VALUES
+('João da Silva', '123.456.789-00', 'Chevrolet', 'Onix', 'LTZ', 1.6, 'Gasolina', 'Automático', 'Prata', 'ABC-1234', '12345678901234567', '10000', 'R$1000', 'Amortecedor dianteiro quebrado', 'parachoque quebrado', 'aberto'),
+('Maria Oliveira', '987.654.321-00', 'Ford', 'Ka', 'SE', 1.0, 'Flex', 'Manual', 'Branco', 'XYZ-5678', '76543210987654321', '20000', 'R$1500', 'Farol esquerdo trincado, para-choque arranhado', 'colisão', 'aberto');
 
 INSERT INTO RA (RA, nome_funcionario) VALUES 
 ('RA123', 'João Silva'),
