@@ -845,7 +845,7 @@ input.error {
     height: 50%;
     background-color: rgb(171, 171, 171);
     box-shadow: 0 0 20px rgb(8, 8, 8);
-    animation: animate 4s linear infinite;
+    animation: animates 4s linear infinite;
 }
 
 #box3.error::before {
@@ -879,7 +879,7 @@ input.error {
 }
 
 
-@keyframes animate {
+@keyframes animates {
     0% {
 
         transform: rotate(0deg);
