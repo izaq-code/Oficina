@@ -1,7 +1,8 @@
-document.addEventListener("DOMContentLoaded", exibir);
-window.addEventListener("load", exibir);
-function exibir() {
+document.addEventListener("DOMContentLoaded", exibirDados);
+//window.addEventListener("load", exibir);
+function exibirDados() {
     $(document).ready(function () {
+        console.log("DOMContentLoaded event fired!");
         $.ajax({
             type: 'POST',
             url: '../PHP/exibir.php',
@@ -23,13 +24,14 @@ function exibir(data) {
     q = $('#informacao-aberta');
     q.empty();
 
-    q.append(solicitacao[0].aberta);
+    console.log(solicitacao[0][0])
+
+    q.append(solicitacao[0][0]);
 
     w = $('#informacao-concluida');
     w.empty();
 
-    w.append(solicitacao[0].finalizada);
-
+    w.append(solicitacao[0][1]);
 
     t = $('#mostrar');
     t.empty();
@@ -53,3 +55,4 @@ function exibir(data) {
     });
 
 }
+
