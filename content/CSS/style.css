@@ -1818,3 +1818,63 @@ input.error {
         background-attachment: fixed;
     }
 }
+
+/*Estilos página inicial*/
+#pag-inicial {
+    padding: 5em 15em;
+}
+
+.solicitacoes {
+    margin: 7px 10px 0px 0px;
+    background-color: rgba(133, 133, 133, 0.308);
+    border-radius: 10px;
+    padding: 20px 30px;
+    text-align: center;
+    display: inline-block;
+}
+
+.numero-informa {
+    font-size: 3.4em;
+}
+
+.solicitacoes-inc {
+    font-size: 1.4em;
+}
+
+.informacoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.solicitacoes-cabecalho {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mostrar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 20px));
+    grid-gap: 20px; 
+}
+
+.card-solicitacoes {
+    background-color: rgba(133, 133, 133, 0.308);
+    border-radius: 10px;
+    padding: 20px 20px;
+}
+
+.solicitacoes-ver-mais {
+    position: absolute;
+    bottom: 10px; 
+    right: 20px;
+    font-weight: bold;
+}
+
+.card-solicitacoes-container {
+    position: relative;
+    height: auto; 
+}
+

@@ -44,7 +44,7 @@ $(document).ready(function () {
                     var imagePath = '../upload/' + inputFile.files[0].name;
                     var imageElement = $('<img>').attr('src', imagePath).addClass('uploaded-image');
                 }
-                //location.reload();  
+                location.reload();  
             },
             error: function (xhr, status, error) {
                 $('#mensagem').text('Erro ao enviar as imagens: ' + error);

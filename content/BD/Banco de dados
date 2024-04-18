@@ -65,7 +65,12 @@ CREATE UNIQUE INDEX um_cadastro ON login_adm (cod_ra);
 
 INSERT INTO carro (nome_proprietario, cpf_proprietario, fabricante, marca, modelo, motorizacao, combustivel, cambio, cor, placa, chassi, hodometro, Orcamento, Pecas_danificadas, sinistro, status_veiculo) VALUES
 ('João da Silva', '123.456.789-00', 'Chevrolet', 'Onix', 'LTZ', 1.6, 'Gasolina', 'Automático', 'Prata', 'ABC-1234', '12345678901234567', '10000', 'R$1000', 'Amortecedor dianteiro quebrado', 'parachoque quebrado', 'aberto'),
-('Maria Oliveira', '987.654.321-00', 'Ford', 'Ka', 'SE', 1.0, 'Flex', 'Manual', 'Branco', 'XYZ-5678', '76543210987654321', '20000', 'R$1500', 'Farol esquerdo trincado, para-choque arranhado', 'colisão', 'aberto');
+('Maria Oliveira', '987.654.321-00', 'Ford', 'Ka', 'SE', 1.0, 'Flex', 'Manual', 'Branco', 'XYZ-5678', '76543210987654321', '20000', 'R$1500', 'Farol esquerdo trincado, para-choque arranhado', 'colisão', 'aberto'),
+('Ana Souza', '111.222.333-00', 'Volkswagen', 'Gol', 'Trendline', 1.0, 'Flex', 'Manual', 'Preto', 'DEF-9012', '98765432109876543', '30000', 'R$1200', 'Porta dianteira amassada', 'roubo', 'aberto'),
+('Pedro Santos', '444.555.666-00', 'Fiat', 'Palio', 'Weekend Adventure', 1.8, 'Flex', 'Automático', 'Azul', 'GHI-3456', '56789012345678901', '40000', 'R$2000', 'Para-choque traseiro quebrado', 'colisão traseira', 'aberto'),
+('Mariana Lima', '777.888.999-00', 'Toyota', 'Corolla', 'XEI', 2.0, 'Gasolina', 'Automático', 'Cinza', 'JKL-7890', '34567890123456789', '50000', 'R$1800', 'Capô amassado, para-brisa trincado', 'colisão frontal', 'aberto'),
+('Luiz Pereira', '333.222.111-00', 'Hyundai', 'HB20', 'Comfort Plus', 1.6, 'Flex', 'Manual', 'Vermelho', 'MNO-1234', '89012345678901234', '60000', 'R$1300', 'Espelho retrovisor quebrado', 'colisão lateral', 'aberto'),
+('Carla Costa', '999.888.777-00', 'Renault', 'Sandero', 'Zen', 1.0, 'Flex', 'Manual', 'Prata', 'PQR-5678', '45678901234567890', '70000', 'R$1400', 'Porta traseira arranhada', 'colisão lateral', 'aberto');
 
 INSERT INTO RA (RA, nome_funcionario) VALUES 
 ('RA123', 'João Silva'),
