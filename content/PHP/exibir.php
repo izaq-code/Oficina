@@ -3,7 +3,7 @@ include_once('conexao.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $sql = mysqli_query ($conexao,"SELECT modelo, sinistro, status_veiculo 
+    $sql = mysqli_query ($conexao,"SELECT cod_veiculo, modelo, sinistro, status_veiculo 
                                     FROM carro
 ");
 
