@@ -6,43 +6,48 @@
     <title>Criando cliente</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body id="body1">
-    
+
 <div id="conteiner3">
     <div class="header3">
-      <div class="left-div3">
-        <form>
-            <div class="form-container3">
-            <div class="input-group3">
-                <label for="email">Ra:</label>
-            <input type="text" placeholder="" required>
-                 <label for="email">Senha:</label> 
-            <input type="password" placeholder="" required>
-            <label for="email">Confirme a senha:</label> 
-            <input type="password" placeholder="" required>
-            <a href="entre.html"><button class="button3">CRIE</button></a>
+        <div class="left-div3">
+            <form>
+                <div class="form-container3">
+                    <div class="input-group3">
+                        <label for="email">Ra:</label>  
+                        <input type="text" placeholder="" required>
+                        <label for="senha">Senha:</label>
+                        <input id="senha" type="password" placeholder="" required>
+                        <span class="bi bi-eye-fill" id="view1" onclick="viewsenha('senha', 'view1')"></span>
+                        <label for="confirmarSenha">Confirme a senha:</label>
+                        <input id="confirmarSenha" type="password" placeholder="" required>
+                        <span class="bi bi-eye-fill" id="view2" onclick="viewsenha('confirmarSenha', 'view2')"></span>
+                        <button class="button3" onclick="verificarSenhas()">CRIE</button>
+                        <p id="alerta"></p>
+                    </div>
+                </div>
+            </form>
         </div>
+        <div class="right-div3">
+            <div class="text-container3">
+                <h1>Apenas funcionários<br>
+                    podem cadastrar nessa página!</h1>
+            </div>
         </div>
-        </form>
     </div>
-    <div class="right-div3">
-        <div class="text-container3">
-            <h1>Apenas funcionários<br>
-                podem cadastrar nessa página!</h1>
+    <div id="faixa3">
+        <div class="admin-login3">
+            <a href="bem-vindo-adm.html"><i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+        <h1>Criando a conta!</h1>
     </div>
-</div>
-    
-
-    </div>
-<div id="faixa3">
-    <div class="admin-login3">
-        <a href="bem-vindo-adm.html"><i class="fa-solid fa-arrow-left"></i></a>
-      </div>
-      <h1>Criando a conta !</h1>
 </div>
 
-</div>
+<script src="../JS/logi.js"></script> <!-- Vincula o arquivo JavaScript externo -->
 
 </body>
 </html>
