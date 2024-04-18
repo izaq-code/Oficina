@@ -42,7 +42,7 @@ function exibir(data) {
 
         let adicionar = (
             "<div class='card-solicitacoes-container'>"
-            +   "<div class='card-solicitacoes'>"
+            +   "<div class='card-solicitacoes' id='veiculo_" + e['cod_veiculo'] + "'>"
             +       "<h2> Solicitação " + i + "</h2><br><br>"
             +       "<div class='solicitacoes-texto'><b>Modelo: </b>" + e['modelo'] + "</div>"
             +       "<div class='solicitacoes-texto'><b>Sinistro: </b>" + e['sinistro'] + "<br><br><br></div>"
@@ -67,5 +67,15 @@ function exibir(data) {
 
 // Definir a mesma altura para todos os cards
 $('.card-solicitacoes').height(maxHeight);
+
+    
+    $(".solicitacoes-ver-mais").click(function(event){
+        event.preventDefault();
+
+        var codVeiculo = $(this).data("cod_veiculo");
+
+        console.log(codVeiculo)
+    })
+    
 }
 
