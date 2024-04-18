@@ -26,9 +26,9 @@ Se você gostaria de contribuir para o projeto (SEMNOME), sinta-se à vontade pa
 ## Autor
 
 - Andre Cardoso Pereira
+- Eduarda Vieira Gonçalves
 - Ian dos Reis Novais
 - Isaque Gomes Azevedo
-- Eduarda Vieira Gonçalves
 - Tiago Alcantara Ferreira
 
 ## Licença
