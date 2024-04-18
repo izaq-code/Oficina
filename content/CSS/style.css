@@ -258,6 +258,20 @@ form .page .field button:hover {
    background: #737373;
 }
 
+
+@media screen and (min-width: 1400px) {
+    .progress-bar .step .bullet:before,
+    .progress-bar .step .bullet:after {
+        position: absolute;
+        content: '';
+        bottom: 9px;
+        right: -435px;
+        height: 3px;
+        width: 435px;
+        background: #737373;
+    }
+}
+
 .progress-bar .step .bullet.active:after {
    background: #000000;
    transform: scaleX(0);
