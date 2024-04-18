@@ -25,7 +25,11 @@ Se você gostaria de contribuir para o projeto (SEMNOME), sinta-se à vontade pa
 
 ## Autor
 
-(SEMNOME) é mantido por{ian novais, andre cardoso , isaque gomes, Eduarda vieira, tiago alcantara}
+- Andre Cardoso Pereira
+- Ian dos Reis Novais
+- Isaque Gomes Azevedo
+- Eduarda Vieira Gonçalves
+- Tiago Alcantara Ferreira
 
 ## Licença
 
