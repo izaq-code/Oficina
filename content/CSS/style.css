@@ -820,18 +820,87 @@ input.error {
     width: 800px;
     height: 500px;
     background-color: rgb(45, 45, 45);
-    transform: translate(30%, 10%);
+    transform: translate(50%, 40%);
 }
+
+
+#box3 {
+    border-radius: 30px 0px 20px 0px;
+    width: 816px;
+    height: 517px;
+    background-color: rgb(45, 45, 45);
+    transform: translate(48%, 37%);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+}
+
+#box3::before {
+    content: '';
+    position: absolute;
+    width: 1300px;
+    height: 50%;
+    background-color: rgb(171, 171, 171);
+    box-shadow: 0 0 20px rgb(8, 8, 8);
+    animation: animate 4s linear infinite;
+}
+
+#box3.error::before {
+    background-color: red;
+    box-shadow: 0 0 5px red;
+}
+
+#box3.accept::before {
+    background-color: green;
+    box-shadow: 0 0 5px green;
+}
+
+#box3.alerta::before {
+    background-color: orange;
+    box-shadow: 0 0 5px orange;
+}
+#box3.normal::before {
+    background-color: rgb(171, 171, 171);
+    box-shadow: 0 0 5px rgb(171, 171, 171);
+}
+
+
+#box3::after {
+    overflow: hidden;
+
+    content: '';
+    position: absolute;
+    inset: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+}
+
+
+@keyframes animate {
+    0% {
+
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
 
 #faixa3 {
     font-size: 10px;
     text-align: left;
-    border-radius: 30px 0px 50px 0px;
+    border-radius: 20px 0px 50px 0px;
     margin-top: 0px;
     position: absolute;
     height: 140px;
     width: 800px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 
 }
 
