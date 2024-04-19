@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = mysqli_query($conexao, "SELECT nome_proprietario, cpf_proprietario, fabricante, marca,
                      modelo, motorizacao, combustivel, cambio, cor, placa,
-                     chassi, hodometro, orcamento, pecas_danificadas FROM carro
+                     chassi, hodometro, sinistro,orcamento, pecas_danificadas FROM carro
                      WHERE cod_veiculo = '$selecionado';
     ");
 
