@@ -31,7 +31,7 @@ function mostrar(data) {
     $('#modelo').val(data[0].modelo);
     $('#motorizacao').val(data[0].motorizacao);
     $('#combustivel').val(data[0].combustivel);
-    $('#sinistro').val(data[0]).sinistro);
+    $('#sinistro').val(data[0].sinistro);
     $('#cambio').val(data[0].cambio);
     $('#cor').val(data[0].cor);
     $('#placa').val(data[0].placa);
