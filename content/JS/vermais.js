@@ -21,16 +21,15 @@ function exibir (data) {
 
     carro = data.carro;
 
-
      w =  $('#exibirmais');
      w.empty();
 
-     var divContent = "<div class='exibirtudo'>";
-     for (var key in data[0]) {
-         if (!isNaN(key)) continue; // Ignorar chaves numéricas
+    for (var key in data[0]) {
+        if (!isNaN(key)) continue; // Ignorar chaves numéricas
+        var divContent = "<div class='exibirtudo'>";
          divContent += "<h3>" + key.replace('_', ' ') + ":</h3>" + "<p>" + data[0][key] + "</p>";
-     }
-     divContent += "</div>";
- 
-     w.append(divContent);
+         divContent += "</div>";
+         w.append(divContent);
+        }
+        
 }
