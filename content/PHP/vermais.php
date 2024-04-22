@@ -7,23 +7,23 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $cod_veiculo = $_POST['cod_veiculo'];
 
     $sql = mysqli_query($conexao, "SELECT 
-        nome_proprietario,
-        sinistro,
-        cpf_proprietario,
-        data_abertura,
-        fabricante,
-        marca,
-        modelo,
-        motorizacao,
-        combustivel,
-        cambio,
-        cor,
-        placa,
-        chassi,
-        hodometro,
-        Orcamento,
-        Pecas_danificadas,
-        status_veiculo
+        nome_proprietario 'Nome do Proprietário',
+        sinistro 'Sinistro',
+        cpf_proprietario 'CPF do Proprietario',
+        data_abertura 'Data de abertura',
+        fabricante 'Fabricante',
+        marca 'Marca',
+        modelo 'Modelo',
+        motorizacao 'Motorização',
+        combustivel 'Combustível',
+        cambio 'Câmbio',
+        cor 'Cor',
+        placa 'Placa',
+        chassi 'Chassi',
+        hodometro 'Hodômetro',
+        Orcamento 'Orçamento',
+        Pecas_danificadas 'Peças danificadas',
+        status_veiculo 'Status da solicitação'
     FROM carro
     WHERE cod_veiculo = '$cod_veiculo'");
 
