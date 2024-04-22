@@ -62,7 +62,9 @@ function verificarSenhas() {
         boxinput.classList.remove('normal');
         boxinput.classList.add('accept');
     }   
-}
 
+    
 confirmarSenhaInput.addEventListener('input', verificarSenhas);
 senhaInput.addEventListener('input', verificarSenhas);
+}
+
