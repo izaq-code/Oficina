@@ -1822,6 +1822,15 @@ input.error {
     .open {
         display: block;
     }
+
+    table {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    #pag-inicial{
+        padding: 0;
+    }
 }
 
 @media screen and (max-width: 00px) {
@@ -1836,12 +1845,13 @@ input.error {
 
 /*Estilos página inicial*/
 #pag-inicial {
-    padding: 5em 15em;
+    padding: 5em 18%;
+    background-color: #f1f1f0;
 }
 
 .solicitacoes {
     margin: 7px 10px 0px 0px;
-    background-color: rgba(133, 133, 133, 0.308);
+    background-color: #FDFDFD;
     border-radius: 10px;
     padding: 20px 30px;
     text-align: center;
@@ -1869,27 +1879,89 @@ input.error {
     align-items: center;
 }
 
-#mostrar {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 20px));
-    grid-gap: 20px; 
+table {
+    width: 100%;
+    height: 1;
 }
 
-.card-solicitacoes {
-    background-color: rgba(133, 133, 133, 0.308);
+td {
+    padding: 100%;
+    text-align: center; 
+}
+
+td .titulo-solicitacao {
+    text-align: left; 
+}
+
+#mostrar {
+    background-color: #FDFDFD;
     border-radius: 10px;
     padding: 20px 20px;
 }
 
-.solicitacoes-ver-mais {
-    position: absolute;
-    bottom: 10px; 
-    right: 20px;
-    font-weight: bold;
+.titulo-solicitacao{
+    font-weight: bolder;
+}
+
+.status_aberto{
+    background-color: rgb(209, 209, 209);
+    border-radius: 30px;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: bolder;
+    width: 8%;
+    text-align: center; 
+}
+
+.status_finalizado{
+    color: white;
+    font-weight: bolder;
+    background-color: rgb(97, 185, 97);
+    border-radius: 30px;
+    font-size: 14px;
+    width: 8%;
+    max-height: 1px;
+    text-align: center;
 }
 
 .card-solicitacoes-container {
-    position: relative;
-    height: auto; 
+    margin-bottom: 20px;
 }
 
+.card-solicitacoes {
+    padding: 20px;
+}
+
+.card-solicitacoes td {
+    padding: 5px;
+}
+
+.card-solicitacoes-container {
+    margin-bottom: 20px;
+}
+
+.solicitacoes-table {
+    border-spacing: 20px;
+}
+
+.solicitacoes-table td {
+    text-align: center;
+}
+
+.solicitacao-titulo{
+    font-weight: bolder;
+}
+
+.solicitacao-titulo{
+    font-weight: bolder;
+}
+
+.solicitacao-detalhes{
+    color: #717171;
+    font-size: 15px;
+}
+
+.solicitacao-icone{
+    position: absolute;
+    margin-top: -15px;
+}

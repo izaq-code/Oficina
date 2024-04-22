@@ -16,7 +16,7 @@ function exibirDados() {
 }
 
 function exibir(data) {
-
+   
     console.log(data);
     var solicitacao = data.solicitacao;
     var exibicao = data.exibicao;
@@ -38,45 +38,52 @@ function exibir(data) {
 
     var i = 1;
 
-    exibicao.forEach(function (e) {
+    var adicionar = (
+        "<div class='card-solicitacoes-container'>" +
+        "<table class='solicitacoes-table'>" +
+        "<thead>" +
+        "<tr>" +
+        "</tr>" +
+        "</thead>" +
+        "<tbody>"
+    );
 
-        let adicionar = (
-            "<div class='card-solicitacoes-container'>"
-            +   "<div class='card-solicitacoes' id='" + e['cod_veiculo'] + "'>"
-            +       "<h2> Solicitação " + i + "</h2><br><br>"
-            +       "<div class='solicitacoes-texto'><b>Modelo: </b>" + e['modelo'] + "</div>"
-            +       "<div class='solicitacoes-texto'><b>Sinistro: </b>" + e['sinistro'] + "<br><br><br></div>"
-            +       "<div class='solicitacoes-texto'><b>Status: </b>" + e['status_veiculo'] + "<br><br><br></div>"
-            +       "<div class='solicitacoes-ver-mais'>Ver mais ➜</div>"
-            +   "</div>"
-            + "</div>"
-        )
-        console.log(e['cod_veiculo'])
+    exibicao.forEach(function(e) {
+        let statusClass = '';
+        if (e['status_veiculo'] === 'aberto') {
+            statusClass = 'status_aberto';
+        } else if (e['status_veiculo'] === 'Finalizado') {
+            statusClass = 'status_finalizado';
+        }
+
+        let iconeClass = '';
+        if (e['status_veiculo'] === 'aberto') {
+            iconeClass = '<img class="icon" src="../img/solicitacao_fe.svg"></img>';
+        } else if (e['status_veiculo'] === 'Finalizado') {
+            iconeClass = '<img class="icon" src="../img/solicitacao_ab.svg"></img>';
+        }
+        
+        adicionar += (
+            "<tr class='card-solicitacoes' id='" + e['cod_veiculo'] + "'>" +
+            "<td colspan='2' class='solicitacao-icone'>" + iconeClass + "</td>" +
+            "<td colspan='2' class='solicitacao-titulo'>Solicitação " + i + "</td>" +
+            "<td class='solicitacao-texto'>" + e['modelo'] + "</td>" +
+            "<td class='" + statusClass + "'>" + e['status_veiculo'] + "</td>" +
+            "<td>" + e['sinistro'] + "</td>" +
+            "<td class='solicitacao-detalhes'>Detalhes</td>" +
+            "</tr>"
+        );
+
+        console.log(e['cod_veiculo']);
 
         i++;
-
-        t.append(adicionar);
     });
 
-    let maxHeight = 0;
-    $('.card-solicitacoes').each(function() {
-    let height = $(this).height();
-    if (height > maxHeight) {
-        maxHeight = height;
-    }
-});
+    adicionar += (
+        "</tbody>" +
+        "</table>" +
+        "</div>"
+    );
 
-// Definir a mesma altura para todos os cards
-$('.card-solicitacoes').height(maxHeight);
-
-    
-    $(".solicitacoes-ver-mais").click(function(event){
-        event.preventDefault(); 
-
-        
-
-        // console.log('o codddd' + codVeiculo)
-    })
-    
+    t.append(adicionar);
 }
-
