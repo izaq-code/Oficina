@@ -3948,7 +3948,7 @@ td .titulo-solicitacao {
     padding: 5px 15px;
     font-size: 14px;
     font-weight: bolder;
-    width: 100%;
+    width: 80%;
     display: inline-block; 
     text-align: center;
 }
@@ -3959,7 +3959,7 @@ td .titulo-solicitacao {
     background-color: rgb(97, 185, 97);
     border-radius: 30px;
     font-size: 14px;
-    width: 100%;
+    width: 80%;
     display: inline-block; 
     text-align: center;
 }
@@ -3969,3 +3969,20 @@ td .titulo-solicitacao {
     display: inline-block; 
     vertical-align: middle; 
 }
+
+.solicitacao {
+    display: table-row;
+  }
+  .icone,
+  .id,
+  .nome-solicitacao {
+    display: table-cell;
+    padding: 5px; /* Espaçamento interno entre células */
+    border: 1px solid #ccc; /* Adiciona bordas para visualização */
+  }
+  .icone {
+    width: 50px; /* Largura da célula do ícone */
+  }
+  .id {
+    width: 100px; /* Largura da célula do ID */
+  }
