@@ -64,7 +64,7 @@ function verificarSenhas() {
     }   
 
     
-confirmarSenhaInput.addEventListener('input', verificarSenhas);
-senhaInput.addEventListener('input', verificarSenhas);
 }
 
+confirmarSenhaInput.addEventListener('input', verificarSenhas);
+senhaInput.addEventListener('input', verificarSenhas);
