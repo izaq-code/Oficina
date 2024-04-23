@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $tiago = "UPDATE carro SET status_veiculo = 'Finalizado' 
     WHERE cod_veiculo = '$status'";
 
-    $tiago_deu_muito = mysqli_query($conexao, $tiago);
+    $tito = mysqli_query($conexao, $tiago);
     
     // Executa a consulta SQL
     if ($conexao->query($sql) === TRUE) {
