@@ -6,7 +6,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     $cod_veiculo = $_POST['cod_veiculo'];
 
-    $sql = mysqli_query($conexao, "SELECT 
+    $sql = mysqli_query($conexao, "SELECT
+        id_personalizado 'ID', 
         nome_proprietario 'Nome do Proprietário',
         sinistro 'Sinistro',
         cpf_proprietario 'CPF do Proprietario',
