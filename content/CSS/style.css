@@ -3930,15 +3930,10 @@ td .titulo-solicitacao {
     font-weight: bolder;
 }
 
-.solicitacao-titulo{
-    font-weight: bolder;
-}
-
 .solicitacao-detalhes{
     color: #717171;
     font-size: 15px;
 }
-
 
 #mostrar {
     background-color: #FDFDFD;
