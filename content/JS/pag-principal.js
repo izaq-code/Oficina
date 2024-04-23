@@ -47,34 +47,36 @@ function exibir(data) {
         data: {
             labels: labels,
             datasets: [{
-                label: 'qte',
+                label: 'Quantidade',
                 data: valores,
                 backgroundColor: [
-                    'rgba(255, 0, 0, 1)',
-                    'rgba(0, 255, 0, 1)',
+                    'rgb(209, 209, 209)',
+                    'rgb(126, 172, 104)',
                 ],
                 borderColor: [
-                    'rgba(255, 0, 0, 1)',
-                    'rgba(0, 255, 0, 1)',
+                    'rgb(209, 209, 209)',
+                    'rgb(126, 172, 104)',
                 ],
-                borderWidth: 0.5,
+                borderWidth:1,cutout:'80%',
+                circumference:180,
+               rotation:270,
             }]
         },
         options: {
             responsive: false,
             plugins: {
                 legend: {
-                    position: 'top',
+                    position: 'bottom',
                 },
                 title: {
-                    display: true,
+                    display: false,
                     text: 'Solicitações'
                 }
             },
             layout: {
                 padding: {
-                    left: 50,
-                    right: 50,
+                    left: 20,
+                    right: 20,
                     top: 0,
                     bottom: 0
                 }
@@ -111,20 +113,26 @@ function exibir(data) {
 
         let iconeClass = '';
         if (e['status_veiculo'] === 'aberto') {
-            iconeClass = '<img class="icon" src="../img/solicitacao_fe.svg"></img>';
+            iconeClass = '<img class="icon" src="../img/aberto.png"></img>';
         } else if (e['status_veiculo'] === 'Finalizado') {
-            iconeClass = '<img class="icon" src="../img/solicitacao_ab.svg"></img>';
+            iconeClass = '<img class="icon" src="../img/Finalizado.png"></img>';
         }
         
         adicionar += (
+  
+
             "<tr class='card-solicitacoes' id='" + e['cod_veiculo'] + "'>" +
-            "<td colspan='2' class='solicitacao-icone'>" + iconeClass + "</td>" +
-            "<td colspan='2' class='solicitacao-titulo'>Solicitação " + i + "</td>" +
+            "<td>" + "<div class='solicitacao-icone'>" + iconeClass + "</div></td>" +
+            "<td class='solicitacao-texto'>" + 
+                "<div class='solicitacao-id'>" + "#323232" + "</div>" + 
+                "<div class='solicitacao-numero'>Solicitação " + i + "</div>" +
+            "</td>" +
             "<td class='solicitacao-texto'>" + e['modelo'] + "</td>" +
-            "<td class='" + statusClass + "'>" + e['status_veiculo'] + "</td>" +
-            "<td>" + e['sinistro'] + "</td>" +
-            "<td class='solicitacao-detalhes' data-cod_veiculo='"+ e['cod_veiculo'] +"'>Detalhes</td>" +
+            "<td>" + "<div class='" + statusClass + "'>" + e['status_veiculo'] + "</div></td>" + 
+            "<td>" + e['sinistro'] + "</td>" + 
+            "<td class='solicitacao-detalhes'>Detalhes</td>" +
             "</tr>"
+   
         );
 
         console.log(e['cod_veiculo']);
