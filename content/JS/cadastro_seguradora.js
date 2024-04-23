@@ -9,9 +9,9 @@ $(document).ready(function(){
             url: '../PHP/cadastro_seguradora.php',
             data: formData,
             success: function(response){
-                cadastro(response)
                console.log('Resposta do servidor', response);
-               alert('Cadastrado com sucesso!!')
+               alert('Cadastro concluído com sucesso !');
+               window.location.href = "entre-cliente.html";
             },
             error: function(xhr, status, error){
                 var erro = xhr.status = ': ' + xhr.statusText;
@@ -22,4 +22,11 @@ $(document).ready(function(){
     });
 });
 
-       
+function a(response){
+     t = $('#alerta');
+     t.empty();
+     resp = (
+        '<p>' + response + '</p>'
+     )
+     t.append(resp);
+}
