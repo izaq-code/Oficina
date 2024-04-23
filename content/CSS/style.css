@@ -673,8 +673,12 @@ input.error {
     width: 800px;
     height: 500px;
     background-color: rgb(45, 45, 45);
-    transform: translate(30%, 10%);
-
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
 }
 
 #faixa1 {
@@ -755,7 +759,12 @@ input.error {
     width: 800px;
     height: 500px;
     background-color: rgb(45, 45, 45);
-    transform: translate(30%, 10%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
 }
 
 #faixa2 {
@@ -835,7 +844,12 @@ input.error {
     width: 800px;
     height: 500px;
     background-color: rgb(45, 45, 45);
-    transform: translate(50%, 40%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
 }
 
 
@@ -844,7 +858,12 @@ input.error {
     width: 816px;
     height: 517px;
     background-color: rgb(45, 45, 45);
-    transform: translate(48%, 37%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -1088,7 +1107,12 @@ input.error {
     width: 800px;
     height: 500px;
     background-color: rgb(45, 45, 45);
-    transform: translate(50%, 40%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
 }
 
 #faixa4 {
@@ -1273,7 +1297,12 @@ input.error {
     width: 800px;
     height: 500px;
     background-color: rgb(45, 45, 45);
-    transform: translate(30%, 10%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
 }
 
 #faixa5 {
@@ -1457,7 +1486,12 @@ input.error {
     width: 800px;
     height: 500px;
     background-color: rgb(45, 45, 45);
-    transform: translate(30%, 10%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
 }
 
 #faixa6 {
