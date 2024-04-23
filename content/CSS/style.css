@@ -1927,35 +1927,8 @@ td .titulo-solicitacao {
     text-align: left; 
 }
 
-#mostrar {
-    background-color: #FDFDFD;
-    border-radius: 10px;
-    padding: 20px 20px;
-}
-
 .titulo-solicitacao{
     font-weight: bolder;
-}
-
-.status_aberto{
-    background-color: rgb(209, 209, 209);
-    border-radius: 30px;
-    padding: 5px 15px;
-    font-size: 14px;
-    font-weight: bolder;
-    width: 8%;
-    text-align: center; 
-}
-
-.status_finalizado{
-    color: white;
-    font-weight: bolder;
-    background-color: rgb(97, 185, 97);
-    border-radius: 30px;
-    font-size: 14px;
-    width: 8%;
-    max-height: 1px;
-    text-align: center;
 }
 
 .card-solicitacoes-container {
@@ -1995,7 +1968,51 @@ td .titulo-solicitacao {
     font-size: 15px;
 }
 
-.solicitacao-icone{
-    position: absolute;
-    margin-top: -15px;
+
+#mostrar {
+    background-color: #FDFDFD;
+    border-radius: 10px;
+    padding: 20px;
+  overflow: auto; 
+}
+
+.status_aberto{
+    background-color: rgb(209, 209, 209);
+    border-radius: 30px;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: bolder;
+    width: 100%;
+    text-align: center; 
+}
+
+.status_finalizado{
+    color: white;
+    font-weight: bolder;
+    background-color: rgb(97, 185, 97);
+    border-radius: 30px;
+    font-size: 14px;
+    width: 100%;
+    max-height: 1px;
+    text-align: center;
+}
+
+
+.solicitacao-icone {
+
+    margin-right: 5px; 
+    display: inline-block; 
+    vertical-align: middle; 
+}
+
+
+.status_aberto, .status_finalizado {
+ 
+    display: inline-block; 
+    padding: 5px 10px; 
+    border-radius: 20px; 
+    font-size: 14px; 
+    font-weight: bold; 
+    text-align: center;
+ 
 }
