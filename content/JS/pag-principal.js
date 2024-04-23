@@ -17,14 +17,11 @@ function exibirDados() {
 
 function exibir(data) {
    
-    console.log(data);
     var solicitacao = data.solicitacao;
     var exibicao = data.exibicao;
 
     q = $('#informacao-aberta');
     q.empty();
-
-    console.log(solicitacao[0][0])
 
     q.append(solicitacao[0][0]);
 
@@ -33,6 +30,62 @@ function exibir(data) {
 
     w.append(solicitacao[0][1]);
 
+    //grafico
+
+    var aberta = solicitacao[0][0];
+
+    var concluida = solicitacao[0][1];
+
+    var labels = ['Aberta', 'Concluída'];
+
+    var valores = [aberta, concluida];
+
+    var graf = document.getElementById('grafico-solicitacoes').getContext('2d');
+
+    var grafico = new Chart(graf, {
+        type: 'doughnut',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'qte',
+                data: valores,
+                backgroundColor: [
+                    'rgba(255, 0, 0, 1)',
+                    'rgba(0, 255, 0, 1)',
+                ],
+                borderColor: [
+                    'rgba(255, 0, 0, 1)',
+                    'rgba(0, 255, 0, 1)',
+                ],
+                borderWidth: 0.5,
+            }]
+        },
+        options: {
+            responsive: false,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Solicitações'
+                }
+            },
+            layout: {
+                padding: {
+                    left: 50,
+                    right: 50,
+                    top: 0,
+                    bottom: 0
+                }
+            }
+
+        }
+    });
+
+
+
+    //cuidando do exibir
     t = $('#mostrar');
     t.empty();
 
@@ -70,7 +123,7 @@ function exibir(data) {
             "<td class='solicitacao-texto'>" + e['modelo'] + "</td>" +
             "<td class='" + statusClass + "'>" + e['status_veiculo'] + "</td>" +
             "<td>" + e['sinistro'] + "</td>" +
-            "<td class='solicitacao-detalhes'>Detalhes</td>" +
+            "<td class='solicitacao-detalhes' data-cod_veiculo='"+ e['cod_veiculo'] +"'>Detalhes</td>" +
             "</tr>"
         );
 
@@ -86,4 +139,14 @@ function exibir(data) {
     );
 
     t.append(adicionar);
+
+    $(".solicitacao-detalhes").click(function (event) {
+        event.preventDefault();
+
+        var codVeiculo = $(this).data('cod_veiculo');
+
+        localStorage.setItem('codVeiculo', codVeiculo);
+
+        window.location.href = '../HTML/vermais.html';
+    })
 }
