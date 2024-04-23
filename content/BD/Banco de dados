@@ -72,7 +72,17 @@ INSERT INTO carro (nome_proprietario, cpf_proprietario, fabricante, marca, model
 ('Mariana Lima', '777.888.999-00', 'Toyota', 'Corolla', 'XEI', 2.0, 'Gasolina', 'Automático', 'Cinza', 'JKL-7890', '34567890123456789', '50000', 'R$1800', 'Capô amassado, para-brisa trincado', 'colisão frontal', 'aberto'),
 ('Luiz Pereira', '333.222.111-00', 'Hyundai', 'HB20', 'Comfort Plus', 1.6, 'Flex', 'Manual', 'Vermelho', 'MNO-1234', '89012345678901234', '60000', 'R$1300', 'Espelho retrovisor quebrado', 'colisão lateral', 'aberto'),
 ('Carla Costa', '999.888.777-00', 'Renault', 'Sandero', 'Zen', 1.0, 'Flex', 'Manual', 'Prata', 'PQR-5678', '45678901234567890', '70000', 'R$1400', 'Porta traseira arranhada', 'colisão lateral', 'aberto');
-
+INSERT INTO carro (nome_proprietario, sinistro, cpf_proprietario, data_abertura, fabricante, marca, modelo, motorizacao, combustivel, cambio, cor, placa, chassi, hodometro, orcamento, pecas_danificadas) VALUES
+('João Silva', 'Sinistro1', '12345678901', '2024-01-05', 'Chevrolet', 'Onix', 'LT', 1000, 'Gasolina', 'Automático', 'Prata', 'ABC1234', '123ABC456DEF789', '50000', 'Troca do para-choque dianteiro', 'Para-choque dianteiro'),
+('Maria Souza', 'Sinistro2', '98765432109', '2024-02-15', 'Volkswagen', 'Gol', 'Trend', 1200, 'Flex', 'Manual', 'Preto', 'XYZ5678', '987XYZ654ZYX321', '60000', 'Reparo na lataria lateral', 'Lataria lateral'),
+('José Santos', 'Sinistro3', '45678901234', '2024-03-25', 'Ford', 'Ka', 'SE', 900, 'Flex', 'Manual', 'Branco', 'DEF9876', '654DEF321ABC987', '70000', 'Substituição do retrovisor esquerdo', 'Retrovisor esquerdo'),
+('Ana Oliveira', 'Sinistro4', '32109876543', '2024-04-10', 'Fiat', 'Uno', 'Drive', 1100, 'Flex', 'Manual', 'Vermelho', 'MNO5432', '321MNO654NOM987', '80000', 'Pintura do capô', 'Capô danificado'),
+('Pedro Costa', 'Sinistro5', '89012345678', '2024-05-20', 'Toyota', 'Corolla', 'XEI', 1600, 'Flex', 'Automático', 'Azul', 'QRS9876', '890QRS123RST456', '90000', 'Substituição do para-brisa', 'Para-brisa trincado'),
+('Carla Lima', 'Sinistro6', '23456789012', '2024-06-30', 'Renault', 'Sandero', 'RS', 1300, 'Flex', 'Automático', 'Amarelo', 'JKL5432', '567JKL890POI123', '100000', 'Reparo na porta traseira direita', 'Porta traseira direita amassada'),
+('Fernando Mendes', 'Sinistro7', '78901234567', '2024-07-05', 'Nissan', 'March', 'SL', 1400, 'Flex', 'Automático', 'Verde', 'MNO7654', '345MNO678PQR901', '110000', 'Troca do retrovisor direito', 'Retrovisor direito'),
+('Luciana Almeida', 'Sinistro8', '89023456789', '2024-08-12', 'Hyundai', 'HB20', 'Comfort', 1500, 'Flex', 'Automático', 'Prata', 'STU2345', '456STU789TUV012', '120000', 'Reparo na tampa do porta-malas', 'Tampa do porta-malas amassada'),
+('Marcos Oliveira', 'Sinistro9', '56789012345', '2024-09-18', 'Chevrolet', 'Cruze', 'LTZ', 1800, 'Flex', 'Automático', 'Branco', 'VWX5678', '567VWX901YZA234', '130000', 'Substituição do farol esquerdo', 'Farol esquerdo quebrado'),
+('Sandra Santos', 'Sinistro10', '01234567890', '2024-10-30', 'Volkswagen', 'Fox', 'Highline', 1400, 'Flex', 'Automático', 'Cinza', 'YZA3456', '678YZA901BCD234', '140000', 'Troca do para-choque traseiro', 'Para-choque traseiro');
 INSERT INTO RA (RA, nome_funcionario) VALUES 
 ('RA123', 'João Silva'),
 ('RA456', 'Maria Oliveira'),
