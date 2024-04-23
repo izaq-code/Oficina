@@ -25,6 +25,7 @@ CREATE TABLE login_seguradora (
 
 CREATE TABLE carro (
 cod_veiculo int  AUTO_INCREMENT PRIMARY KEY,
+id_personalizado varchar(10),
 nome_proprietario varchar(80),
 sinistro varchar(40),
 cpf_proprietario varchar(25),
