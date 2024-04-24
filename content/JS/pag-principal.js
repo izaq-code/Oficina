@@ -66,6 +66,9 @@ function exibir(data) {
             plugins: {
                 legend: {
                     position: 'bottom',
+                    labels: {
+                        color: 'white'
+                    }
                 },
                 title: {
                     display: false,
@@ -84,8 +87,6 @@ function exibir(data) {
         }
     });
 
-
-
     //cuidando do exibir
     t = $('#mostrar');
     t.empty();
@@ -94,6 +95,8 @@ function exibir(data) {
 
     var adicionar = (
         "<div class='card-solicitacoes-container'>" +
+        "<div class='titulo-solicitacoes'>Solicitações</div>" +
+        "<hr>" +
         "<table class='solicitacoes-table'>" +
         "<thead>" +
         "<tr>" +

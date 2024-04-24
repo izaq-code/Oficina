@@ -12,7 +12,12 @@
 
 <body id="pag-inicial">
     <div class="inicial">
-        <h1> Informações </h1>
+        <div class="solicitacoes-grafico">
+            <div class="grafico-titulo">Status solicitações</div>
+            <hr class="hr-grafico">
+            <canvas id="grafico-solicitacoes"></canvas>
+        </div>
+        <br> <br>
         <div class="informacoes"></div>
         <div class="solicitacoes">
             <div class="solicitacoes-inc"> Solicitações abertas</div>
@@ -24,12 +29,10 @@
             <h1 class="numero-informa" id="informacao-concluida"></h1>
             <!-- aqui aparecerão os numeros de solicitações abertas e concluídas -->
         </div>
-        <canvas class="solicitacoes" id="grafico-solicitacoes"></canvas>
     </div>
 
 
     <div class="solicitacoes-cabecalho">
-        <h1> Solicitações </h1>
     </div>
     <div id="mostrar">
         <!-- aqui serão exibidas as solicitações -->
