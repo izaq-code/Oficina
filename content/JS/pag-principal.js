@@ -132,7 +132,7 @@ function exibir(data) {
             "<td class='solicitacao-texto'>" + e['modelo'] + "</td>" +
             "<td>" + "<div class='" + statusClass + "'>" + e['status_veiculo'] + "</div></td>" + 
             "<td>" + e['sinistro'] + "</td>" + 
-            "<td class='solicitacao-detalhes'>Detalhes</td>" +
+            "<td class='solicitacao-detalhes' data-cod_veiculo='" + e['cod_veiculo'] +"'>Detalhes</td>" +
             "</tr>"
    
         );
