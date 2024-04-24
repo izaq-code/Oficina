@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", exibirDados);
 
-function exibirDados () {
+function exibirDados() {
     var cod_veiculo = localStorage.getItem('codVeiculo');
-    
+
     $.ajax({
         type: 'POST',
         url: '../PHP/vermais.php',
@@ -17,19 +17,37 @@ function exibirDados () {
     });
 }
 
-function exibir (data) {
+function exibir(data) {
 
+    //iterando sobre os elementos do array
     carro = data.carro;
+    resp = data.sim;
 
-     w =  $('#exibirmais');
-     w.empty();
 
-    for (var key in data[0]) {
+    w = $('#exibirmais');
+    w.empty();
+
+    for (var key in carro[0]) {
         if (!isNaN(key)) continue; // Ignorar chaves numéricas
         var divContent = "<div class='exibirtudo'>";
-         divContent += "<h3>" + key.replace('_', ' ') + ":</h3>" + "<p>" + data[0][key] + "</p>";
-         divContent += "</div>";
-         w.append(divContent);
+        divContent += "<h3>" + key.replace('_', ' ') + ":</h3>" + "<p>" + carro[0][key] + "</p>";
+        divContent += "</div>";
+        w.append(divContent);
+    }
+
+    if (resp === true) {
+
+        fotos = data.fotos;
+
+        for (var key in fotos[0]) {
+            if (!isNaN(key)) continue; // Ignorar chaves numéricas
+            var divContent = "<div class='exibirtudo'>";
+            divContent += "<h3>" + key.replace('_', ' ') + ":</h3>" + "<img src = '"+ fotos[0][key] +"'>";
+            divContent += "</div>";
+            w.append(divContent);
         }
-        
+
+
+    }
+
 }
