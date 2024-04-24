@@ -31,6 +31,37 @@ function exibir(data) {
 
     //grafico
 
+
+    function addNumbersToDoughnutChart(chart) {
+        var ctx = chart.ctx;
+        var labels = chart.data.labels;
+    
+        chart.data.datasets.forEach(function(dataset, datasetIndex) {
+            var meta = chart.getDatasetMeta(datasetIndex);
+            if (!meta.hidden) {
+                meta.data.forEach(function(element, index) {
+                    // Posição central da fatia
+                    var centerX = element._model.x;
+                    var centerY = element._model.y;
+    
+                    // Renderizar o número (valor) na fatia
+                    var data = dataset.data[index];
+                    var fontSize = 14;
+                    var fontStyle = 'normal';
+                    var fontFamily = 'Helvetica Neue';
+                    ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
+                    ctx.fillStyle = 'white';
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+    
+                    var padding = 5;
+                    var position = element.tooltipPosition();
+                    ctx.fillText(data, centerX + position.x + padding, centerY + position.y + padding);
+                });
+            }
+        });
+    }
+
     var aberta = solicitacao[0][0];
 
     var concluida = solicitacao[0][1];
@@ -39,8 +70,42 @@ function exibir(data) {
 
     var valores = [aberta, concluida];
 
+    // function drawNumbersOnDoughnutChart(chart) {
+    //     var ctx = chart.ctx;
+    //     var sum = 0;
+    //     chart.data.datasets.forEach(function(dataset) {
+    //         dataset.data.forEach(function(value) {
+    //             sum += value;
+    //         });
+    //     });
+    
+    //     chart.data.datasets.forEach(function(dataset, datasetIndex) {
+    //         var meta = chart.getDatasetMeta(datasetIndex);
+    //         if (!meta.hidden) {
+    //             meta.data.forEach(function(element, index) {
+    //                 // Posição central da fatia
+    //                 var position = element.tooltipPosition();
+    //                 var centerX = position.x;
+    //                 var centerY = position.y;
+    
+    //                 // Renderizar o número (valor) na fatia
+    //                 var data = dataset.data[index];
+    //                 var fontSize = 14;
+    //                 var fontStyle = 'normal';
+    //                 var fontFamily = 'Helvetica Neue';
+    //                 ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
+    //                 ctx.fillStyle = 'white';
+    //                 ctx.textAlign = 'center';
+    //                 ctx.textBaseline = 'middle';
+    
+    //                 ctx.fillText(data, centerX, centerY);
+    //             });
+    //         }
+    //     });
+    // }
+    
+    // Configuração do gráfico
     var graf = document.getElementById('grafico-solicitacoes').getContext('2d');
-
     var grafico = new Chart(graf, {
         type: 'doughnut',
         data: {
@@ -56,9 +121,10 @@ function exibir(data) {
                     'rgb(209, 209, 209)',
                     'rgb(126, 172, 104)',
                 ],
-                borderWidth:1,cutout:'80%',
-                circumference:180,
-               rotation:270,
+                borderWidth: 1,
+                cutout: '80%',
+                circumference: 180,
+                rotation: 270,
             }]
         },
         options: {
@@ -73,17 +139,31 @@ function exibir(data) {
                 title: {
                     display: false,
                     text: 'Solicitações'
-                }
+                },
             },
             layout: {
                 padding: {
                     left: 20,
                     right: 20,
-                    top: 0,
-                    bottom: 0
+                    top: 20,
+                    bottom: 20
+                }
+            },
+            animation: {
+                onProgress: function(animation) {
+                    var centerX = graf.canvas.width / 2;
+                    var centerY = graf.canvas.height / 1.55;
+                    var text = 'nao Estou aqui';
+                    var fontSize = 20;
+                    var fontStyle = 'normal';
+                    var fontFamily = 'Helvetica Neue';
+                    graf.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
+                    graf.fillStyle = 'white';
+                    graf.textAlign = 'center';
+                    graf.textBaseline = 'middle';
+                    graf.fillText(text, centerX, centerY);
                 }
             }
-
         }
     });
 
@@ -133,6 +213,7 @@ function exibir(data) {
             "<td>" + "<div class='" + statusClass + "'>" + e['status_veiculo'] + "</div></td>" + 
             "<td>" + e['sinistro'] + "</td>" + 
             "<td class='solicitacao-detalhes' data-cod_veiculo='" + e['cod_veiculo'] +"'>Detalhes</td>" +
+
             "</tr>"
    
         );
