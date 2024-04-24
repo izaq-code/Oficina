@@ -26,18 +26,52 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         Pecas_danificadas 'Peças danificadas',
         status_veiculo 'Status da solicitação'
     FROM carro
-    WHERE cod_veiculo = '$cod_veiculo'");
+    WHERE cod_veiculo = '$cod_veiculo';");
 
-    $resposta = array();
+    $carro = array();
+    // $filtro = array();
+    $fotos = array();
+    $sim = false;
 
     while ($row = mysqli_fetch_array($sql)) {
-        $resposta[] = $row;
+        $carro[] = $row;
+        $filtro = $row['Status da solicitação'];
     }
 
-    echo json_encode($resposta, JSON_UNESCAPED_SLASHES);
+    if ($filtro === 'Finalizado') {
+        $sim = true;
+        $segunda_consulta = mysqli_query($conexao, "SELECT 
+        chassi,
+        hodometro,
+        Frente,
+        Trasseira,
+        lateral_direita,
+        Lateral_esquerda,
+        Motor,
+        Pecas_danificadas
+    FROM carro_fotos
+    WHERE cod_veiculo = '$cod_veiculo';");
+
+        while ($row = mysqli_fetch_array($segunda_consulta)) {
+            $fotos[] = $row;
+        }
+
+        $eu = array(
+            'carro' => $carro,
+            'sim' => $sim,
+            'fotos' => $fotos
+        );
+    } else {
+        $eu = array(
+            'carro' => $carro,
+            'sim' => $sim
+        );
+    }
+
+
+    echo json_encode($eu, JSON_UNESCAPED_SLASHES);
 
 }
-
 
 
 ?>
