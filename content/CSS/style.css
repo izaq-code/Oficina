@@ -515,21 +515,21 @@
 
  @media screen and (max-width: 1600px) {
 
-    .header {
-        margin-right: 1400px;
-        width: 4%;
-    }
+     .header {
+         margin-right: 1400px;
+         width: 4%;
+     }
 
-    .hd {
-        margin-right: 1400px;
+     .hd {
+         margin-right: 1400px;
 
-    }
+     }
 
-    .hd1 {
-        margin-right: 1400px;
+     .hd1 {
+         margin-right: 1400px;
 
-    }
-}
+     }
+ }
 
 
  .nav {
@@ -1710,12 +1710,8 @@
      font-weight: bolder;
  }
 
- .solicitacoes {
-     background-color: #e6e6e6;
- }
-
  .solicitacoes-inc {
-     text-align: left;
+     text-align: center;
      font-size: 19px;
  }
 
@@ -1756,11 +1752,12 @@
      color: #717171;
      font-size: 15px;
      cursor: pointer;
+     border-radius: 20px;
  }
 
  #mostrar {
      background-color: #FDFDFD;
-     border-radius: 10px;
+     border-radius: 20px;
      padding: 20px;
      overflow: auto;
  }
@@ -1810,9 +1807,10 @@
 
  .solicitacoes-grafico {
      background-color: #181A1F;
-     border-radius: 10px;
+     border-radius: 20px;
      padding: 20px;
-     max-width: 400px;
+     max-width: 350px;
+     margin-bottom: 20px;
  }
 
  canvas {
@@ -1847,11 +1845,12 @@
 
  .solicitacoes {
      margin: 7px 10px 0px 0px;
-     background-color: #FDFDFD;
-     border-radius: 10px;
+     background-color: #cacaca80;
+     border-radius: 20px;
      padding: 20px 30px;
      text-align: center;
      display: inline-block;
+     min-width: 330px;
  }
 
  .numero-informa {
@@ -2207,8 +2206,7 @@
  }
 
  #texto-in {
-
-     position: absolute;
-     margin-top: -50px;
-     margin-left: 80px;
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 80px;
  }

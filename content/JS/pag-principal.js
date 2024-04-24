@@ -40,11 +40,9 @@ function exibir(data) {
             var meta = chart.getDatasetMeta(datasetIndex);
             if (!meta.hidden) {
                 meta.data.forEach(function(element, index) {
-                    // Posição central da fatia
                     var centerX = element._model.x;
                     var centerY = element._model.y;
     
-                    // Renderizar o número (valor) na fatia
                     var data = dataset.data[index];
                     var fontSize = 14;
                     var fontStyle = 'normal';
@@ -62,49 +60,13 @@ function exibir(data) {
         });
     }
 
-    var aberta = solicitacao[0][0];
-
-    var concluida = solicitacao[0][1];
+    var aberta = parseInt(solicitacao[0][0]);
+    var concluida = parseInt(solicitacao[0][1]);
 
     var labels = ['Aberta', 'Concluída'];
 
     var valores = [aberta, concluida];
-
-    // function drawNumbersOnDoughnutChart(chart) {
-    //     var ctx = chart.ctx;
-    //     var sum = 0;
-    //     chart.data.datasets.forEach(function(dataset) {
-    //         dataset.data.forEach(function(value) {
-    //             sum += value;
-    //         });
-    //     });
     
-    //     chart.data.datasets.forEach(function(dataset, datasetIndex) {
-    //         var meta = chart.getDatasetMeta(datasetIndex);
-    //         if (!meta.hidden) {
-    //             meta.data.forEach(function(element, index) {
-    //                 // Posição central da fatia
-    //                 var position = element.tooltipPosition();
-    //                 var centerX = position.x;
-    //                 var centerY = position.y;
-    
-    //                 // Renderizar o número (valor) na fatia
-    //                 var data = dataset.data[index];
-    //                 var fontSize = 14;
-    //                 var fontStyle = 'normal';
-    //                 var fontFamily = 'Helvetica Neue';
-    //                 ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
-    //                 ctx.fillStyle = 'white';
-    //                 ctx.textAlign = 'center';
-    //                 ctx.textBaseline = 'middle';
-    
-    //                 ctx.fillText(data, centerX, centerY);
-    //             });
-    //         }
-    //     });
-    // }
-    
-    // Configuração do gráfico
     var graf = document.getElementById('grafico-solicitacoes').getContext('2d');
     var grafico = new Chart(graf, {
         type: 'doughnut',
@@ -151,17 +113,33 @@ function exibir(data) {
             },
             animation: {
                 onProgress: function(animation) {
+                    var graf = animation.chart.ctx;
+                    var dataset = animation.chart.data.datasets[0];
+                    var valores = dataset.data;
+                    var dataAtual = aberta + concluida
+                    
                     var centerX = graf.canvas.width / 2;
                     var centerY = graf.canvas.height / 1.55;
-                    var text = 'nao Estou aqui';
-                    var fontSize = 20;
+                    var text = 'Solicitações totais';
+                    var fontSize = 14; 
                     var fontStyle = 'normal';
-                    var fontFamily = 'Helvetica Neue';
+                    var fontFamily = 'Poppins';
                     graf.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
                     graf.fillStyle = 'white';
                     graf.textAlign = 'center';
                     graf.textBaseline = 'middle';
                     graf.fillText(text, centerX, centerY);
+                    
+                    // Texto 2 - Quantidade de solicitações atuais
+                    var centerX2 = graf.canvas.width / 2;
+                    var centerY2 = graf.canvas.height / 1.95;
+                    var text2 = dataAtual;
+                    var fontSize2 = 45; 
+                    var fontStyle2 = 'bolder'; 
+                    var fontFamily2 = 'Poppins'; 
+                    graf.font = Chart.helpers.fontString(fontSize2, fontStyle2, fontFamily2); 
+                    graf.fillStyle = 'white'; 
+                    graf.fillText(text2, centerX2, centerY2);
                 }
             }
         }
