@@ -30,21 +30,22 @@ function exibir(data) {
     for (var key in carro[0]) {
         if (!isNaN(key)) continue; // Ignorar chaves numéricas
         var divContent = "<div class='exibirtudo'>";
-        divContent += "<h3>" + key.replace('_', ' ') + ":</h3>" + "<p>" + carro[0][key] + "</p>";
+        divContent += "<h3>" + key.replace('_', ' ') + ":</h3><br>" + "<p>" + carro[0][key] + "</p>";
         divContent += "</div>";
         w.append(divContent);
     }
 
     if (resp === true) {
-
+        ww = $('#exibirmaiss');
+        ww.empty();
         fotos = data.fotos;
 
         for (var key in fotos[0]) {
             if (!isNaN(key)) continue; // Ignorar chaves numéricas
-            var divContent = "<div class='exibirtudo'>";
-            divContent += "<h3>" + key.replace('_', ' ') + ":</h3>" + "<img src = '"+ fotos[0][key] +"'>";
+            var divContent = "<div class='exibirtuudo'>";
+            divContent += "<h3>" + key.replace('_', ' ') + ":</h3><br>" + "<img  src = '"+ fotos[0][key] +"'class='imgg'>";
             divContent += "</div>";
-            w.append(divContent);
+            ww.append(divContent);
         }
 
 
