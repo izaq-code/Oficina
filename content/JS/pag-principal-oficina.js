@@ -30,8 +30,6 @@ function exibir(data) {
     w.append(solicitacao[0][1]);
 
     //grafico
-
-
     function addNumbersToDoughnutChart(chart) {
         var ctx = chart.ctx;
         var labels = chart.data.labels;
@@ -40,11 +38,10 @@ function exibir(data) {
             var meta = chart.getDatasetMeta(datasetIndex);
             if (!meta.hidden) {
                 meta.data.forEach(function(element, index) {
-                    // Posição central da fatia
+
                     var centerX = element._model.x;
                     var centerY = element._model.y;
-    
-                    // Renderizar o número (valor) na fatia
+
                     var data = dataset.data[index];
                     var fontSize = 14;
                     var fontStyle = 'normal';
@@ -63,47 +60,11 @@ function exibir(data) {
     }
 
     var aberta = solicitacao[0][0];
-
     var concluida = solicitacao[0][1];
-
+    
     var labels = ['Aberta', 'Concluída'];
-
     var valores = [aberta, concluida];
 
-    // function drawNumbersOnDoughnutChart(chart) {
-    //     var ctx = chart.ctx;
-    //     var sum = 0;
-    //     chart.data.datasets.forEach(function(dataset) {
-    //         dataset.data.forEach(function(value) {
-    //             sum += value;
-    //         });
-    //     });
-    
-    //     chart.data.datasets.forEach(function(dataset, datasetIndex) {
-    //         var meta = chart.getDatasetMeta(datasetIndex);
-    //         if (!meta.hidden) {
-    //             meta.data.forEach(function(element, index) {
-    //                 // Posição central da fatia
-    //                 var position = element.tooltipPosition();
-    //                 var centerX = position.x;
-    //                 var centerY = position.y;
-    
-    //                 // Renderizar o número (valor) na fatia
-    //                 var data = dataset.data[index];
-    //                 var fontSize = 14;
-    //                 var fontStyle = 'normal';
-    //                 var fontFamily = 'Helvetica Neue';
-    //                 ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
-    //                 ctx.fillStyle = 'white';
-    //                 ctx.textAlign = 'center';
-    //                 ctx.textBaseline = 'middle';
-    
-    //                 ctx.fillText(data, centerX, centerY);
-    //             });
-    //         }
-    //     });
-    // }
-    
     // Configuração do gráfico
     var graf = document.getElementById('grafico-solicitacoes').getContext('2d');
     var grafico = new Chart(graf, {
@@ -201,21 +162,17 @@ function exibir(data) {
         }
         
         adicionar += (
-  
-
             "<tr class='card-solicitacoes' id='" + e['cod_veiculo'] + "'>" +
-            "<td>" + "<div class='solicitacao-icone'>" + iconeClass + "</div></td>" +
-            "<td class='solicitacao-texto'>" + 
-                "<div class='solicitacao-id'>" + e['id_personalizado'] + "</div>" + 
-                "<div class='solicitacao-numero'>Solicitação " + i + "</div>" +
-            "</td>" +
-            "<td class='solicitacao-texto'>" + e['modelo'] + "</td>" +
-            "<td>" + "<div class='" + statusClass + "'>" + e['status_veiculo'] + "</div></td>" + 
-            "<td>" + e['sinistro'] + "</td>" + 
-            "<td class='solicitacao-detalhes' data-cod_veiculo='" + e['cod_veiculo'] +"'>Detalhes</td>" +
-
+                "<td>" + "<div class='solicitacao-icone'>" + iconeClass + "</div></td>" +
+                "<td class='solicitacao-texto'>" + 
+                    "<div class='solicitacao-id'>" + e['id_personalizado'] + "</div>" + 
+                    "<div class='solicitacao-numero'>Solicitação " + i + "</div>" +
+                "</td>" +
+                "<td class='solicitacao-texto'>" + e['modelo'] + "</td>" +
+                "<td>" + "<div class='" + statusClass + "'>" + e['status_veiculo'] + "</div></td>" + 
+                "<td>" + e['sinistro'] + "</td>" + 
+                "<td class='solicitacao-detalhes' data-cod_veiculo='" + e['cod_veiculo'] +"'>Detalhes</td>" +
             "</tr>"
-   
         );
 
         i++;
@@ -231,11 +188,8 @@ function exibir(data) {
 
     $(".solicitacao-detalhes").click(function (event) {
         event.preventDefault();
-
         var codVeiculo = $(this).data('cod_veiculo');
-
         localStorage.setItem('codVeiculo', codVeiculo);
-
         window.location.href = '../HTML/vermais.html';
     })
 }
