@@ -27,7 +27,7 @@ function entrar(sucesso) {
     localStorage.setItem('codCareca', cod);
 
 
-    acesso === true ? window.location.href = "../HTML/pag-inicial.html" : g();
+    acesso === true ? window.location.href = "../HTML/pag-principal-oficina.html" : g();
 
 }
 
