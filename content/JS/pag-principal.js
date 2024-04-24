@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", exibirDados);
 //window.addEventListener("load", exibir);
 function exibirDados() {
     $(document).ready(function () {
-        console.log("DOMContentLoaded event fired!");
         $.ajax({
             type: 'POST',
             url: '../PHP/exibir.php',
@@ -124,7 +123,7 @@ function exibir(data) {
             "<tr class='card-solicitacoes' id='" + e['cod_veiculo'] + "'>" +
             "<td>" + "<div class='solicitacao-icone'>" + iconeClass + "</div></td>" +
             "<td class='solicitacao-texto'>" + 
-                "<div class='solicitacao-id'>" + "#323232" + "</div>" + 
+                "<div class='solicitacao-id'>" + e['id_personalizado'] + "</div>" + 
                 "<div class='solicitacao-numero'>Solicitação " + i + "</div>" +
             "</td>" +
             "<td class='solicitacao-texto'>" + e['modelo'] + "</td>" +
@@ -134,8 +133,6 @@ function exibir(data) {
             "</tr>"
    
         );
-
-        console.log(e['cod_veiculo']);
 
         i++;
     });
