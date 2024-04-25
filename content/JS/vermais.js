@@ -30,7 +30,7 @@ function exibir(data) {
     for (var key in carro[0]) {
         if (!isNaN(key)) continue; // Ignorar chaves numéricas
         var divContent = "<div class='exibirtudo'>";
-        divContent += "<h3>" + key.replace('_', ' ') + ":</h3><br>" + "<p>" + carro[0][key] + "</p>";
+        divContent += "<h3>" + key.replace('_', ' ') + ":</h3>  " + "<p>" + carro[0][key] + "</p>";
         divContent += "</div>";
         w.append(divContent);
     }
@@ -43,7 +43,7 @@ function exibir(data) {
         for (var key in fotos[0]) {
             if (!isNaN(key)) continue; // Ignorar chaves numéricas
             var divContent = "<div class='exibirtuudo'>";
-            divContent += "<h3>" + key.replace('_', ' ') + ":</h3><br>" + "<img  src = '"+ fotos[0][key] +"'class='imgg'>";
+            divContent +=  "<div class='img-conteiner'><img  src = '"+ fotos[0][key] +"'class='imgg'></div> <h3>" + key.replace('_', ' ') + ":</h3><br>" ;
             divContent += "</div>";
             ww.append(divContent);
         }
