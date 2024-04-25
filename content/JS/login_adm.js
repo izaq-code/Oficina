@@ -2,12 +2,20 @@ $(document).ready(function () {
     $('#entre_adm').submit(function (e) {
         e.preventDefault();
 
-        var formData = $(this).serialize();
+        var ra = $('#ra').prop('value');
+        var senha = $('#senha').prop('value');
+
+        var senhaHash = CryptoJS.SHA256(senha).toString(CryptoJS.enc.Hex);
+
+        var data = {
+            ra: ra,
+            senha: senhaHash,
+        };
 
         $.ajax({
             type: 'POST',
             url: '../PHP/login_adm.php',
-            data: formData,
+            data: data,
             dataType: 'json',
             success: function (sucesso) {
                 entrar(sucesso);
@@ -27,7 +35,7 @@ function entrar(sucesso) {
     localStorage.setItem('codCareca', cod);
 
 
-    acesso === true ? window.location.href = "../HTML/pag-principal-oficina.html" : g();
+    acesso === true ? window.location.href = "../HTML/pag-principal.html" : g();
 
 }
 
