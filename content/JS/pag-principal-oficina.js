@@ -4,7 +4,7 @@ function exibirDados() {
     $(document).ready(function () {
         $.ajax({
             type: 'POST',
-            url: '../PHP/exibir.php',
+            url: '../PHP/exibir_oficina.php',
             contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
             dataType: 'json',
             success: function (data) {
@@ -15,7 +15,7 @@ function exibirDados() {
 }
 
 function exibir(data) {
-   
+
     var solicitacao = data.solicitacao;
     var exibicao = data.exibicao;
 
@@ -29,41 +29,15 @@ function exibir(data) {
 
     w.append(solicitacao[0][1]);
 
-    //grafico
-    function addNumbersToDoughnutChart(chart) {
-        var ctx = chart.ctx;
-        var labels = chart.data.labels;
-    
-        chart.data.datasets.forEach(function(dataset, datasetIndex) {
-            var meta = chart.getDatasetMeta(datasetIndex);
-            if (!meta.hidden) {
-                meta.data.forEach(function(element, index) {
-
-                    var centerX = element._model.x;
-                    var centerY = element._model.y;
-
-                    var data = dataset.data[index];
-                    var fontSize = 14;
-                    var fontStyle = 'normal';
-                    var fontFamily = 'Helvetica Neue';
-                    ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
-                    ctx.fillStyle = 'white';
-                    ctx.textAlign = 'center';
-                    ctx.textBaseline = 'middle';
-    
-                    var padding = 5;
-                    var position = element.tooltipPosition();
-                    ctx.fillText(data, centerX + position.x + padding, centerY + position.y + padding);
-                });
-            }
-        });
-    }
+    //grafico 1
 
     var aberta = solicitacao[0][0];
     var concluida = solicitacao[0][1];
-    
+
     var labels = ['Aberta', 'Concluída'];
     var valores = [aberta, concluida];
+
+
 
     // Configuração do gráfico
     var graf = document.getElementById('grafico-solicitacoes').getContext('2d');
@@ -111,7 +85,7 @@ function exibir(data) {
                 }
             },
             animation: {
-                onProgress: function(animation) {
+                onProgress: function (animation) {
                     var centerX = graf.canvas.width / 2;
                     var centerY = graf.canvas.height / 1.55;
                     var text = 'nao Estou aqui';
@@ -127,6 +101,64 @@ function exibir(data) {
             }
         }
     });
+
+    //grafico 2 (seguradoras)
+
+    var seguradoras = data.segura_nomes;
+    console.log(seguradoras);
+    var seguradoras_num = data.segura_numeros;
+     console.log(seguradoras_num);
+    
+    var labels = [seguradoras];
+    var valores = [seguradoras_num];
+
+    var graf1 = document.getElementById('grafico-seguradora').getContext('2d');
+    var grafico_seguradora = new Chart(graf1, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Quantidade',
+                data: valores,
+                backgroundColor: [
+                    'rgb(209, 209, 209)',
+                    'rgb(126, 172, 104)',
+                ],
+                borderColor: [
+                    'rgb(209, 209, 209)',
+                    'rgb(126, 172, 104)',
+                ],
+                borderWidth: 1,
+                cutout: '80%',
+                circumference: 180,
+                rotation: 270,
+            }]
+        },
+        options: {
+            responsive: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        color: 'white'
+                    }
+                },
+                title: {
+                    display: false,
+                    text: 'Solicitações'
+                },
+            },
+            layout: {
+                padding: {
+                    left: 20,
+                    right: 20,
+                    top: 20,
+                    bottom: 20
+                }
+            }
+        }
+    });
+
 
     //cuidando do exibir
     t = $('#mostrar');
@@ -146,7 +178,7 @@ function exibir(data) {
         "<tbody>"
     );
 
-    exibicao.forEach(function(e) {
+    exibicao.forEach(function (e) {
         let statusClass = '';
         if (e['status_veiculo'] === 'aberto') {
             statusClass = 'status_aberto';
@@ -160,18 +192,18 @@ function exibir(data) {
         } else if (e['status_veiculo'] === 'Finalizado') {
             iconeClass = '<img class="icon" src="../img/Finalizado.png"></img>';
         }
-        
+
         adicionar += (
             "<tr class='card-solicitacoes' id='" + e['cod_veiculo'] + "'>" +
-                "<td>" + "<div class='solicitacao-icone'>" + iconeClass + "</div></td>" +
-                "<td class='solicitacao-texto'>" + 
-                    "<div class='solicitacao-id'>" + e['id_personalizado'] + "</div>" + 
-                    "<div class='solicitacao-numero'>Solicitação " + i + "</div>" +
-                "</td>" +
-                "<td class='solicitacao-texto'>" + e['modelo'] + "</td>" +
-                "<td>" + "<div class='" + statusClass + "'>" + e['status_veiculo'] + "</div></td>" + 
-                "<td>" + e['sinistro'] + "</td>" + 
-                "<td class='solicitacao-detalhes' data-cod_veiculo='" + e['cod_veiculo'] +"'>Detalhes</td>" +
+            "<td>" + "<div class='solicitacao-icone'>" + iconeClass + "</div></td>" +
+            "<td class='solicitacao-texto'>" +
+            "<div class='solicitacao-id'>" + e['id_personalizado'] + "</div>" +
+            "<div class='solicitacao-numero'>Solicitação " + i + "</div>" +
+            "</td>" +
+            "<td class='solicitacao-texto'>" + e['modelo'] + "</td>" +
+            "<td>" + "<div class='" + statusClass + "'>" + e['status_veiculo'] + "</div></td>" +
+            "<td>" + e['sinistro'] + "</td>" +
+            "<td class='solicitacao-detalhes' data-cod_veiculo='" + e['cod_veiculo'] + "'>Detalhes</td>" +
             "</tr>"
         );
 
