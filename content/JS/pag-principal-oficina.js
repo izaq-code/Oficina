@@ -103,14 +103,9 @@ function exibir(data) {
     });
 
     //grafico 2 (seguradoras)
-
-    var seguradoras = data.segura_nomes;
-    console.log(seguradoras);
-    var seguradoras_num = data.segura_numeros;
-     console.log(seguradoras_num);
     
-    var labels = [seguradoras];
-    var valores = [seguradoras_num];
+    var labels = data.segura_nomes;
+    var valores = data.segura_numeros;
 
     var graf1 = document.getElementById('grafico-seguradora').getContext('2d');
     var grafico_seguradora = new Chart(graf1, {
