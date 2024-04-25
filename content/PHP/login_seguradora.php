@@ -1,31 +1,30 @@
 <?php
 
 session_start();
-
 include_once ("conexao.php");
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
-
     $cnpj = $_POST['cnpj'];
     $senha = $_POST['senha'];
 
-    $sql = "SELECT cod_seguradora FROM login_seguradora
-     WHERE cnpj = '$cnpj'
-     and senha = '$senha'";
-}
+    $cnpj_hash = $cnpj;
+    $senha_hash = $senha;
 
-$resultado = mysqli_query($conexao, $sql);
+    $sql = "SELECT cnpj, senha FROM login_seguradora 
+    WHERE cnpj = '$cnpj_hash' AND senha = '$senha_hash'";
+    $result = $conexao->query($sql);
 
-if (mysqli_num_rows($resultado) > 0) {
+    if ($result->num_rows > 0) {
 
-    $sim = true;
-    while ($row = mysqli_fetch_array($resultado)) {
-        $cod = $row['cod_seguradora'];
+        echo json_encode(true);
+        while ($row = mysqli_fetch_array($resultado)) {
+            $cod = $row['cod_seguradora'];
+        }
+        $_SESSION['cod_seguradora'] = $cod;
+
+    } else {
+
+        echo json_encode(false);
     }
-    $_SESSION['cod_seguradora'] = $cod;
-
-} else {
-    $sim = false;
 }
-echo json_encode($sim);
 ?>
