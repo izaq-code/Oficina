@@ -2,7 +2,17 @@ $(document).ready(function(){
     $('#cadastrar').submit(function(e){
         e.preventDefault();
 
-        var formData = $(this).serialize();
+        var cnpj = $('[id="cnpj"]').val();
+        var senha = $('[id="senha"]').val();
+       
+        var senhaHash = CryptoJS.SHA256(senha).toString(CryptoJS.enc.Hex);
+        
+        var cnpjHash = CryptoJS.SHA256(cnpj).toString(CryptoJS.enc.Hex);
+        
+        var formData = {
+            cnpj: cnpjHash,
+            senha: senhaHash,
+        };
 
         $.ajax({
             type: 'POST',
@@ -31,5 +41,3 @@ function a(){
     )
     t.append(resp);
 }
-
-       
