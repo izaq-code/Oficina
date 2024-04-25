@@ -44,7 +44,9 @@ chassi Varchar(120),
 hodometro Varchar(120),
 Orcamento Varchar(120),
 Pecas_danificadas Varchar(120),
-status_veiculo varchar(15)
+status_veiculo varchar(15),
+cod_seguradora int,
+FOREIGN KEY (cod_seguradora) REFERENCES login_seguradora(cod_seguradora)
 );
 
 CREATE TABLE carro_fotos (
