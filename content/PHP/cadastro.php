@@ -1,8 +1,16 @@
 <?php
 
+session_start();
 include_once ('conexao.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    if(isset($_SESSION['cod_seguradora'])){
+        $cod_seguradora = $_SESSION['cod_seguradora'];
+    } else {
+        header("Location: ../HTML/entre-cliente.html ");
+        die();
+    }
 
     $nome_proprietario = $_POST['nome_proprietario'];
     $cpf_proprietario = $_POST['cpf_proprietario'];
@@ -17,13 +25,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $chassi = $_POST['chassi'];
     $hodometro = $_POST['hodometro'];
     $sinistro = $_POST['sinistro'];
-    $orcamento = $_POST['orcamento'];
-    $pecas_danificadas = $_POST['pecas_danificadas'];
 
-    $sql = "INSERT INTO carro (nome_proprietario, cpf_proprietario, fabricante, marca,
-     modelo, motorizacao, combustivel, cambio, cor, placa, chassi, hodometro, sinistro, orcamento, pecas_danificadas, status_veiculo) 
-        VALUES ('$nome_proprietario', '$cpf_proprietario', '$fabricante', '$marca', '$modelo', $motorizacao,
-         '$combustivel', '$cambio', '$cor', '$placa', '$chassi', '$hodometro', '$sinistro', '$orcamento', '$pecas_danificadas', 'aberto')";
+    $sql = "INSERT INTO carro (nome_proprietario, cpf_proprietario, data_abertura, fabricante, marca,
+     modelo, motorizacao, combustivel, cambio, cor, placa, chassi, hodometro, sinistro, status_veiculo, cod_seguradora) 
+        VALUES ('$nome_proprietario', '$cpf_proprietario', curdate(), '$fabricante', '$marca', '$modelo', $motorizacao,
+         '$combustivel', '$cambio', '$cor', '$placa', '$chassi', '$hodometro', '$sinistro', 'aberto', '$cod_seguradora')";
 
 
 
