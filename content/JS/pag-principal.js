@@ -24,48 +24,32 @@ function exibir(data) {
 
     q.append(solicitacao[0][0]);
 
-    w = $('#informacao-concluida');
+    w = $('#informacao-em-analize');
     w.empty();
 
     w.append(solicitacao[0][1]);
 
+    e = $('#informacao-recusada');
+    e.empty();
+
+    e.append(solicitacao[0][2]);
+
+    i = $('#informacao-concluida');
+    i.empty();
+
+    i.append(solicitacao[0][3]);
+
     //grafico
 
-
-    function addNumbersToDoughnutChart(chart) {
-        var ctx = chart.ctx;
-        var labels = chart.data.labels;
-    
-        chart.data.datasets.forEach(function(dataset, datasetIndex) {
-            var meta = chart.getDatasetMeta(datasetIndex);
-            if (!meta.hidden) {
-                meta.data.forEach(function(element, index) {
-                    var centerX = element._model.x;
-                    var centerY = element._model.y;
-    
-                    var data = dataset.data[index];
-                    var fontSize = 14;
-                    var fontStyle = 'normal';
-                    var fontFamily = 'Helvetica Neue';
-                    ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
-                    ctx.fillStyle = 'white';
-                    ctx.textAlign = 'center';
-                    ctx.textBaseline = 'middle';
-    
-                    var padding = 5;
-                    var position = element.tooltipPosition();
-                    ctx.fillText(data, centerX + position.x + padding, centerY + position.y + padding);
-                });
-            }
-        });
-    }
-
     var aberta = parseInt(solicitacao[0][0]);
-    var concluida = parseInt(solicitacao[0][1]);
+    var emAnalize = parseInt(solicitacao[0][1]);
+    var concluida = parseInt(solicitacao[0][2]);
+    var recusada = parseInt(solicitacao[0][3]);
 
-    var labels = ['Aberta', 'Concluída'];
 
-    var valores = [aberta, concluida];
+    var labels = ['Aberta', 'Em análize', 'Concluida', 'Recusada'];
+
+    var valores = [aberta, emAnalize, concluida, recusada];
     
     var graf = document.getElementById('grafico-solicitacoes').getContext('2d');
     var grafico = new Chart(graf, {
@@ -78,10 +62,14 @@ function exibir(data) {
                 backgroundColor: [
                     'rgb(209, 209, 209)',
                     'rgb(126, 172, 104)',
+                    'rgb(126, 172, 104)',
+                    'rgb(126, 172, 104)'
                 ],
                 borderColor: [
                     'rgb(209, 209, 209)',
                     'rgb(126, 172, 104)',
+                    'rgb(126, 172, 104)',
+                    'rgb(126, 172, 104)'
                 ],
                 borderWidth: 1,
                 cutout: '80%',
@@ -116,7 +104,7 @@ function exibir(data) {
                     var graf = animation.chart.ctx;
                     var dataset = animation.chart.data.datasets[0];
                     var valores = dataset.data;
-                    var dataAtual = aberta + concluida
+                    var dataAtual = aberta + emAnalize + concluida + recusada
                     
                     var centerX = graf.canvas.width / 2;
                     var centerY = graf.canvas.height / 1.55;
@@ -165,15 +153,15 @@ function exibir(data) {
 
     exibicao.forEach(function(e) {
         let statusClass = '';
-        if (e['status_veiculo'] === 'aberto') {
+        if (e['status_veiculo'] === 'Aberto') {
             statusClass = 'status_aberto';
         } else if (e['status_veiculo'] === 'Finalizado') {
             statusClass = 'status_finalizado';
         }
 
         let iconeClass = '';
-        if (e['status_veiculo'] === 'aberto') {
-            iconeClass = '<img class="icon" src="../img/aberto.png"></img>';
+        if (e['status_veiculo'] === 'Aberto') {
+            iconeClass = '<img class="icon" src="../img/Aberto.png"></img>';
         } else if (e['status_veiculo'] === 'Finalizado') {
             iconeClass = '<img class="icon" src="../img/Finalizado.png"></img>';
         }
@@ -188,7 +176,7 @@ function exibir(data) {
                 "<div class='solicitacao-numero'>Solicitação " + i + "</div>" +
             "</td>" +
             "<td class='solicitacao-texto'>" + e['modelo'] + "</td>" +
-            "<td>" + "<div class='" + statusClass + "'>" + e['status_veiculo'] + "</div></td>" + 
+            "<td>" + "<div class='" + statusClass + "'>" + e['status_veiculo'].replace('Finalizado', 'Em análize') + "</div></td>" +
             "<td>" + e['sinistro'] + "</td>" + 
             "<td class='solicitacao-detalhes' data-cod_veiculo='" + e['cod_veiculo'] +"'>Detalhes</td>" +
 
