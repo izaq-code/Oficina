@@ -30,14 +30,14 @@ $(document).ready(function(){
 
 function entrar(response){
     let acesso = response;
-    acesso === true ? window.location.href = "../HTML/pag-principal.html" : a();
+    acesso === true ? window.location.href = "../../index.html" : a();
 } 
 
 function a(){
     t = $('#resposta_seguradora');
     t.empty();
     resp = (
-        '<p> CNPJ ou senha não encontrados, tente novamente !</p>'
+        'CNPJ e/ou senha incorretos. Tente novamente!</p>'
     )
     t.append(resp);
 }

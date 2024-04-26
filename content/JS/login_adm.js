@@ -35,7 +35,7 @@ function entrar(sucesso) {
     localStorage.setItem('codCareca', cod);
 
 
-    acesso === true ? window.location.href = "../HTML/pag-principal-oficina.html" : g();
+    acesso === true ? window.location.href = "../HTML/pag-principal.html" : g();
 
 }
 
@@ -43,7 +43,7 @@ function g(){
     t = $('#resposta_login');
     t.empty();
     resp = (
-        '<p>ra ou senha não encontrados, tente novamente !</p>'
+        'Ra e/ou senha incorretos. Tente novamente!'
     )
     t.append(resp);
 }
