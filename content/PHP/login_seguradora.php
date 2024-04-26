@@ -10,14 +10,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $cnpj_hash = $cnpj;
     $senha_hash = $senha;
 
-    $sql = "SELECT cnpj, senha FROM login_seguradora 
+    $sql = "SELECT cod_seguradora FROM login_seguradora 
     WHERE cnpj = '$cnpj_hash' AND senha = '$senha_hash'";
     $result = $conexao->query($sql);
 
     if ($result->num_rows > 0) {
 
         echo json_encode(true);
-        while ($row = mysqli_fetch_array($resultado)) {
+        while ($row = mysqli_fetch_array($result)) {
             $cod = $row['cod_seguradora'];
         }
         $_SESSION['cod_seguradora'] = $cod;
