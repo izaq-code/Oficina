@@ -12,40 +12,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </head>
 <body id="body1">
-    
-<div id="conteiner6">
-    <div class="header6">
-      <div class="left-div6">
-        <form id="cadastrar" >
-            <div class="form-container6">
-            <div class="input-group6">
-                <label for="email">CNPJ:</label>
-                <input  id="cnpj" name="cnpj" placeholder="" required>
-                <label for="email">Senha:</label> 
-                <input id="senha" name="senha" type="password" placeholder="" required>
-                <span class="bi bi-eye-fill" id="view1" onclick="viewsenha('senha', 'view1')"></span><br>
+    <div class="container-entrar">
+        <form id="cadastrar">
+            <div class="form-entrar">
+                <div class="login-titulo">Entre</div>
+                <div class="input">
+                    <input  id="cnpj" name="cnpj" placeholder="" required>
+                    <label for="email">CNPJ</label>
+                </div>
+                <div class="input">
+                    <input id="senha" name="senha" type="password" placeholder="" required>
+                    <label for="email">Senha</label> 
+                    <!-- <span class="bi bi-eye-fill" id="view1" onclick="viewsenha('senha', 'view1')"></span><br> -->
+                </div>
                 <div id="resposta_seguradora"> </div>
-                <a href="../../index.html"><button type="sumbit" class="button6">ENTRE</button></a>
-        </div>
-        </div>
+                <a href="../../index.html"><button type="sumbit" class="botao-entrar-login">Entre</button></a>
+                <div class="naotemconta">Ainda não possui conta?<a class="cadastrarse" href="crie-cliente.html"> Cadastre-se aqui!</a></div>
+            </div>        
         </form>
     </div>
-    <div class="right-div6">
-        <div class="text-container6">
-        <h1>Seja bem-vindo,<br> aqui a excelência se encontra com a expertise para cuidar do seu veículo com carinho e profissionalismo!</h1>
-    </div>
-</div>
-    
-
-    </div>
-<div id="faixa6">
-    <div class="admin-login6">
-        <a href="bem-vindo-cliente.html"><i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-      <h1>Entrando na conta!</h1>
-</div>
-
-</div>
 
 <script src="../JS/login_seguradora.js"></script>
 <script src="../JS/view.js"></script>

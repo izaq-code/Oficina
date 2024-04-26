@@ -13,42 +13,30 @@
 
 </head>
 <body id="body1">
-<div id="box3"></div>
-<div id="conteiner3">
-    <div class="header3">
-        <div class="left-div3">
-            <form id="cadastro" >
-                <div class="form-container3">
-                    <div class="input-group3">
-                        <label for="email">Ra:</label>  
-                        <input type="text" name="ra" id="ra" placeholder="" required>
-                        <label for="senha">Senha:</label>
-                        <input id="senha" name="senha" type="password" placeholder="" required>
-                        <span class="bi bi-eye-fill" id="view1" onclick="viewsenha('senha', 'view1')"></span>
-                        <label for="confirmarSenha">Confirme a senha:</label>
-                        <input id="confirmarSenha" type="password" placeholder="" required>
-                        <span class="bi bi-eye-fill" id="view2" onclick="viewsenha('confirmarSenha', 'view2')"></span>
-                        <button class="button3" onclick="verificarSenhas()">CRIE</button>
-                        <p id="alerta"></p>
-                    </div>
+    <div class="container-entrar">
+        <form id="cadastro">
+            <div class="form-entrar">
+                <div class="login-titulo">Cadastre-se</div>
+                <div class="input">
+                    <input type="text" name="ra" id="ra" placeholder="" required>
+                    <label for="email">RA</label>  
                 </div>
-            </form>
-        </div>
-        <div class="right-div3">
-            <div class="text-container3">
-                <h1>Apenas funcionários<br>
-                    podem cadastrar nessa página!</h1>
+                <div class="input">
+                    <input id="senha" name="senha" type="password" placeholder="" required>
+                    <label for="senha">Senha</label>
+                    <!-- <span class="bi bi-eye-fill" id="view1" onclick="viewsenha('senha', 'view1')"></span> -->
+                </div>
+                <div class="input">
+                    <input id="confirmarSenha" type="password" placeholder="" required>
+                    <label for="confirmarSenha">Confirme a senha</label>
+                    <!-- <span class="bi bi-eye-fill" id="view2" onclick="viewsenha('confirmarSenha', 'view2')"></span> -->
+                </div>  
+                <p id="alerta"></p>
+                <button class="botao-entrar-login" onclick="verificarSenhas()">Crie sua conta</button>
+                <div class="naotemconta">Já possui conta?<a class="cadastrarse" href="entre-adm.html"> Entre aqui!</a></div>
             </div>
-        </div>
-    </div>
-    <div id="faixa3">
-        <div class="admin-login3">
-            <a href="bem-vindo-adm.html"><i class="fa-solid fa-arrow-left"></i></a>
-        </div>
-        <h1>Criando a conta!</h1>
-    </div>
-</div>
-
+        </form>
+    </div>    
 
 <script src="../JS/logi.js"></script> <!-- Vincula o arquivo JavaScript externo -->
 <script src="../JS/cadastro_adm.js"></script>

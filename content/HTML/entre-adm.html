@@ -15,25 +15,28 @@
 </head>
 
 <body id="body1">
-
-    <form id="entre_adm">
-        <div class="form-entrar">
-            <div class="input">
-                <input id="ra" name="ra" type="text" placeholder="" required>
-                <label for="email">RA</label>
+    <div class="container-entrar">
+        <form id="entre_adm">
+            <div class="form-entrar">
+                <div class="login-titulo">Entre</div>
+                <div class="input">
+                    <input id="ra" name="ra" type="text" placeholder="" required>
+                    <label for="email">RA</label>
+                </div>
+                <div class="input">
+                    <input id="senha" name="senha" type="password" placeholder="" required>
+                    <label for="email">Senha</label>
+                    <!-- <span class="bi bi-eye-fill" id="view1" onclick="viewsenha('senha', 'view1')"></span> -->
+                </div>
+                <div id="resposta_login"></div>
+                <button type="submit" class="botao-entrar-login">Entre</button>
+                <div class="naotemconta">Ainda não possui conta?<a class="cadastrarse" href="crie-adm.html"> Cadastre-se aqui!</a></div>
             </div>
-            <div class="input">
-                <input id="senha" name="senha" type="password" placeholder="" required>
-                <label for="email">Senha</label>
-                <span class="bi bi-eye-fill" id="view1" onclick="viewsenha('senha', 'view1')"></span>
-            </div>
-            <div id="resposta_login"></div>
-            <button type="submit" class="botao-entrar-login">Entre</button>
-        </div>
-    </form>
-</body>
+        </form>
+    </div>
 
 <script src="../JS/login_adm.js"></script>
 <script src="../JS/view.js"></script>
 
+</body>
 </html>
