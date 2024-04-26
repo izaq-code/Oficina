@@ -7,9 +7,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     FROM carro
 ");
 
-    $informacoes = mysqli_query($conexao, "SELECT SUM(CASE WHEN  status_veiculo = 'aberto' THEN 1 ELSE 0 END) as Aberto,
-                                            SUM(CASE WHEN status_veiculo = 'Finalizado' THEN 1 ELSE 0 END) as Finalizado
-                                            FROM carro;    
+    $informacoes = mysqli_query($conexao, "SELECT SUM(CASE WHEN  status_veiculo = 'Aberto' THEN 1 ELSE 0 END),
+                                            SUM(CASE WHEN status_veiculo = 'Finalizado' THEN 1 ELSE 0 END),
+                                            SUM(CASE WHEN status_veiculo = 'Recusado' THEN 1 ELSE 0 END),
+                                            SUM(CASE WHEN status_veiculo = 'Aceito' THEN 1 ELSE 0 END)
+                                            FROM carro;   
 ");
 
     $seguradoras = mysqli_query($conexao, "SELECT login_seguradora.nome 'Seguradora', COUNT(carro.cod_seguradora) AS total_carros 

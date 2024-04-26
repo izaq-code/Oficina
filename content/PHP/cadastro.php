@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO carro (nome_proprietario, cpf_proprietario, data_abertura, fabricante, marca,
      modelo, motorizacao, combustivel, cambio, cor, placa, chassi, hodometro, sinistro, status_veiculo, cod_seguradora) 
         VALUES ('$nome_proprietario', '$cpf_proprietario', curdate(), '$fabricante', '$marca', '$modelo', $motorizacao,
-         '$combustivel', '$cambio', '$cor', '$placa', '$chassi', '$hodometro', '$sinistro', 'aberto', '$cod_seguradora')";
+         '$combustivel', '$cambio', '$cor', '$placa', '$chassi', '$hodometro', '$sinistro', 'Aberto', '$cod_seguradora')";
 
 
 
