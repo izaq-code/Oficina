@@ -35,7 +35,7 @@ function entrar(sucesso) {
     localStorage.setItem('codCareca', cod);
 
 
-    acesso === true ? window.location.href = "../HTML/pag-principal.html" : g();
+    acesso === true ? window.location.href = "../HTML/pag-principal-oficina.html" : g();
 
 }
 
