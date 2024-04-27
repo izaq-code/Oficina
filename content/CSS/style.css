@@ -2,13 +2,14 @@
  /*FORMULARIO*/
  @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
+ html,
+ body {
+     height: 100%;
+     margin: 0;
+     padding: 0;
+ }
 
-* {
+ * {
      font-family: 'poppins', sans-serif;
      margin: 0;
      padding: 0;
@@ -24,7 +25,7 @@ html, body {
      justify-content: center;
      min-height: 100vh;
      overflow: hidden;
-     background: white;
+    background-color: #f1f1f0;
  }
 
  ::selection {
@@ -425,202 +426,153 @@ html, body {
      margin-right: 220px;
      width: 200px;
  }
-/* ISAQUE */
+
+ /* ISAQUE */
  /* NAVBAR */
  :root {
-    --main-color: #121212;
-    --segunda-color: #ffffff;
-    --text-color: #e8edec;
-    --bg-color-: #000000;
-    --tran-all: 0.2s all linear;
-}
+     --main-color: #121212;
+     --second-color: #ffffff;
+     --text-color: #e8edec;
+     --nav-bg: #000000;
+     --tran-all: 0.2s all linear;
+ }
 
-.nav.active {
-    border-radius: 10px;
-    position: fixed;
-    background-color: var(--main-color);
-    width: 12%;
-    height: 95%;
-    left: 20px;
-    top: 20px;
-    transition: var(--tran-all);
-    z-index: 1;
-}
+ .nav {
+     border-radius: 10px;
+     position: fixed;
+     background-color: var(--main-color);
+     width: 80px;
+     height: 95%;
+     left: 20px;
+     top: 20px;
+     transition: var(--tran-all);
+     z-index: 1;
+ }
 
-.nav  li {
-  text-decoration: none;
-  list-style-type: none;
-  margin-top: 100px;
-}
+ .nav.active {
+     width: 250px;
+     /* largura quando ativo */
+ }
 
-.nav{
+ .navbar-lista {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     display: grid;
+     gap: 1rem;
+ }
 
-   border-radius: 10px;
-    position: fixed;
-    background-color: var(--main-color);
-    width: 3%;
-    height: 95%;
-    left: 20px;
-    top: 20px;
-    transition: var(--tran-all);
-}
+ .navbar-lista a {
+     color: rgb(255, 255, 255);
+     display: none;
+     text-decoration: none;
+     padding: 1rem 2rem;
 
-
-#bnte.active {
-    cursor: pointer;
-    border-radius: 5px 0px 0px 5px;
-    position: absolute;
-    top: 30px;
-    left: 90%;
-    width: 10%;
-    height: 5%;
-    background-color: grey;
-}
-
-#bnte {
-   cursor: pointer;
-   border-radius: 5px 0px 0px 5px;
-   position: absolute;
-   top: 30px;
-   left: 60%;
-   width:40%;
-   height: 5%;
-   background-color: grey;
-}
+ }
 
 
-#bb {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(0, 0, 0);
-}
+ .navbar-lista li {
+     margin-top: 100px;
+     color: white;
+     position: relative;
+     margin-left: 30px;
 
-.navbar-lista {
-   margin-top: 30px;
-}
+ }
 
-#con {
-    font-size: 20px;
-    border-radius: 13px;
-    color: var(--segunda-color);
-    text-decoration: none;
-    transition: var(--tran-all);
-    margin-top: -20px;
-}
-
-#con:hover {
-    background-color: #313131;
-}
-
-#on {
-    font-size: 20px;
-    border-radius: 13px;
-    color: var(--segunda-color);
-    text-decoration: none;
-    transition: var(--tran-all);
-    margin-top: -90px;
-}
-
-#on:hover {
-    background-color: #313131;
-}
-
-#cons {
-    margin-left: 10px;
-    font-size: 15px;
-    border-radius: 13px;
-    color: var(--segunda-color);
-    text-decoration: none;
-    transition: var(--tran-all);
-    margin-top: 109px;
-}
+ .navbar-lista li:hover a,
+ .navbar-lista li:hover {
+     color: rgb(0, 0, 0);
+     transition: 0s all linear;
+ }
 
 
-#con:hover,
-#on:hover,
-#cons:hover {
-    background-color: #313131;
-}
+ .navbar-lista li:hover {
 
-#on::after {
-    font-weight: bolder;
-    content: "Home";
-    position: absolute;
-    bottom: 1px;
-    left: 50%;
-    transform: translateX(80%);
-    background-color: rgba(255, 255, 255);
-    color: var(--bg-color-);
-    padding: 5px 10px;
-    border-radius: 5px;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s, visibility 0.3s;
-    box-shadow: 0 0 5px var(--bg-color-);
-    font-size: 15px;
-}
+     background-color: white;
+     border-radius: 50px 0px 0px 50px;
+     padding-left: 10px;
 
-#on:hover::after {
-    visibility: visible;
-    opacity: 1;
-}
+ }
 
-input.error {
-    border: 1px solid red;
-}
 
-.foto-container.error {
-    border: 1px solid red;
-    padding: 10px;
-}
 
-#con::after {
-    font-weight: bolder;
-    content: "Formulario";
-    position: absolute;
-    bottom: 1px;
-    left: -25%;
-    transform: translateX(80%);
-    background-color: rgba(255, 255, 255);
-    color: var(--bg-color-);
-    padding: 5px 10px;
-    border-radius: 5px;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s, visibility 0.3s;
-    box-shadow: 0 0 5px var(--bg-color-);
-    font-size: 15px;
-}
+ .nav.active .navbar-lista li:hover::before,
+ .nav.active .navbar-lista li:hover::after {
 
-#con:hover::after {
-    visibility: visible;
-    opacity: 1;
-}
+     --border-radius: 1rem;
+     content: "";
+     position: absolute;
+     width: var(--border-radius);
+     height: var(--border-radius);
+     right: 0;
+     border-radius: 100vw;
+     transition: 0.5s all linear;
+ }
 
-#cons::after {
-    font-weight: bolder;
-    content: "Logout";
-    position: absolute;
-    bottom: 1px;
-    left: 30%;
-    transform: translateX(80%);
-    background-color: rgba(255, 255, 255, 0.5);
-    color: var(--bg-color-);
-    padding: 5px 10px;
-    border-radius: 5px;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s, visibility 0.3s;
-    box-shadow: 0 0 5px var(--bg-color-);
-    font-size: 15px;
-}
+ .nav.active .navbar-lista li:hover::before {
+     box-shadow: 3px 3px 0 3px white;
+     border-radius: 0 0 100vw 0;
+     top: calc(var(--border-radius) * -1);
 
-#cons:hover::after {
-    visibility: visible;
-    opacity: 1;
-}
+ }
+
+ .nav.active .navbar-lista li:hover::after {
+     box-shadow: 3px -3px 0px 3px white;
+     border-radius: 0 100vw 0 0;
+     bottom: calc(var(--border-radius) * -1);
+
+ }
+
+ #iconee {
+     margin-left: 30PX;
+     position: absolute;
+     width: 100PX;
+     margin-top: 500PX;
+     color: white;
+
+ }
+
+ #sairr {
+     display: none; 
+
+ }
+
+ #sair {
+     display: NONE;
+     color: white;
+ }
+
+ #bnte.active {
+     cursor: pointer;
+     border-radius: 5px 0px 0px 5px;
+     position: absolute;
+     top: 30px;
+     left: 90%;
+     width: 10%;
+     height: 5%;
+     background-color: grey;
+ }
+
+ #bnte {
+     cursor: pointer;
+     border-radius: 5px 0px 0px 5px;
+     position: absolute;
+     top: 30px;
+     left: 80%;
+     width: 20%;
+     height: 5%;
+     background-color: grey;
+ }
+
+
+ #bb {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     color: rgb(0, 0, 0);
+ }
+
  /*IAN*/
  /*Estilos página inicial*/
 
@@ -1088,14 +1040,14 @@ input.error {
  }
 
  .exibirmaiss {
-    border-radius: 10px;
+     border-radius: 10px;
      display: flex;
      flex-wrap: wrap;
      justify-content: center;
      align-items: flex-start;
      padding: 50px;
      background-color: #717171;
-     width:78%;
+     width: 78%;
      top: 0;
      right: 0;
      bottom: 0;
@@ -1140,82 +1092,82 @@ input.error {
  }
 
  #texto-in {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    margin-left: 180px;
-    margin-top: 100px;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     margin: auto;
+     margin-left: 180px;
+     margin-top: 100px;
  }
 
  /* ESTILOS LOGIN */
  #body1 {
-    background-color: black;
+     background-color: black;
  }
 
  .login-titulo {
-    font-weight: bolder;
-    font-size: 20px;
-    margin-bottom: 15px;
+     font-weight: bolder;
+     font-size: 20px;
+     margin-bottom: 15px;
  }
 
  .botao-entrar-login {
-    background: #121212;
-    border-radius: 10px;
-    border: none;
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-    padding: 12px;
-    width: 100%;
-    margin-top: 15px;
+     background: #121212;
+     border-radius: 10px;
+     border: none;
+     color: white;
+     font-weight: bold;
+     font-size: 15px;
+     padding: 12px;
+     width: 100%;
+     margin-top: 15px;
  }
 
-.form-entrar {
-    max-width: 100%;
-}
+ .form-entrar {
+     max-width: 100%;
+ }
 
-.naotemconta {
-    font-size: 12px;
-    text-align: center;
-    margin-top: 20px;
-}
+ .naotemconta {
+     font-size: 12px;
+     text-align: center;
+     margin-top: 20px;
+ }
 
-.cadastrarse {
-    color: black;
-    font-weight: bolder;
-}
+ .cadastrarse {
+     color: black;
+     font-weight: bolder;
+ }
 
-.container-entrar {
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    background-color: white;
-    width: 40%;
-    height: 100%;
-}
+ .container-entrar {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: white;
+     width: 40%;
+     height: 100%;
+ }
 
-#resposta_login {
-    color: red;
-    max-width: 100%;
-    font-size: 15.5px;
-}
+ #resposta_login {
+     color: red;
+     max-width: 100%;
+     font-size: 15.5px;
+ }
 
-#resposta_seguradora{
-    color: red;
-    max-width: 100%;
-    font-size: 14.8px;
-}
+ #resposta_seguradora {
+     color: red;
+     max-width: 100%;
+     font-size: 14.8px;
+ }
 
-@media screen and (max-width: 910px) {
-    .container-entrar {
-        width: 50%;
-    }
-}
+ @media screen and (max-width: 910px) {
+     .container-entrar {
+         width: 50%;
+     }
+ }
 
-@media screen and (max-width: 730px) {
-    .container-entrar {
-        width: 100%;
-    }
-}
+ @media screen and (max-width: 730px) {
+     .container-entrar {
+         width: 100%;
+     }
+ }
