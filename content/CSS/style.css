@@ -25,7 +25,7 @@
      justify-content: center;
      min-height: 100vh;
      overflow: hidden;
-    background-color: #f1f1f0;
+     background-color: #f1f1f0;
  }
 
  ::selection {
@@ -160,7 +160,6 @@
  .input select:focus {
      border-color: black;
  }
-
 
  form .page .field button {
      width: 100%;
@@ -304,7 +303,6 @@
      color: #fff;
  }
 
-
  #foto__input1,
  #foto__input2,
  #foto__input3,
@@ -312,7 +310,8 @@
  #foto__input5,
  #foto__input6,
  #foto__input7,
- #foto__input8 {
+ #foto__input8,
+ #foto__input9 {
      display: none;
  }
 
@@ -372,7 +371,6 @@
      max-width: 100%;
  }
 
-
  #a {
      color: rgb(0, 0, 0);
      font-size: 50px;
@@ -428,7 +426,92 @@
  }
 
  /* ISAQUE */
+ /* ENVIO DE PERFIL */
+
+
+ .remover-foto1 {
+     top: -20px;
+     font-weight: bolder;
+     cursor: pointer;
+     font-size: 14px;
+     padding: auto;
+     background-color: transparent;
+     border-radius: 4px;
+     color: rgb(0, 0, 0);
+     font-size: 20px;
+     margin-top: -100px;
+     margin-left: 150px;
+     border: none;
+     padding-top: 6px;
+     padding-left: 7px;
+     padding-right: 7px;
+     position: relative;
+     transition: 0.2s all linear;
+ }
+
+ .remover-foto1:hover {
+     background-color: rgb(255, 255, 255, 0.3);
+     border-radius: 13px;
+     padding-top: 6px;
+     padding-left: 7px;
+     padding-right: 7px;
+     transition: 0.2s all linear;
+ }
+
+ .label1 {
+     position: absolute;
+     font-weight: 500;
+     margin-bottom: 5px;
+     margin-left: 40PX;
+     margin-top: 10PX;
+ }
+
+ .foto-container1 {
+     margin-left: 60px;
+ }
+
+ #envio-de-foto {
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     margin: auto;
+     height: 550PX;
+     border-radius: 10PX;
+     background-color: #ffffff;
+     padding: 20px;
+     border-radius: 8px;
+     box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+     color: #000000;
+     width: 400px;
+ }
+
+ #envio-de-foto form {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .enviar-perfil {
+     margin-left: 90PX;
+     background: #121212;
+     border-radius: 10px;
+     border: none;
+     color: white;
+     font-weight: bold;
+     font-size: 15px;
+     padding: 12px;
+     width: 50%;
+     transition: all 0.2s linear;
+ }
+
+ .enviar-perfil:hover {
+     box-shadow: 0 0 5px black;
+ }
+
+ /* ISAQUE */
  /* NAVBAR */
+
  :root {
      --main-color: #121212;
      --second-color: #ffffff;
@@ -451,7 +534,86 @@
 
  .nav.active {
      width: 250px;
-     /* largura quando ativo */
+ }
+
+ @media screen and (max-width: 1568px) {
+
+     .navbar-lista li:hover a,
+     .navbar-lista li:hover {
+         color: rgb(0, 0, 0);
+         transition: 0s all linear;
+     }
+
+     .nav .navbar-lista li:hover {
+         background-color: rgb(255, 255, 255);
+         border-radius: 50px 50px 50px 50px;
+     }
+
+     .nav .navbar-lista li:hover::before,
+     .nav .navbar-lista li:hover::after {
+         display: none;
+     }
+
+     .nav .navbar-lista li:hover::before {
+         display: none;
+     }
+
+     .nav .navbar-lista li:hover::after {
+         display: none;
+     }
+
+     .nav.active .navbar-lista li:hover {
+         background-color: rgb(255, 255, 255);
+         border-radius: 50px;
+     }
+
+     .nav.active .navbar-lista li:hover::before,
+     .nav.active .navbar-lista li:hover::after {
+         display: none;
+     }
+
+     .nav.active .navbar-lista li:hover::before {
+         display: none;
+     }
+
+     .nav.active .navbar-lista li:hover::after {
+         display: none;
+     }
+
+ }
+
+ #foto-perfil {
+     border-radius: 10px;
+     margin-top: 30px;
+     margin-left: 10px;
+     width: 40px;
+     height: 40px;
+     background-color: white;
+ }
+
+ #email-fulano {
+     display: none;
+     position: absolute;
+     color: white;
+     font-weight: 100;
+     font-size: 12px;
+     top: 50px;
+     margin-left: 59px;
+ }
+
+ #nome-fulano {
+     display: none;
+     position: absolute;
+     color: white;
+     font-size: 20px;
+     font-weight: bold;
+     top: 27px;
+     margin-left: 59px;
+ }
+
+ .nav.active #email-fulano,
+ .nav.active #nome-fulano {
+     display: block;
  }
 
  .navbar-lista {
@@ -467,16 +629,50 @@
      display: none;
      text-decoration: none;
      padding: 1rem 2rem;
-
  }
 
+ #textosair i {
+     position: absolute;
+     color: rgb(255, 255, 255);
+     font-size: 17px;
+     margin-top: -100px;
+ }
+
+ .nav.active #iconee {
+     padding-left: 5px;
+     padding-top: 9px;
+     padding-bottom: 9px;
+     border-radius: 10px;
+     margin-top: 340px;
+     display: block;
+     width: 190px;
+     color: black;
+     background-color: white;
+ }
+
+ #textosair a {
+     display: none;
+ }
+
+ .nav.active #textosair a {
+     margin-left: 60px;
+     font-weight: 500;
+     color: #000;
+     display: inline;
+ }
+
+ .nav.active #textosair i {
+     color: rgb(0, 0, 0);
+     margin-top: 1px;
+     font-size: 17px;
+     margin-left: 10px;
+ }
 
  .navbar-lista li {
      margin-top: 100px;
      color: white;
      position: relative;
      margin-left: 30px;
-
  }
 
  .navbar-lista li:hover a,
@@ -485,20 +681,44 @@
      transition: 0s all linear;
  }
 
-
- .navbar-lista li:hover {
-
-     background-color: white;
+ .nav .navbar-lista li:hover {
+     background-color: rgb(255, 255, 255);
      border-radius: 50px 0px 0px 50px;
      padding-left: 10px;
-
  }
 
+ .nav .navbar-lista li:hover::before,
+ .nav .navbar-lista li:hover::after {
+     --border-radius: 1rem;
+     content: "";
+     position: absolute;
+     width: var(--border-radius);
+     height: var(--border-radius);
+     right: 0;
+     border-radius: 100vw;
+     transition: 0.5s all linear;
+ }
 
+ .nav .navbar-lista li:hover::before {
+     box-shadow: 3px 3px 0 3px white;
+     border-radius: 0 0 100vw 0;
+     top: calc(var(--border-radius) * -1);
+ }
+
+ .nav .navbar-lista li:hover::after {
+     box-shadow: 3px -3px 0px 3px white;
+     border-radius: 0 100vw 0 0;
+     bottom: calc(var(--border-radius) * -1);
+ }
+
+ .nav.active .navbar-lista li:hover {
+     background-color: rgb(255, 255, 255);
+     border-radius: 50px 0px 0px 50px;
+     padding-left: 10px;
+ }
 
  .nav.active .navbar-lista li:hover::before,
  .nav.active .navbar-lista li:hover::after {
-
      --border-radius: 1rem;
      content: "";
      position: absolute;
@@ -513,14 +733,12 @@
      box-shadow: 3px 3px 0 3px white;
      border-radius: 0 0 100vw 0;
      top: calc(var(--border-radius) * -1);
-
  }
 
  .nav.active .navbar-lista li:hover::after {
      box-shadow: 3px -3px 0px 3px white;
      border-radius: 0 100vw 0 0;
      bottom: calc(var(--border-radius) * -1);
-
  }
 
  #iconee {
@@ -529,12 +747,10 @@
      width: 100PX;
      margin-top: 500PX;
      color: white;
-
  }
 
  #sairr {
-     display: none; 
-
+     display: none;
  }
 
  #sair {
@@ -563,7 +779,6 @@
      height: 5%;
      background-color: grey;
  }
-
 
  #bb {
      position: absolute;
@@ -813,8 +1028,8 @@
  }
 
  /*IAN*/
-
  /*Tela inicial*/
+
  #telainicial {
      background-image: url('../img/fundo.avif');
      background-size: cover;
@@ -878,6 +1093,27 @@
      padding: 10px 15px;
      border-radius: 5px;
      background-color: transparent;
+ }
+
+ #view2 {
+     position: absolute;
+     margin-left: -30px;
+     margin-top: 10px;
+
+ }
+
+ #view1 {
+     position: absolute;
+     margin-left: -30px;
+     margin-top: 10px;
+ }
+
+ #senha {
+     padding-right: 35px;
+ }
+
+ #confirmarSenha {
+     padding-right: 35px;
  }
 
  .login-button button a {
@@ -1101,7 +1337,9 @@
      margin-top: 100px;
  }
 
+ /* IAN */
  /* ESTILOS LOGIN */
+
  #body1 {
      background-color: black;
  }
