@@ -108,7 +108,9 @@ INSERT INTO carro (nome_proprietario, sinistro, cpf_proprietario, data_abertura,
 ('Fernando Mendes', 'Sinistro7', '78901234567', '2024-07-05', 'Nissan', 'March', 'SL', 1400, 'Flex', 'Automático', 'Verde', 'MNO7654', '345MNO678PQR901', '110000', 'Troca do retrovisor direito', 'Retrovisor direito', 'Finalizado'),
 ('Luciana Almeida', 'Sinistro8', '89023456789', '2024-08-12', 'Hyundai', 'HB20', 'Comfort', 1500, 'Flex', 'Automático', 'Prata', 'STU2345', '456STU789TUV012', '120000', 'Reparo na tampa do porta-malas', 'Tampa do porta-malas amassada', 'Aberto'),
 ('Marcos Oliveira', 'Sinistro9', '56789012345', '2024-09-18', 'Chevrolet', 'Cruze', 'LTZ', 1800, 'Flex', 'Automático', 'Branco', 'VWX5678', '567VWX901YZA234', '130000', 'Substituição do farol esquerdo', 'Farol esquerdo quebrado', 'Aberto'),
-('Sandra Santos', 'Sinistro10', '01234567890', '2024-10-30', 'Volkswagen', 'Fox', 'Highline', 1400, 'Flex', 'Automático', 'Cinza', 'YZA3456', '678YZA901BCD234', '140000', 'Troca do para-choque traseiro', 'Para-choque traseiro', 'Finalizado');
+('Marcos Oliveira', 'Sinistro10', '56789012345', '2024-09-18', 'Chevrolet', 'Cruze', 'LTZ', 1800, 'Flex', 'Automático', 'Branco', 'VWX5678', '567VWX901YZA234', '130000', 'Substituição do farol esquerdo', 'Farol esquerdo quebrado', 'Aceito'),
+('Marcos Oliveira', 'Sinistro11', '56789012345', '2024-09-18', 'Chevrolet', 'Cruze', 'LTZ', 1800, 'Flex', 'Automático', 'Branco', 'VWX5678', '567VWX901YZA234', '130000', 'Substituição do farol esquerdo', 'Farol esquerdo quebrado', 'Recusado'),
+('Sandra Santos', 'Sinistro12', '01234567890', '2024-10-30', 'Volkswagen', 'Fox', 'Highline', 1400, 'Flex', 'Automático', 'Cinza', 'YZA3456', '678YZA901BCD234', '140000', 'Troca do para-choque traseiro', 'Para-choque traseiro', 'Finalizado');
 INSERT INTO RA (RA, nome_funcionario) VALUES 
 ('RA123', 'João Silva'),
 ('RA456', 'Maria Oliveira'),

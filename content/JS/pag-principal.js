@@ -24,7 +24,7 @@ function exibir(data) {
 
     q.append(solicitacao[0][0]);
 
-    w = $('#informacao-em-analize');
+    w = $('#informacao-em-analise');
     w.empty();
 
     w.append(solicitacao[0][1]);
@@ -42,14 +42,14 @@ function exibir(data) {
     //grafico
 
     var aberta = parseInt(solicitacao[0][0]);
-    var emAnalize = parseInt(solicitacao[0][1]);
+    var emAnalise = parseInt(solicitacao[0][1]);
     var concluida = parseInt(solicitacao[0][2]);
     var recusada = parseInt(solicitacao[0][3]);
 
 
-    var labels = ['Aberta', 'Em análize', 'Concluida', 'Recusada'];
+    var labels = ['Aberta', 'Em análise', 'Concluida', 'Recusada'];
 
-    var valores = [aberta, emAnalize, concluida, recusada];
+    var valores = [aberta, emAnalise, concluida, recusada];
     
     var graf = document.getElementById('grafico-solicitacoes').getContext('2d');
     var grafico = new Chart(graf, {
@@ -104,7 +104,7 @@ function exibir(data) {
                     var graf = animation.chart.ctx;
                     var dataset = animation.chart.data.datasets[0];
                     var valores = dataset.data;
-                    var dataAtual = aberta + emAnalize + concluida + recusada
+                    var dataAtual = aberta + emAnalise + concluida + recusada
                     
                     var centerX = graf.canvas.width / 2;
                     var centerY = graf.canvas.height / 1.55;
@@ -157,6 +157,10 @@ function exibir(data) {
             statusClass = 'status_aberto';
         } else if (e['status_veiculo'] === 'Finalizado') {
             statusClass = 'status_finalizado';
+        } else if (e['status_veiculo'] === 'Aceito') {
+            statusClass = 'status_aceito';
+        } else if (e['status_veiculo'] === 'Recusado') {
+            statusClass = 'status_recusado';
         }
 
         let iconeClass = '';
@@ -164,6 +168,10 @@ function exibir(data) {
             iconeClass = '<img class="icon" src="../img/Aberto.png"></img>';
         } else if (e['status_veiculo'] === 'Finalizado') {
             iconeClass = '<img class="icon" src="../img/Finalizado.png"></img>';
+        } else if (e['status_veiculo'] === 'Aceito') {
+            iconeClass = '<img class="icon" src="../img/Aceito.png"></img>';
+        } else if (e['status_veiculo'] === 'Recusado') {
+            iconeClass = '<img class="icon" src="../img/Recusado.png"></img>';
         }
         
         adicionar += (
@@ -176,7 +184,7 @@ function exibir(data) {
                 "<div class='solicitacao-numero'>Solicitação " + i + "</div>" +
             "</td>" +
             "<td class='solicitacao-texto'>" + e['modelo'] + "</td>" +
-            "<td>" + "<div class='" + statusClass + "'>" + e['status_veiculo'].replace('Finalizado', 'Em análize') + "</div></td>" +
+            "<td>" + "<div class='" + statusClass + "'>" + e['status_veiculo'].replace('Finalizado', 'Em análise') + "</div></td>" +
             "<td>" + e['sinistro'] + "</td>" + 
             "<td class='solicitacao-detalhes' data-cod_veiculo='" + e['cod_veiculo'] +"'>Detalhes</td>" +
 

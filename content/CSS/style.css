@@ -789,7 +789,7 @@
  }
 
  /*IAN*/
- /*Estilos página inicial*/
+ /*Estilos página principal*/
 
  table {
      width: 100%;
@@ -872,7 +872,7 @@
      text-align: center;
  }
 
- .status_finalizado {
+ .status_aceito {
      background: rgb(126, 172, 104);
      border-radius: 30px;
      padding: 5px 15px;
@@ -883,8 +883,20 @@
      max-width: 110px;
      display: inline-block;
      text-align: center;
-     /*rgb(202, 69, 77)*/
  }
+
+ .status_recusado {
+    background: rgb(153, 44, 51);
+    border-radius: 30px;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: bolder;
+    width: 100%;
+    color: white;
+    max-width: 110px;
+    display: inline-block;
+    text-align: center;
+}
 
  .solicitacao-icone {
      margin-right: 5px;
