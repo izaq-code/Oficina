@@ -957,10 +957,10 @@
      margin: 7px 10px 0px 0px;
      background-color: #cacaca80;
      border-radius: 20px;
-     padding: 20px 30px;
+     padding: 20px 0px;
      text-align: center;
      display: inline-block;
-     min-width: 330px;
+     min-width: 283px;
  }
 
  .numero-informa {
