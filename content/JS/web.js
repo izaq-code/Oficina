@@ -41,7 +41,12 @@ function validateFields() {
 function goToNextStep() {
 
   if (!validateFields()) {
-    alert("Por favor, preencha todos os campos obrigatórios.");
+    Swal.fire({
+      icon: "warning",
+      title: "Oops...",
+      text: "Campos incompletos!",
+      footer: '<p>Preencha todos os campos!</p>'
+    });
     return;
   }
 
@@ -121,7 +126,12 @@ window.addEventListener("DOMContentLoaded", function () {
 
               const fileSizeLimit = 5 * 1024 * 1024;
               if (file.size > fileSizeLimit) {
-                  alert("O tamanho do arquivo excede o limite permitido (5MB).");
+                Swal.fire({
+                  icon: "error",
+                  title: "Espaço excedido...",
+                  text: "Apenas imagens abaixo de 5 MB",
+                  footer: '<p>Imagem com valor igual ou superior a 5 mb</p>'
+                });
                   inputFile.value = ''; 
                   return;
               }
