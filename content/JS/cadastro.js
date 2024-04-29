@@ -8,16 +8,26 @@ $(document).ready(function () {
             url: '../PHP/cadastro.php',
             type: 'POST',
             data: formData,
-            success: function(response){
+            success: function(response) {
                 console.log('Resposta do servidor:', response); // Verifica a resposta do servidor
-                alert('Cadastrado com sucesso');
-                location.reload();  
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Enviado com sucesso!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.reload();
+                    }
+                });
             },
             error: function(xhr, status, error) {
                 var errorMessage = xhr.status + ': ' + xhr.statusText;
-                console.error('Erro ao cadastrar:', errorMessage); // Exibe o erro no console
-                alert('Erro ao cadastrar: ' + errorMessage);
+                console.error('Erro ao enviar o formulário:', error);
+                Swal.fire({
+                  icon: 'error',
+                  title: 'Erro ao enviar o formulário',
+                  text: 'Por favor, tente novamente mais tarde.'
+                });
             }
-        })
-    })
-})
+        });
+    });
+});
