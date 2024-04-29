@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         while ($row = mysqli_fetch_array($result)) {
             $cod = $row['cod_seguradora'];
         }
-        $_SESSION['cod_seguradora'] = $cod;
+        $_SESSION['id_usuario'] = $cod;
 
     } else {
 
