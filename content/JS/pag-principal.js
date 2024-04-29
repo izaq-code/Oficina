@@ -61,13 +61,13 @@ function exibir(data) {
                 data: valores,
                 backgroundColor: [
                     'rgb(209, 209, 209)',
-                    'rgb(126, 172, 104)',
+                    'rgb(238, 180, 93)',
                     'rgb(126, 172, 104)',
                     'rgb(153, 44, 51)'
                 ],
                 borderColor: [
                     'rgb(209, 209, 209)',
-                    'rgb(126, 172, 104)',
+                    'rgb(238, 180, 93)',
                     'rgb(126, 172, 104)',
                     'rgb(153, 44, 51)'
                 ],
@@ -178,7 +178,7 @@ function exibir(data) {
         if (e['status_veiculo'] === 'Aberto') {
             iconeClass = '<img class="icon" src="../img/Aberto.png"></img>';
         } else if (e['status_veiculo'] === 'Finalizado') {
-            iconeClass = '<img class="icon" src="../img/Finalizado.png"></img>';
+            iconeClass = '<img class="icon" src="../img/Analise.png"></img>';
         } else if (e['status_veiculo'] === 'Aceito') {
             iconeClass = '<img class="icon" src="../img/Aceito.png"></img>';
         } else if (e['status_veiculo'] === 'Recusado') {

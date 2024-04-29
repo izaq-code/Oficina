@@ -61,13 +61,13 @@ function exibir(data) {
                 data: valores,
                 backgroundColor: [
                     'rgb(209, 209, 209)',
-                    'rgb(126, 172, 104)',
+                    'rgb(238, 180, 93)',
                     'rgb(126, 172, 104)',
                     'rgb(153, 44, 51)'
                 ],
                 borderColor: [
                     'rgb(209, 209, 209)',
-                    'rgb(126, 172, 104)',
+                    'rgb(238, 180, 93)',
                     'rgb(126, 172, 104)',
                     'rgb(153, 44, 51)'
                 ],
@@ -107,7 +107,7 @@ function exibir(data) {
                     var dataAtual = aberta + emAnalise + concluida + recusada
                     
                     var centerX = graf.canvas.width / 2;
-                    var centerY = graf.canvas.height / 1.55;
+                    var centerY = graf.canvas.height / 1.65;
                     var text = 'Solicitações totais';
                     var fontSize = 14; 
                     var fontStyle = 'normal';
@@ -120,7 +120,7 @@ function exibir(data) {
                     
                     // Texto 2 - Quantidade de solicitações atuais
                     var centerX2 = graf.canvas.width / 2;
-                    var centerY2 = graf.canvas.height / 1.95;
+                    var centerY2 = graf.canvas.height / 2.1;
                     var text2 = dataAtual;
                     var fontSize2 = 45; 
                     var fontStyle2 = 'bolder'; 
@@ -221,13 +221,21 @@ function exibir(data) {
             statusClass = 'status_aberto';
         } else if (e['status_veiculo'] === 'Finalizado') {
             statusClass = 'status_finalizado';
+        } else if (e['status_veiculo'] === 'Aceito') {
+            statusClass = 'status_aceito';
+        } else if (e['status_veiculo'] === 'Recusado') {
+            statusClass = 'status_recusado';
         }
 
         let iconeClass = '';
         if (e['status_veiculo'] === 'Aberto') {
             iconeClass = '<img class="icon" src="../img/Aberto.png"></img>';
         } else if (e['status_veiculo'] === 'Finalizado') {
-            iconeClass = '<img class="icon" src="../img/Finalizado.png"></img>';
+            iconeClass = '<img class="icon" src="../img/Analise.png"></img>';
+        } else if (e['status_veiculo'] === 'Aceito') {
+            iconeClass = '<img class="icon" src="../img/Aceito.png"></img>';
+        } else if (e['status_veiculo'] === 'Recusado') {
+            iconeClass = '<img class="icon" src="../img/Recusado.png"></img>';
         }
 
         adicionar += (

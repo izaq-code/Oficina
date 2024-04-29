@@ -898,6 +898,19 @@
     text-align: center;
 }
 
+.status_finalizado {
+    background: rgb(238, 180, 93);
+    border-radius: 30px;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: bolder;
+    width: 100%;
+    color: white;
+    max-width: 110px;
+    display: inline-block;
+    text-align: center;
+}
+
  .solicitacao-icone {
      margin-right: 5px;
      vertical-align: middle;
@@ -916,16 +929,19 @@
  }
 
  .solicitacoes-grafico {
-     background-color: #181A1F;
-     border-radius: 20px;
-     padding: 20px;
-     max-width: 350px;
-     margin-bottom: 20px;
- }
+    background-color: #181A1F;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 500px;
+    margin-bottom: 20px;
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+}
 
- canvas {
-     margin: 0 auto;
- }
+canvas {
+    margin: 0 auto;
+}
 
  hr {
      width: 98%;
