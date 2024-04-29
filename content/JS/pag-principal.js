@@ -63,13 +63,13 @@ function exibir(data) {
                     'rgb(209, 209, 209)',
                     'rgb(126, 172, 104)',
                     'rgb(126, 172, 104)',
-                    'rgb(126, 172, 104)'
+                    'rgb(153, 44, 51)'
                 ],
                 borderColor: [
                     'rgb(209, 209, 209)',
                     'rgb(126, 172, 104)',
                     'rgb(126, 172, 104)',
-                    'rgb(126, 172, 104)'
+                    'rgb(153, 44, 51)'
                 ],
                 borderWidth: 1,
                 cutout: '80%',
@@ -107,7 +107,7 @@ function exibir(data) {
                     var dataAtual = aberta + emAnalise + concluida + recusada
                     
                     var centerX = graf.canvas.width / 2;
-                    var centerY = graf.canvas.height / 1.55;
+                    var centerY = graf.canvas.height / 1.65;
                     var text = 'Solicitações totais';
                     var fontSize = 14; 
                     var fontStyle = 'normal';
@@ -120,7 +120,7 @@ function exibir(data) {
                     
                     // Texto 2 - Quantidade de solicitações atuais
                     var centerX2 = graf.canvas.width / 2;
-                    var centerY2 = graf.canvas.height / 1.95;
+                    var centerY2 = graf.canvas.height / 2.1;
                     var text2 = dataAtual;
                     var fontSize2 = 45; 
                     var fontStyle2 = 'bolder'; 

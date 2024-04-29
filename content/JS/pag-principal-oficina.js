@@ -24,7 +24,7 @@ function exibir(data) {
 
     q.append(solicitacao[0][0]);
 
-    w = $('#informacao-em-analize');
+    w = $('#informacao-em-analise');
     w.empty();
 
     w.append(solicitacao[0][1]);
@@ -42,14 +42,14 @@ function exibir(data) {
     //grafico 1
 
     var aberta = parseInt(solicitacao[0][0]);
-    var emAnalize = parseInt(solicitacao[0][1]);
+    var emAnalise = parseInt(solicitacao[0][1]);
     var concluida = parseInt(solicitacao[0][2]);
     var recusada = parseInt(solicitacao[0][3]);
 
 
-    var labels = ['Aberta', 'Em análize', 'Concluida', 'Recusada'];
+    var labels = ['Aberta', 'Em análise', 'Concluida', 'Recusada'];
 
-    var valores = [aberta, emAnalize, concluida, recusada];
+    var valores = [aberta, emAnalise, concluida, recusada];
     
     var graf = document.getElementById('grafico-solicitacoes').getContext('2d');
     var grafico = new Chart(graf, {
@@ -63,13 +63,13 @@ function exibir(data) {
                     'rgb(209, 209, 209)',
                     'rgb(126, 172, 104)',
                     'rgb(126, 172, 104)',
-                    'rgb(126, 172, 104)'
+                    'rgb(153, 44, 51)'
                 ],
                 borderColor: [
                     'rgb(209, 209, 209)',
                     'rgb(126, 172, 104)',
                     'rgb(126, 172, 104)',
-                    'rgb(126, 172, 104)'
+                    'rgb(153, 44, 51)'
                 ],
                 borderWidth: 1,
                 cutout: '80%',
@@ -104,7 +104,7 @@ function exibir(data) {
                     var graf = animation.chart.ctx;
                     var dataset = animation.chart.data.datasets[0];
                     var valores = dataset.data;
-                    var dataAtual = aberta + emAnalize + concluida + recusada
+                    var dataAtual = aberta + emAnalise + concluida + recusada
                     
                     var centerX = graf.canvas.width / 2;
                     var centerY = graf.canvas.height / 1.55;
