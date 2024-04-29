@@ -151,6 +151,17 @@ function exibir(data) {
         "<tbody>"
     );
 
+    var map = {
+        'Finalizado': 'Em análise',
+        'Aberto': 'Aberta',
+        'Aceito': 'Aceita',
+        'Recusado': 'Recusada'
+    };
+    
+    function m(match) {
+        return map[match] || match;
+    }
+
     exibicao.forEach(function(e) {
         let statusClass = '';
         if (e['status_veiculo'] === 'Aberto') {
@@ -184,7 +195,7 @@ function exibir(data) {
                 "<div class='solicitacao-numero'>Solicitação " + i + "</div>" +
             "</td>" +
             "<td class='solicitacao-texto'>" + e['modelo'] + "</td>" +
-            "<td>" + "<div class='" + statusClass + "'>" + e['status_veiculo'].replace('Finalizado', 'Em análise') + "</div></td>" +
+            "<td>" + "<div class='" + statusClass + "'>" + e['status_veiculo'].replace(/\b(Finalizado|Aberto|Aceito|Recusado)\b/g, m) + "</div></td>" +
             "<td>" + e['sinistro'] + "</td>" + 
             "<td class='solicitacao-detalhes' data-cod_veiculo='" + e['cod_veiculo'] +"'>Detalhes</td>" +
 
@@ -200,6 +211,7 @@ function exibir(data) {
         "</table>" +
         "</div>"
     );
+
 
     t.append(adicionar);
 
