@@ -35,17 +35,9 @@ $(document).ready(function () {
             data: formData,
             processData: false,
             contentType: false,
-            success: function (resposta) {
-                $('#mensagem').text(resposta);
+            success: function () {
 
-                $('#imagem-container').empty();
-
-                for (var i = 1; i <= numFiles; i++) {
-                    var imagePath = '../upload/' + inputFile.files[0].name;
-                    var imageElement = $('<img>').attr('src', imagePath).addClass('uploaded-image');
-                }
-                location.reload();  
-            },
+            },  
             error: function (xhr, status, error) {
                 $('#mensagem').text('Erro ao enviar as imagens: ' + error);
             }
