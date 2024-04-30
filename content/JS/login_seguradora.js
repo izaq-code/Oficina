@@ -2,15 +2,13 @@ $(document).ready(function(){
     $('#cadastrar').submit(function(e){
         e.preventDefault();
 
-        var cnpj = $('[id="cnpj"]').val();
+        var email= $('[id="email"]').val();
         var senha = $('[id="senha"]').val();
        
         var senhaHash = CryptoJS.SHA256(senha).toString(CryptoJS.enc.Hex);
         
-        var cnpjHash = CryptoJS.SHA256(cnpj).toString(CryptoJS.enc.Hex);
-        
         var formData = {
-            cnpj: cnpjHash,
+            email: email,
             senha: senhaHash,
         };
 
@@ -20,24 +18,54 @@ $(document).ready(function(){
             data: formData,
             dataType: 'json',
             success: function(response){
-                entrar(response)
-                $('#cnpj').val('');
+                entrar(response);
+                $('#email').val('');
                 $('#senha').val('');
             }  
         });
     });
 });
 
+
 function entrar(response){
     let acesso = response;
-    acesso === true ? window.location.href = "../HTML/pag-principal.html" : a();
+    if (acesso === true) {
+        window.location.href = "../HTML/pag-principal.html"; 
+    } else {
+        s();
+    }
 } 
+
+function entrar(response) {
+    let acesso = response[0];
+    if (acesso === true) {
+        let cod = response[1];
+        localStorage.setItem('codCareca', cod);
+        window.location.href = "../HTML/pag-principal-oficina.html";
+    } else {
+        a();
+    }
+}
+
+function s(){
+    t = $('#resposta_seguradora');
+    t.empty();
+    resp = (
+        'Email ou senha estão incorretos. Tente novamente!</p>'
+    )
+    t.append(resp);
+}
 
 function a(){
     t = $('#resposta_seguradora');
     t.empty();
     resp = (
-        'CNPJ e/ou senha incorretos. Tente novamente!</p>'
+        'RA ou senha estão incorretos. Tente novamente!</p>'
     )
     t.append(resp);
 }
+
+
+
+
+

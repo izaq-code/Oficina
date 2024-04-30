@@ -1,9 +1,4 @@
 
-function hashCNPJ(cnpj) {
-    var hash = CryptoJS.SHA256(cnpj).toString(CryptoJS.enc.Hex);
-    return hash;
-}
-
 function hashSenha(senha) {
     var hash = CryptoJS.SHA256(senha).toString(CryptoJS.enc.Hex);
     return hash;
@@ -14,15 +9,16 @@ $(document).ready(function(){
         e.preventDefault();
 
         var nome = $('[id="nome"]').val();
+        var email = $('[id="email"]').val();
         var cnpj = $('[id="cnpj"]').val();
         var senha = $('[id="senha"]').val();
 
-        var cnpj_hash = hashCNPJ(cnpj);
         var senha_hash = hashSenha(senha);
         
         var formData = new FormData();
         formData.append('nome', nome);
-        formData.append('cnpj', cnpj_hash); 
+        formData.append('email', email);
+        formData.append('cnpj', cnpj); 
         formData.append('senha', senha_hash);
  
         $.ajax({

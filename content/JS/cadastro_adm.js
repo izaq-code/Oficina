@@ -22,6 +22,7 @@ function senhahash(senha) {
                 url: '../PHP/cadastro_adm.php',
                 data: data,
                 success: function (data) {
+
                     conclusao(data);
                 }
             });
@@ -29,7 +30,7 @@ function senhahash(senha) {
     });
     
     function conclusao(data) {
-        if (data === true) {
+        if (data == true) {
 
                 let timerInterval;
                 Swal.fire({
@@ -52,9 +53,7 @@ function senhahash(senha) {
                 }).then((result) => {
                   /* Read more about handling dismissals below */
                   if (result.dismiss === Swal.DismissReason.timer) {
-                    console.log("o times fechou certo");
-                    alert('Cadastro concluído com sucesso!');
-                    window.location.href = "entre-adm.html";
+                    window.location.href = "../HTML/entre-cliente.html";
                   }
                 })
       
