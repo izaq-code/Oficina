@@ -59,95 +59,102 @@ function exibir(data) {
         for (var key in fotos[0]) {
             if (!isNaN(key)) continue; // Ignorar chaves numéricas
             var divContent = "<div class='exibirtuudo'>";
-            divContent += "<div class='img-container'><img src='" + fotos[0][key] + "' class='imgg'></div><h3>" + key.replace('_', ' ') + ":</h3>";
+            divContent += "<div class='container-img'>";
+            divContent += "<div class='img-container'>";
+            divContent += "<img src='" + fotos[0][key] + "' class='imgg'>";
+            divContent += "</div>";
+            divContent += "<div class='text-container'>";
+            divContent += "<div id='texto-div'><h3>" + key.replace('_', ' ') + ":</h3></div>";
             divContent += "<input type='checkbox' id='imagens' class='img-checkbox' data-caminho='" + fotos[0][key] + "'>";
             divContent += "</div>";
+            divContent += "</div>";
+            
             ww.append(divContent);
         }
-
+ 
         if (pdf) {
-            pdf = "<iframe  src='" + pdf + "'></iframe>";
-            ww.append(pdf);
-        }
+            pdf= "<div id='texto-titulo-pdf'>Visulizar o pdf</div><iframe id='pdf' src='" + pdf + "'></iframe>";
+           ww.append(pdf); 
+       }   
 
-        var download = "<button id='download-pdf'> Download-PDF </button>";
-        ww.append(download);
+       var download = "<button id='download-pdf'> Download PDF  <i class='bi bi-file-earmark-pdf'></i> </button>";
+       ww.append(download);
 
-        var download = "<button id='bnt-baixar'> Download </button>";
-        ww.append(download);
+       var download = "<button id='bnt-baixar'> Download img <i class='bi bi-image'></i> </button>";
+       ww.append(download);
 
-        $("#download-pdf").click(function () {
-            var link = document.createElement('a');
-            link.href = pdfCaminho;
-            link.download = 'Documento.pdf';
-            link.target = '_self';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        });
+       $("#download-pdf").click(function () {
+           var link = document.createElement('a');
+           link.href = pdfCaminho;
+           link.download = 'Documento.pdf';
+           link.target = '_self';
+           document.body.appendChild(link);
+           link.click();
+           document.body.removeChild(link);
+       });
 
-        $("#bnt-baixar").click(function () {
-            var imagens_selecionadas = [];
+       $("#bnt-baixar").click(function () {
+           var imagens_selecionadas = [];
 
-            $(".img-checkbox:checked").each(function () {
-                imagens_selecionadas.push($(this).data('caminho'));
-            });
+           $(".img-checkbox:checked").each(function () {
+               imagens_selecionadas.push($(this).data('caminho'));
+           });
 
-            if (imagens_selecionadas.length === 0) {
-                alert('Nenhuma imagem selecionada para download');
-                return;
-            }
+           if (imagens_selecionadas.length === 0) {
+               alert('Nenhuma imagem selecionada para download');
+               return;
+           }
 
-            var zip = new JSZip();
-            var diretorioImagens = '../upload/';
+           var zip = new JSZip();
+           var diretorioImagens = '../upload/';
 
-            var promises = [];
+           var promises = [];
 
-            imagens_selecionadas.forEach(function (caminhoImagem) {
-                var nomeArquivo = caminhoImagem.substring(caminhoImagem.lastIndexOf('/') + 1);
-                var caminhoCompleto = diretorioImagens + nomeArquivo;
+           imagens_selecionadas.forEach(function (caminhoImagem) {
+               var nomeArquivo = caminhoImagem.substring(caminhoImagem.lastIndexOf('/') + 1);
+               var caminhoCompleto = diretorioImagens + nomeArquivo;
 
-                var promise = fetch(caminhoCompleto)
-                    .then(response => response.blob())
-                    .then(blob => {
-                        zip.file(nomeArquivo, blob, { binary: true });
-                    });
+               var promise = fetch(caminhoCompleto)
+                   .then(response => response.blob())
+                   .then(blob => {
+                       zip.file(nomeArquivo, blob, { binary: true });
+                   });
 
-                promises.push(promise);
-            });
+               promises.push(promise);
+           });
 
-            Promise.all(promises).then(function () {
-                zip.generateAsync({ type: 'blob' }).then(function (content) {
-                    var zipNome = 'Imagens.zip';
-                    var link = document.createElement('a');
-                    link.download = zipNome;
-                    link.href = URL.createObjectURL(content);
-                    link.click();
-                });
-            });
-        });
+           Promise.all(promises).then(function () {
+               zip.generateAsync({ type: 'blob' }).then(function (content) {
+                   var zipNome = 'Imagens.zip';
+                   var link = document.createElement('a');
+                   link.download = zipNome;
+                   link.href = URL.createObjectURL(content);
+                   link.click();
+               });
+           });
+       });
 
-    }
+   }
 
-    //fim do tratamento de fotos e anexos
+   //fim do tratamento de fotos e anexos
 
-    //tratamento de botões de atualizar e excluir
+   //tratamento de botões de atualizar e excluir
 
-    //atualizar
-    $(".atualizar").click(function (event) {
-        event.preventDefault();
+   //atualizar
+   $(".atualizar").click(function (event) {
+       event.preventDefault();
 
-        localStorage.setItem('codVeiculo', cod_veiculo);
+       localStorage.setItem('codVeiculo', cod_veiculo);
 
-        window.location.href = '../HTML/atualizar-seg.html';
-    });
+       window.location.href = '../HTML/atualizar-seg.html';
+   });
 
-    //excluir
-    $(".excluir").click(function (event) {
-        event.preventDefault();
+   //excluir
+   $(".excluir").click(function (event) {
+       event.preventDefault();
 
-        localStorage.setItem('codVeiculo', cod_veiculo);
+       localStorage.setItem('codVeiculo', cod_veiculo);
 
-        window.location.href = '../HTML/excluir-seg.html';
-    });
+       window.location.href = '../HTML/excluir-seg.html';
+   });
 }
