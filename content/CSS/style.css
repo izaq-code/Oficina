@@ -161,6 +161,17 @@
      border-color: black;
  }
 
+ .input input[type="email"]:valid ~ label,
+.input input[type="email"]:focus ~ label,
+.input input[type="email"]:not(:placeholder-shown) ~ label {
+    top: 0;
+    left: 15px;
+    font-size: 16px;
+    padding: 0 1px;
+    background: white;
+    color: #000;
+}
+
  form .page .field button {
      width: 100%;
      max-width: 300px;
