@@ -1286,6 +1286,20 @@ canvas {
  /* ISAQUE */
  /* VER + */
 
+ #bnt-baixar {
+    position: absolute;
+}
+
+#download-pdf{
+   position: absolute;
+   margin-top: 40%;
+}
+
+ .img-checkbox {
+    position: absolute;
+    z-index: 1;
+}
+
  .exibirmais {
      border-radius: 10px;
      background-color: rgba(193, 193, 193, 0.2);
