@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", exibirDados);
 
-function exibirDados() {
     var cod_veiculo = localStorage.getItem('codVeiculo');
+function exibirDados() {
 
     $.ajax({
         type: 'POST',
