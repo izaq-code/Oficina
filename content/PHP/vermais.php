@@ -22,7 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         placa 'Placa',
         chassi 'Chassi',
         hodometro 'Hodômetro',
-        Orcamento 'Orçamento',
         Pecas_danificadas 'Peças danificadas',
         status_veiculo 'Status da solicitação'
     FROM carro
@@ -52,6 +51,17 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     FROM carro_fotos
     WHERE cod_veiculo = '$cod_veiculo';");
 
+        if ($filtro === 'Finalizado') {
+            $sim = true;
+            $terceira_consulta = mysqli_query($conexao, "SELECT Orcamento
+    FROM carro_fotos
+    WHERE cod_veiculo = '$cod_veiculo';");
+        }
+
+        while ($row = mysqli_fetch_array($terceira_consulta)) {
+             $pdf = $row['Orcamento'];
+        }
+
         while ($row = mysqli_fetch_array($segunda_consulta)) {
             $fotos[] = $row;
         }
@@ -59,7 +69,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $eu = array(
             'carro' => $carro,
             'sim' => $sim,
-            'fotos' => $fotos
+            'fotos' => $fotos,
+            'pdf' => $pdf
         );
     } else {
         $eu = array(
@@ -70,8 +81,5 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 
     echo json_encode($eu, JSON_UNESCAPED_SLASHES);
-
 }
-
-
 ?>
