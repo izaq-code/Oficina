@@ -20,6 +20,7 @@ FOREIGN KEY (cod_ra) REFERENCES RA(cod_ra)
 CREATE TABLE login_seguradora (
     cod_seguradora int AUTO_INCREMENT PRIMARY KEY,
     nome Varchar(120),
+    email Varchar(120),
     cnpj varchar(80),
     senha Varchar(120)
 );
