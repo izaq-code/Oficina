@@ -886,30 +886,30 @@
  }
 
  .status_recusado {
-    background: rgb(153, 44, 51);
-    border-radius: 30px;
-    padding: 5px 15px;
-    font-size: 14px;
-    font-weight: bolder;
-    width: 100%;
-    color: white;
-    max-width: 110px;
-    display: inline-block;
-    text-align: center;
-}
+     background: rgb(153, 44, 51);
+     border-radius: 30px;
+     padding: 5px 15px;
+     font-size: 14px;
+     font-weight: bolder;
+     width: 100%;
+     color: white;
+     max-width: 110px;
+     display: inline-block;
+     text-align: center;
+ }
 
-.status_finalizado {
-    background: rgb(238, 180, 93);
-    border-radius: 30px;
-    padding: 5px 15px;
-    font-size: 14px;
-    font-weight: bolder;
-    width: 100%;
-    color: white;
-    max-width: 110px;
-    display: inline-block;
-    text-align: center;
-}
+ .status_finalizado {
+     background: rgb(238, 180, 93);
+     border-radius: 30px;
+     padding: 5px 15px;
+     font-size: 14px;
+     font-weight: bolder;
+     width: 100%;
+     color: white;
+     max-width: 110px;
+     display: inline-block;
+     text-align: center;
+ }
 
  .solicitacao-icone {
      margin-right: 5px;
@@ -929,19 +929,19 @@
  }
 
  .solicitacoes-grafico {
-    background-color: #181A1F;
-    border-radius: 20px;
-    padding: 20px;
-    max-width: 500px;
-    margin-bottom: 20px;
-    display: inline-block;
-    margin-right: 20px;
-    vertical-align: top;
-}
+     background-color: #181A1F;
+     border-radius: 20px;
+     padding: 20px;
+     max-width: 500px;
+     margin-bottom: 20px;
+     display: inline-block;
+     margin-right: 20px;
+     vertical-align: top;
+ }
 
-canvas {
-    margin: 0 auto;
-}
+ canvas {
+     margin: 0 auto;
+ }
 
  hr {
      width: 98%;
@@ -1282,33 +1282,78 @@ canvas {
      }
  }
 
-
  /* ISAQUE */
  /* VER + */
 
- #bnt-baixar {
-    position: absolute;
-}
+ #vermais {
+    background-color: #f1f1f0;
+ }
 
-#download-pdf{
-   position: absolute;
-   margin-top: 40%;
-}
+ input[type="checkbox"] {
+     background-color: #dddddd;
+     appearance: none;
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     border: 2px solid #121212;
+     border-radius: 5px;
+     width: 15px;
+     height: 15px;
+     outline: none;
+     cursor: pointer;
+     transition: background-color 0.3s;
+ }
+
+ input[type="checkbox"]:checked {
+     background-color: #121212;
+ }
+
+ #bnt-baixar {
+     cursor: pointer;
+     position: absolute;
+     border: none;
+     background: #121212;
+     border-radius: 10px;
+     border: none;
+     color: white;
+     font-weight: bold;
+     font-size: 15px;
+     padding: 12px;
+     width: 10%;
+     margin-top: 15px;
+     left: 390px;
+     margin-top: 700px;
+ }
+
+ #download-pdf {
+     cursor: pointer;
+     position: absolute;
+     border: none;
+     background: #121212;
+     border-radius: 10px;
+     border: none;
+     color: white;
+     font-weight: bold;
+     font-size: 15px;
+     padding: 12px;
+     width: 10%;
+     margin-top: 15px;
+     left: 600px;
+     margin-top: 700px;
+ }
 
  .img-checkbox {
-    position: absolute;
-    z-index: 1;
-}
+     position: absolute;
+     z-index: 1;
+ }
 
  .exibirmais {
      border-radius: 10px;
-     background-color: rgba(193, 193, 193, 0.2);
      display: flex;
      flex-wrap: wrap;
      justify-content: center;
      align-items: flex-start;
      padding: 50px;
-     background-color: #717171;
+     background-color: white;
      width: 78%;
      top: 0;
      right: 0;
@@ -1324,7 +1369,7 @@ canvas {
      justify-content: center;
      align-items: flex-start;
      padding: 50px;
-     background-color: #717171;
+     background-color: white;
      width: 78%;
      top: 0;
      right: 0;
@@ -1332,15 +1377,18 @@ canvas {
      left: 0;
      margin: auto;
      margin-bottom: 100px;
+
  }
 
  .exibirtudo {
+     padding-left: 10px;
+     padding-bottom: 10px;
      width: 350px;
-     height: 50px;
+     height: 60px;
      margin: 20px;
      border-radius: 10px;
-     background-color: #e6e6e6;
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     background-color: #ffffff;
+     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
      overflow: hidden;
  }
 
@@ -1350,13 +1398,19 @@ canvas {
      margin: 20px;
      border-radius: 10px;
      background-color: #e6e6e6;
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
      overflow: hidden;
  }
 
- .img-conteiner {
+ .container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .img-container {
      width: 100%;
-     height: 80%;
+     height: 15%;
      display: flex;
      justify-content: center;
      align-items: center;
@@ -1369,52 +1423,83 @@ canvas {
      border-radius: 10px;
  }
 
+ .text-container {
+     width: 100%;
+     text-align: center;
+ }
+
+ #pdf {
+     margin-top: 50px;
+     margin-left: 830px;
+     border: none;
+     scrollbar-color: black;
+ }
+
+ #texto-titulo-pdf {
+     position: absolute;
+     font-weight: bold;
+     margin-top: 600px;
+     margin-left: 1000px;
+ }
+
+ #imagens {
+     margin-left: -100px;
+ }
+
  #texto-in {
      top: 0;
      right: 0;
      bottom: 0;
      left: 0;
      margin: auto;
-     margin-left: 180px;
+     margin-left: 210px;
      margin-top: 100px;
+     margin-bottom: 10px;
+ }
+
+ #texto-div {
+     margin-top: -5px;
+     margin-left: 10px;
+     position: absolute;
+     font-weight: bold;
  }
 
  /* IAN */
  /* ESTILOS LOGIN */
 
-#header-login {
-    position: fixed;
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    z-index: 1000;
-}
+ #header-login {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     z-index: 1000;
+ }
 
-#header-login .nav-link {
-    text-decoration: none;
-    font-size: 1.0rem;
-    color: white;
-    font-weight: 400;
-    padding: 3px 10px;
-}
+ #header-login .nav-link {
+     text-decoration: none;
+     font-size: 1.0rem;
+     color: white;
+     font-weight: 400;
+     padding: 3px 10px;
+ }
 
-#header-login .nav-link:hover {
-    text-decoration: none;
-    font-size: 1.0rem;
-    color: gray;
-    font-weight: 400;
-    padding: 3px 10px;
-}
+ #header-login .nav-link:hover {
+     text-decoration: none;
+     font-size: 1.0rem;
+     color: gray;
+     font-weight: 400;
+     padding: 3px 10px;
+ }
 
-#header-login .fi.fi-rs-circle-user {
-    color: white;
-    font-size: 22px;
-}
+ #header-login .fi.fi-rs-circle-user {
+     color: white;
+     font-size: 22px;
+ }
 
-#header-login .fi.fi-rs-circle-user:hover {
-    color: gray;
-    font-size: 22px;
-}
+ #header-login .fi.fi-rs-circle-user:hover {
+     color: gray;
+     font-size: 22px;
+ }
 
  #body1 {
      background-color: black;
@@ -1490,8 +1575,10 @@ canvas {
  /* ALERTA */
 
  .swal-button {
-    background-color: black !important;
-    color: white !important;
-    border: 1px solid black !important; /* Define a borda como preta */
-    box-shadow: none !important; /* Remove qualquer sombra */
-}
+     background-color: black !important;
+     color: white !important;
+     border: 1px solid black !important;
+     /* Define a borda como preta */
+     box-shadow: none !important;
+     /* Remove qualquer sombra */
+ }
