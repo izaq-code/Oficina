@@ -37,4 +37,8 @@ function mostrar(data) {
     $('#placa').val(data[0].placa);
     $('#chassi').val(data[0].chassi);
     $('#hodometro').val(data[0].hodometro);
+    t = $('#status_veiculo');
+    t.empty();
+    t.append(data[0].status_veiculo);
+
 }
