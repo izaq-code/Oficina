@@ -30,7 +30,7 @@ $(document).ready(function(){
 
 function entrar(response){
     let acesso = response;
-    acesso === true ? window.location.href = "../../index.html" : a();
+    acesso === true ? window.location.href = "../HTML/pag-principal.html" : a();
 } 
 
 function a(){
