@@ -1,30 +1,57 @@
 <?php
+    session_start();
+    include_once ("conexao.php");
 
-session_start();
-include_once ("conexao.php");
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+    
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)){
 
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    $cnpj = $_POST['cnpj'];
-    $senha = $_POST['senha'];
+            $sql = "SELECT cod_seguradora FROM login_seguradora 
+        WHERE email = '$email' AND senha = '$senha'";
+        $result = $conexao->query($sql);
 
-    $cnpj_hash = $cnpj;
-    $senha_hash = $senha;
+        if ($result->num_rows > 0) {
 
-    $sql = "SELECT cod_seguradora FROM login_seguradora 
-    WHERE cnpj = '$cnpj_hash' AND senha = '$senha_hash'";
-    $result = $conexao->query($sql);
+            echo json_encode(true);
+            while ($row = mysqli_fetch_array($result)) {
+                $cod = $row['cod_seguradora'];
+            }
+            $_SESSION['id_usuario'] = $cod;
 
-    if ($result->num_rows > 0) {
+        } else {
 
-        echo json_encode(true);
-        while ($row = mysqli_fetch_array($result)) {
-            $cod = $row['cod_seguradora'];
+            echo json_encode(false);
         }
-        $_SESSION['id_usuario'] = $cod;
+        } else{
 
-    } else {
+            $adm = "SELECT login_adm.cod_adm from login_adm
+        INNER join ra on login_adm.cod_ra = ra.cod_ra
+        where ra.RA = '$email' and login_adm.senha_adm = '$senha';";
 
-        echo json_encode(false);
+        $resultado = mysqli_query($conexao, $adm);
+
+        if (mysqli_num_rows($resultado) > 0) {
+
+            $sim = true;
+        } else {
+            $sim = false;
+        }
+
+        if ($sim == true) {
+
+            while ($row = mysqli_fetch_array($resultado)) {
+                $cod = $row['cod_adm'];
+                $_SESSION['id_usuario'] = $cod;
+            }
+        } else {
+            $cod = '';
+        }
+        echo json_encode(array($sim, $cod));
+
     }
-}
-?>
+    }
+    
+    ?>
