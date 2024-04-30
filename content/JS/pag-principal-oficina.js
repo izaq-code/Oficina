@@ -61,13 +61,13 @@ function exibir(data) {
                 data: valores,
                 backgroundColor: [
                     'rgb(209, 209, 209)',
-                    'rgb(238, 180, 93)',
+                    'rgb(66, 116, 166)',
                     'rgb(126, 172, 104)',
                     'rgb(153, 44, 51)'
                 ],
                 borderColor: [
                     'rgb(209, 209, 209)',
-                    'rgb(238, 180, 93)',
+                    'rgb(66, 116, 166)',
                     'rgb(126, 172, 104)',
                     'rgb(153, 44, 51)'
                 ],
