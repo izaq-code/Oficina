@@ -30,10 +30,42 @@ function senhahash(senha) {
     
     function conclusao(data) {
         if (data === true) {
-            alert('Cadastro concluído com sucesso!');
-            window.location.href = "entre-adm.html";
+
+                let timerInterval;
+                Swal.fire({
+                  icon:"success",
+                  title: "Funcionario cadastrado!",
+                  html: "Você sera redirecionando em <b></b> milisegundos .",
+                  timer: 5000,
+                  timerProgressBar: true,
+                  heightAuto: false,  // Evita o redimensionamento automático da tela
+                  didOpen: () => {
+                    Swal.showLoading();
+                    const timer = Swal.getPopup().querySelector("b");
+                    timerInterval = setInterval(() => {
+                      timer.textContent = `${Swal.getTimerLeft()}`;
+                    }, 100);
+                  },
+                  willClose: () => {
+                    clearInterval(timerInterval);
+                  }
+                }).then((result) => {
+                  /* Read more about handling dismissals below */
+                  if (result.dismiss === Swal.DismissReason.timer) {
+                    console.log("o times fechou certo");
+                    alert('Cadastro concluído com sucesso!');
+                    window.location.href = "entre-adm.html";
+                  }
+                })
+      
         } else {
             h(data);
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Erro ao cadastrar!",
+                footer: '<p>Tente novamente</p>'
+              });
         }
     }
     

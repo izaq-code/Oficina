@@ -1,3 +1,4 @@
+
 function hashCNPJ(cnpj) {
     var hash = CryptoJS.SHA256(cnpj).toString(CryptoJS.enc.Hex);
     return hash;
@@ -31,14 +32,41 @@ $(document).ready(function(){
             processData: false,  
             contentType: false,  
             success: function(response){
-               console.log('Resposta do servidor', response);
-               alert('Cadastro concluído com sucesso !');
-               window.location.href = "entre-cliente.html";
+                let timerInterval;
+                Swal.fire({
+                  icon:"success",
+                  title: "Seguradora cadastrada!",
+                  html: "Você sera redirecionando em <b></b> milisegundos .",
+                  timer: 5000,
+                  timerProgressBar: true,
+                  heightAuto: false,  // Evita o redimensionamento automático da tela
+                  didOpen: () => {
+                    Swal.showLoading();
+                    const timer = Swal.getPopup().querySelector("b");
+                    timerInterval = setInterval(() => {
+                      timer.textContent = `${Swal.getTimerLeft()}`;
+                    }, 100);
+                  },
+                  willClose: () => {
+                    clearInterval(timerInterval);
+                  }
+                }).then((result) => {
+                  /* Read more about handling dismissals below */
+                  if (result.dismiss === Swal.DismissReason.timer) {
+                    console.log("o times fechou certo");
+                    window.location.href = "entre-cliente.html";
+                  }
+                })
             }, 
             error: function(xhr, status, error){
                 var erro = xhr.status + ': ' + xhr.statusText;
                 console.error('Erro ao cadastrar:', erro);
-                alert('Erro ao cadastrar ' + erro);
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Erro ao cadastrar!",
+                    footer: '<p>Tente novamente</p>'
+                  });
             }
         });
     });
@@ -52,3 +80,5 @@ function a(response){
      )
      t.append(resp);
 }
+
+
