@@ -126,6 +126,9 @@ document.addEventListener("DOMContentLoaded", function () {
       Swal.fire({
         icon: 'success',
         title: 'Enviado com sucesso!',
+        customClass: {
+          confirmButton: 'swal-button' 
+      }
       }).then((result) => {
         if (result.isConfirmed) {
           window.location.reload();
