@@ -12,7 +12,10 @@ $(document).ready(function () {
                 console.log('Resposta do servidor:', response); // Verifica a resposta do servidor
                 Swal.fire({
                     icon: 'success',
-                    title: 'Enviado com sucesso!'
+                    title: 'Enviado com sucesso!',
+                    customClass: {
+                        confirmButton: 'swal-button' 
+                    }
                 }).then((result) => {
                     if (result.isConfirmed) {
                         window.location.reload();
@@ -25,7 +28,10 @@ $(document).ready(function () {
                 Swal.fire({
                   icon: 'error',
                   title: 'Erro ao enviar o formulário',
-                  text: 'Por favor, tente novamente mais tarde.'
+                  text: 'Por favor, tente novamente mais tarde.',
+                  customClass: {
+                    confirmButton: 'swal-button' 
+                }
                 });
             }
         });

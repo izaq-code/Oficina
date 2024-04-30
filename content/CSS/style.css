@@ -1471,3 +1471,13 @@ canvas {
          width: 100%;
      }
  }
+
+ /* ISAQUE */
+ /* ALERTA */
+
+ .swal-button {
+    background-color: black !important;
+    color: white !important;
+    border: 1px solid black !important; /* Define a borda como preta */
+    box-shadow: none !important; /* Remove qualquer sombra */
+}

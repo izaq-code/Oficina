@@ -22,7 +22,10 @@ window.addEventListener("DOMContentLoaded", function () {
                         icon: "warning",
                         title: "Oops...",
                         text: "O arquivo escolhido não e uma foto",
-                        footer: '<p>Preencha todos os campos corretamente!</p>'
+                        footer: '<p>Preencha todos os campos corretamente!</p>',
+                        customClass: {
+                            confirmButton: 'swal-button' 
+                        }
                       });
                     inputFile.value = '';
                     return;
@@ -34,7 +37,10 @@ window.addEventListener("DOMContentLoaded", function () {
                     icon: "error",
                     title: "Espaço excedido...",
                     text: "Apenas imagens abaixo de 5 MB",
-                    footer: '<p>Imagem com valor igual ou superior a 5 mb</p>'
+                    footer: '<p>Imagem com valor igual ou superior a 5 mb</p>',
+                    customClass: {
+                        confirmButton: 'swal-button' 
+                    }
                   });
                     inputFile.value = ''; 
                     return;

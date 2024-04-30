@@ -34,7 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
         icon: "warning",
         title: "Oops...",
         text: "Selecione um arquivo PDF antes de avançar!",
-        footer: '<p>Por favor, escolha um arquivo PDF.</p>'
+        footer: '<p>Por favor, escolha um arquivo PDF.</p>',
+        customClass: {
+          confirmButton: 'swal-button' 
+      }
       });
       return;
     }
@@ -44,7 +47,10 @@ document.addEventListener("DOMContentLoaded", function () {
         icon: "warning",
         title: "Oops...",
         text: "Campos incompletos!",
-        footer: '<p>Preencha todos os campos obrigatórios!</p>'
+        footer: '<p>Preencha todos os campos obrigatórios!</p>',
+        customClass: {
+          confirmButton: 'swal-button' 
+      }
       });
       return;
     }
@@ -103,7 +109,10 @@ document.addEventListener("DOMContentLoaded", function () {
         icon: "warning",
         title: "Oops...",
         text: "Campos incompletos!",
-        footer: '<p>Preencha todos os campos obrigatórios!</p>'
+        footer: '<p>Preencha todos os campos obrigatórios!</p>',
+        customClass: {
+          confirmButton: 'swal-button' 
+      }
       });
       return;
     }
@@ -128,7 +137,10 @@ document.addEventListener("DOMContentLoaded", function () {
       Swal.fire({
         icon: 'error',
         title: 'Erro ao enviar o formulário',
-        text: 'Por favor, tente novamente mais tarde.'
+        text: 'Por favor, tente novamente mais tarde.',
+        customClass: {
+          confirmButton: 'swal-button' 
+      }
       });
     });
   });

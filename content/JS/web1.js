@@ -35,7 +35,10 @@ function goToNextStep() {
       icon: "warning",
       title: "Oops...",
       text: "Campos incompletos!",
-      footer: '<p>Preencha todos os campos!</p>'
+      footer: '<p>Preencha todos os campos!</p>',
+      customClass: {
+        confirmButton: 'swal-button' 
+    }
     });
     return;
   }

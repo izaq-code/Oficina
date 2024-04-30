@@ -29,7 +29,10 @@ window.addEventListener("DOMContentLoaded", function () {
                     icon: "error",
                     title: "Espaço excedido...",
                     text: "Apenas imagens abaixo de 5 MB",
-                    footer: '<p>Imagem com valor igual ou superior a 5 mb</p>'
+                    footer: '<p>Imagem com valor igual ou superior a 5 mb</p>',
+                    customClass: {
+                        confirmButton: 'swal-button' 
+                    }
                   });
                     inputFile.value = ''; 
                     return;
