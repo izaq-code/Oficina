@@ -4,9 +4,9 @@ session_start();
 include_once ('conexao.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    if(isset($_SESSION['cod_seguradora'])){
-        $cod_seguradora = $_SESSION['cod_seguradora'];
+    
+    if(isset($_SESSION['id_usuario'])){
+        $cod_seguradora = $_SESSION['id_usuario'];
     } else {
         header("Location: ../HTML/entre-cliente.html ");
         die();
