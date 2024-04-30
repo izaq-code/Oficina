@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Perguntas frequentes</title>
+</head>
+
+<body id="tela-faq" class="bodyfaq">
+    <header id="header-inicial-faq">
+        <nav class="nav-bar-faq">
+            <div class="logo">
+                <h1>Oficina</h1>
+            </div>
+            <div class="login-button-faq">
+                <ul>
+                    <li class="nav-item-faq"><a href="" class="nav-link-faq">Sobre nós</a></li>
+                    <li class="nav-item-faq"><button class=""><a href=" ">Dúvidas?</a></button></li>
+                </ul>
+            </div>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="../img/menu.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item-faq"><a href="" class="nav-link-faq">Sobre nós</a></li>
+                <li class="nav-item-faq"><a href="" class="nav-link-faq">Dúvidas</a></li>
+            </ul>
+            <div class="login-button-faq">
+                <button>Entre</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-banner-ajuda">
+        <div class="imagem-banner-ajuda">
+            <img class="imagem-banner-ajuda" src="../img/Oficina.png" alt="Banner de Ajuda">
+        </div>
+        <div class='ajuda-titulo'>
+            <div>Central de Ajuda</div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Pesquisar por palavra-chave" onkeyup="search()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <main class="main-tela-faq">
+
+        <div class="faq-texto-inicial">
+            <div class="faq-titulo-texto-inicial">Precisa de assistência? Estamos aqui para ajudar.</div>
+            <div class="faq-descricao-texto-inicial">Oferecemos suporte completo para todas as suas necessidades no
+                Sistema Oficina.</div>
+        </div>
+
+        <p class="sistema">Sobre o sistema</p>
+
+        <div class="faq-list">
+            <div class="faq-item" id="question1" onclick="toggleAnswer(1)">
+                <h2>
+                    Como faço para acessar minha conta depois de cadastrado?
+                    <i id="icon1" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer1" style="display: none">
+                    Após o cadastro, você pode entrar indo a página de login do site utilizando seu RA ou email e senha
+                    cadastrados.
+                </div>
+            </div>
+            <div class="faq-item" id="question2" onclick="toggleAnswer(2)">
+                <h2>
+                    Quais as funcionalidades da seguradora?
+                    <i id="icon2" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer2" style="display: none">
+                    Cadastrar email, fazer login e acesssar informações que são geradas para a seguradora. Enviar
+                    formulários com as informações necessárias. Fazer o download dos documentos enivados pela oficina. 
+                    Visualizar o grafico de status da solicitação(em analise, aceito, recusado)
+                </div>
+            </div>
+            <div class="faq-item" id="question3" onclick="toggleAnswer(3)">
+                <h2>
+                    Quais as funcionalidades da oficina?
+                    <i id="icon3" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer3" style="display: none">
+                    Cadastrar RA, fazer login, acessar todas as informações do sistema enviadas por clientes, acessar
+                    pdfs e vizualizar uma tabela que apresenta o estado de cada requisição.
+                    Os administradores têm acesso a funcionalidades adicionais, como visualização de gráficos e status
+                    dos formulários, além de enviar PDFs de orçamento e fotos. Fazer o download desses documentos.
+                    Ver as seguradoras que foram cadastradas no sistema.
+                </div>
+            </div>
+            <div class="faq-item" id="question4" onclick="toggleAnswer(4)">
+                <h2>
+                    O que garante a segurança dos dados?
+                    <i id="icon4" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer4" style="display: none">
+                    Criptografia de senhas e informações sensíveis.
+                </div>
+            </div>
+            <div class="faq-item" id="question5" onclick="toggleAnswer(5)">
+                <h2>
+                    Qual é a diferença entre a sessão da seguradora e da oficina?
+                    <i id="icon5" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer5" style="display: none">
+                    A sessão da seguradora permite o envio de formulários com informações sobre os sinistros, enquanto a
+                    sessão da oficina permite analisar esses formulários e responder à seguradora com orçamentos e
+                    fotos.
+                </div>
+            </div>
+            <div class="faq-item" id="question6" onclick="toggleAnswer(6)">
+                <h2>
+                    Quais informações devo fornecer ao iniciar uma sessão como seguradora? E como oficina?
+                    <i id="icon6" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer6" style="display: none">
+                    Como seguradora, você precisará fornecer detalhes sobre o sinistro, como informações do segurado e
+                    fotos do dano. Como oficina, você precisa acessar a solicitação recebida da seguradora para análise
+                    e resposta.
+                </div>
+            </div>
+            <div class="faq-item" id="question7" onclick="toggleAnswer(7)">
+                <h2>
+                    Como faço para enviar um formulário?
+                    <i id="icon7" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer7" style="display: none">
+                    Após preencher todas as informações necessárias sobre o sinistro, você poderá enviar o formulário
+                    diretamente do sistema para a oficina.
+                </div>
+            </div>
+            <div class="faq-item" id="question8" onclick="toggleAnswer(8)">
+                <h2>
+                    Como a oficina recebe e analisa o formulário enviado pela seguradora?
+                    <i id="icon8" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer8" style="display: none">
+                    A oficina recebe o formulário automaticamente no sistema e analisa as informações fornecidas para
+                    elaborar um orçamento e responder à seguradora.
+                </div>
+            </div>
+            <div class="faq-item" id="question9" onclick="toggleAnswer(9)">
+                <h2>
+                    Quais são as etapas para a oficina responder à seguradora com o orçamento e as fotos?
+                    <i id="icon9" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer9" style="display: none">
+                    Após analisar o formulário, a oficina prepara um orçamento e envia junto com as fotos do dano para a
+                    seguradora que indica se a solicitação foi aceita ou recusada.
+                </div>
+            </div>
+            <div class="faq-item" id="question10" onclick="toggleAnswer(10)">
+                <h2>
+                    Quais tipos de gráficos e análises estão disponíveis para a oficina na página de acompanhamento de
+                    solicitações?
+                    <i id="icon10" class="fas fa-chevron-down"></i>
+                </h2>
+                <div class="answer" id="answer10" style="display: none">
+                    Na página de acompanhamento de solicitações, a oficina pode acessar gráficos e análises que mostram
+                    o status atual de todas as solicitações recebidas, como a quantidade de solicitações pendentes,
+                    aceitas ou recusadas, além das seguradoras cadastradas.                                                                                                                                                                                                                      
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </main>
+
+    <script src="../JS/faq.js"></script>
+    <script src="../JS/navbar-faq.js"></script>
+    <script src="https://kit.fontawesome.com/993326fe18.js" crossorigin="anonymous"></script>
+</body>
