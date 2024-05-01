@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function(){
         $.ajax({
             type: 'POST',
             url: '../PHP/navbarLoad.php',
-            data: data,
             dataType: 'json',
 
             success: function (data) {
@@ -13,15 +12,14 @@ document.addEventListener("DOMContentLoaded", function(){
     })
 })
 
-function conclusa (data) {
+function conclusao (data) {
     t = $('#nome-fulano');
     t.empty();
-
-    t.append(data[0].nome_fulano);
+    t.append(data.nome_fulano);
 
     q = $('#email-fulano');
     q.empty();
 
-    t.append(data[0].email_fulano);
+    q.append(data.email_fulano);
 
 }
