@@ -22,29 +22,29 @@ function exibir(data) {
     q = $('#informacao-aberta');
     q.empty();
 
-    q.append(solicitacao[0][0]);
+    q.append(solicitacao[0][0] ? solicitacao[0][0] : '0');
 
     w = $('#informacao-em-analise');
     w.empty();
 
-    w.append(solicitacao[0][1]);
+    w.append(solicitacao[0][1] ? solicitacao[0][1] : '0');
 
     e = $('#informacao-recusada');
     e.empty();
 
-    e.append(solicitacao[0][2]);
+    e.append(solicitacao[0][2] ? solicitacao[0][2] : '0');
 
     i = $('#informacao-concluida');
     i.empty();
 
-    i.append(solicitacao[0][3]);
+    i.append(solicitacao[0][3] ? solicitacao[0][3] : '0');
 
     //grafico
 
-    var aberta = parseInt(solicitacao[0][0]);
-    var emAnalise = parseInt(solicitacao[0][1]);
-    var concluida = parseInt(solicitacao[0][2]);
-    var recusada = parseInt(solicitacao[0][3]);
+    var aberta = parseInt(solicitacao[0][0] ? solicitacao[0][0] : '0');
+    var emAnalise = parseInt(solicitacao[0][1] ? solicitacao[0][1] : '0');
+    var concluida = parseInt(solicitacao[0][2] ? solicitacao[0][2] : '0');
+    var recusada = parseInt(solicitacao[0][3] ? solicitacao[0][3] : '0');
 
 
     var labels = ['Aberta', 'Em análise', 'Concluida', 'Recusada'];
