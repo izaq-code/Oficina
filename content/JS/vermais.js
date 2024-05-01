@@ -40,7 +40,7 @@ function exibir(data) {
     for (var key in carro[0]) {
         if (!isNaN(key)) continue; // Ignorar chaves numéricas
         var divContent = "<div class='exibirtudo'>";
-        divContent += "<h3>" + key + ":</h3>  " + "<p>" + carro[0][key].replace(/\b(Finalizado|Aberto|Aceito|Recusado)\b/g, m) + "</p>";
+        divContent += "<h3>" + key + ":</h3>  " + "<p>" + (carro[0][key] ? carro[0][key].replace(/\b(Finalizado|Aberto|Aceito|Recusado)\b/g, m) : '') + "</p>";
         divContent += "</div>";
         w.append(divContent);
     }
@@ -155,6 +155,38 @@ function exibir(data) {
 
        localStorage.setItem('codVeiculo', cod_veiculo);
 
-       window.location.href = '../HTML/excluir-seg.html';
+       const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+          confirmButton: "btn btn-success",
+          cancelButton: "btn btn-danger"
+        },
+        buttonsStyling: false
+      });
+      swalWithBootstrapButtons.fire({
+        title: "Tem certeza que deseja deletar?",
+        text: "concordando com isso você estará deletando a solicitação!",
+        icon: "question",
+        showCancelButton: true,
+        confirmButtonText: "Sim, deletar!",
+        cancelButtonText: "Não, cancelar!",
+        reverseButtons: true
+      }).then((result) => {
+        if (result.isConfirmed) {
+          swalWithBootstrapButtons.fire({
+            title: "Deletado!",
+            text: "Sua solicitação foi deletada.",
+            icon: "success"
+          });
+        } else if (
+          /* Read more about handling dismissals below */
+          result.dismiss === Swal.DismissReason.cancel
+        ) {
+          swalWithBootstrapButtons.fire({
+            title: "Cancelado",
+            text: "Você cancelou a exclusão da solicitação",
+            icon: "error"
+          });
+        }
+      });
    });
 }
