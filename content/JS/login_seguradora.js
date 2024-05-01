@@ -18,7 +18,11 @@ $(document).ready(function(){
             data: formData,
             dataType: 'json',
             success: function(response){
-                entrar(response);
+                if (response === 'a') {
+                    entrarCliente(response);
+                } else {
+                    entrarOficina(response);
+                }
                 $('#email').val('');
                 $('#senha').val('');
             }  
@@ -26,17 +30,7 @@ $(document).ready(function(){
     });
 });
 
-
-function entrar(response){
-    let acesso = response;
-    if (acesso === true) {
-        window.location.href = "../HTML/pag-principal.html"; 
-    } else {
-        s();
-    }
-} 
-
-function entrar(response) {
+function  entrarOficina(response) {
     let acesso = response[0];
     if (acesso === true) {
         let cod = response[1];
@@ -47,20 +41,22 @@ function entrar(response) {
     }
 }
 
-function s(){
-    t = $('#resposta_seguradora');
-    t.empty();
-    resp = (
-        'Email ou senha estão incorretos. Tente novamente!</p>'
-    )
-    t.append(resp);
+function entrarCliente(response) {
+    let acesso = response;
+    if (acesso === 'a') {
+        window.location.href = "../HTML/pag-principal.html"; 
+    } else {
+        a();
+    }
 }
+
+
 
 function a(){
     t = $('#resposta_seguradora');
     t.empty();
     resp = (
-        'RA ou senha estão incorretos. Tente novamente!</p>'
+        'Email ou RA e senha estão incorretos. Tente novamente!</p>'
     )
     t.append(resp);
 }
