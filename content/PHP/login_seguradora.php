@@ -15,7 +15,7 @@
 
         if ($result->num_rows > 0) {
 
-            echo json_encode(true);
+            echo json_encode('a');
             while ($row = mysqli_fetch_array($result)) {
                 $cod = $row['cod_seguradora'];
             }
