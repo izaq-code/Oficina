@@ -3,6 +3,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("bnte").addEventListener("click", function() {
         document.querySelector("#bnte").classList.toggle("active");
+        document.querySelector("#bb").classList.toggle("active");
     });
     const nav = document.querySelector('.nav');
     const toggleButton = document.getElementById('bnte');
