@@ -22,4 +22,9 @@ function conclusao (data) {
 
     q.append(data.email_fulano);
 
+    w = $('#foto-perfil');
+    w.empty();
+    var h = "<img style='width: 100%; height: 100%;'src='" + data.foto_perfil + "'>";
+    w.append(h);
+
 }
