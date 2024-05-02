@@ -19,24 +19,22 @@
 </head>
 
 <body id="pag-inicial">
- 
     <nav class="nav">
-        <div id="foto-perfil"></div>
-        <div id="nome-fulano">Fulanodetal</div>
-        <div id="email-fulano">fulanodetal@gmail.com</div>
         <ul class="navbar-lista">
-            <li id="home"><i class="fi fi-rr-home"></i><a href="pag-principal-oficina.html"> Home</a></li>
-            <li id="lista"><i class="fi fi-rr-clipboard-list"></i><a href="Formulario of.html"> Formulário</a></li>
+            <li id="home"><i class="fi fi-rr-home"></i><a href="#"> Home</a></li>
+            <li id="lista"><i class="fi fi-rr-clipboard-list"></i><a href="#"> Formulário</a></li>
         </ul>
-        <div id="iconee">
-            <div id="textosair">
-                <i class="fi fi-rr-exit"></i>
-                <a href="../../index.html">Sair</a>
-            </div>
-        </div>
+       <div id="iconee"><i class="fi fi-rr-exit"></i><div id="sair"><a href="#">Sair</a></div></div>
         <div id="bnte"><i id="bb" class="bi bi-caret-left-fill"></i></div>
     </nav>
     
+    <select id="informacoes">
+        <option value="Aberto">Aberto</option>
+        <option value="Finalizado">Em análise</option>
+        <option value="Recusado">Recusado</option>
+        <option value="Aceito">Concluídas</option>
+    </select>
+
     <div class="inicial">
         <div class="solicitacoes-grafico">
             <div class="grafico-titulo">Status solicitações</div>
@@ -81,8 +79,7 @@
     </div>
 
 </body>
-<script src="../JS/navbarLoad.js"></script>
+
 <script src="../JS/pag-principal-oficina.js"></script>
-
-
+<script src="../JS/filtrar.js"></script>
 </html>
