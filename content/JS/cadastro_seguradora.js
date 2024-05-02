@@ -1,4 +1,3 @@
-
 function hashSenha(senha) {
     var hash = CryptoJS.SHA256(senha).toString(CryptoJS.enc.Hex);
     return hash;
@@ -28,6 +27,11 @@ $(document).ready(function(){
             processData: false,  
             contentType: false,  
             success: function(response){
+                if (response == false) {
+                  a();
+                  return
+                }
+
                 let timerInterval;
                 Swal.fire({
                   icon:"success",
@@ -68,13 +72,11 @@ $(document).ready(function(){
     });
 });
 
-function a(response){
-     t = $('#alerta');
-     t.empty();
-     resp = (
-        '<p>' + response + '</p>'
-     )
-     t.append(resp);
+function a(){
+  Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Digite um email válido ! (Ex: seguradora@email.com)",
+      footer: '<p>Tente novamente</p>'
+    });
 }
-
-
