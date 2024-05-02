@@ -1253,6 +1253,7 @@
          flex-direction: column;
          text-align: center;
          padding-bottom: 1rem;
+         padding-left: 27px;
      }
 
      .mobile-menu .nav-item {
