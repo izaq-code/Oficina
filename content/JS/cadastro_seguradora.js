@@ -65,7 +65,8 @@ $(document).ready(function(){
                     icon: "error",
                     title: "Oops...",
                     text: "Erro ao cadastrar!",
-                    footer: '<p>Tente novamente</p>'
+                    footer: '<p>Tente novamente</p>',
+                    heightAuto: false
                   });
             }
         });
@@ -77,6 +78,7 @@ function a(){
       icon: "error",
       title: "Oops...",
       text: "Digite um email válido ! (Ex: seguradora@email.com)",
-      footer: '<p>Tente novamente</p>'
+      footer: '<p>Tente novamente</p>',
+      heightAuto: false
     });
 }
