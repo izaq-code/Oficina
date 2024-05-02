@@ -101,7 +101,15 @@ function exibir(data) {
            });
 
            if (imagens_selecionadas.length === 0) {
-               alert('Nenhuma imagem selecionada para download');
+            Swal.fire({
+                icon: "error",
+                title: "Nenhuma imagem selecionada...",
+                text:"Selecione uma imagem para fazer o download",
+
+                customClass: {
+                    confirmButton: 'swal-button' 
+                }
+              });
                return;
            }
 
@@ -160,7 +168,7 @@ function exibir(data) {
           confirmButton: "btn btn-success",
           cancelButton: "btn btn-danger"
         },
-        buttonsStyling: false
+     
       });
       swalWithBootstrapButtons.fire({
         title: "Tem certeza que deseja deletar?",
