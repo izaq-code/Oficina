@@ -1,20 +1,29 @@
 <?php
-  include_once("conexao.php");
+include_once ("conexao.php");
 
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-   $nome = $_POST['nome'];
-   $email = $_POST['email'];
-   $cnpj = $_POST['cnpj']; 
-   $senha = $_POST['senha']; 
+  $email = $_POST['email'];
 
- $sql = "INSERT INTO login_seguradora (nome, email, cnpj, senha) VALUES 
+  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo false;
+    exit();
+  }
+
+  $nome = $_POST['nome'];
+  $cnpj = $_POST['cnpj'];
+  $senha = $_POST['senha'];
+
+
+
+  $sql = "INSERT INTO login_seguradora (nome, email, cnpj, senha) VALUES 
  ('$nome', '$email', '$cnpj', '$senha')";
 
-if ($conexao->query($sql) === TRUE) {
+  if ($conexao->query($sql) === TRUE) {
     echo "Inserção realizada com sucesso";
-} else {
+  } else {
     echo "Erro na inserção: " . $conexao->error;
-}
+  }
+
 }
 ?>
