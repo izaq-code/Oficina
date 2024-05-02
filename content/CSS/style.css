@@ -360,6 +360,27 @@
      overflow: hidden;
  }
 
+ .foto1 {
+    margin-left: 40px;
+    margin-top: 40px;
+    border-radius: 23px;
+    width: 150px;
+    height: 150px;
+    aspect-ratio: 16/9;
+    background-image: url(../fotos-usuarios/semfoto.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    border: 2px dashed currentcolor;
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+    outline: none;
+    overflow: hidden;
+}
+
  #fto {
      display: grid;
      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -816,9 +837,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgb(0, 0, 0);
-   
 }
- 
 
  /*IAN*/
  /*Estilos página principal*/
