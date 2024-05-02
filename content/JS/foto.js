@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", function () {
         const removeButton = container.querySelector('.remover-foto1');
         const fotoImageTxt = '';
   
-        fotoImage.innerHTML = `<i class="bi bi-plus-lg" id="a"></i> ${fotoImageTxt}`;
+   
   
         inputFile.addEventListener("change", function (e) {
             const inputTarget = e.target;
@@ -59,12 +59,12 @@ window.addEventListener("DOMContentLoaded", function () {
                 reader.readAsDataURL(file);
             } else {
          
-                fotoImage.innerHTML = `<i class="bi bi-plus-lg" id="a"></i> ${fotoImageTxt}`;
+         
             }
         });
   
         removeButton.addEventListener("click", function () {
-            fotoImage.innerHTML = `<i class="bi bi-plus-lg" id="a"></i> ${fotoImageTxt}`; 
+            fotoImage.innerHTML = `${fotoImageTxt}`; 
             inputFile.value = ""; 
      
             inputFile.disabled = false;
