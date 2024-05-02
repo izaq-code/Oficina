@@ -14,6 +14,7 @@ CREATE TABLE login_adm (
 cod_adm int AUTO_INCREMENT PRIMARY KEY,
 senha_adm Varchar(120),
 isOf boolean DEFAULT true,
+foto varchar(120) DEFAULT '../fotos-usuarios/semfoto.png',
 cod_ra int,
 FOREIGN KEY (cod_ra) REFERENCES RA(cod_ra)
 );
@@ -24,6 +25,7 @@ CREATE TABLE login_seguradora (
     email Varchar(120),
     cnpj varchar(80),
     isOf boolean DEFAULT false,
+    foto varchar(120) DEFAULT '../fotos-usuarios/semfoto.png', 
     senha Varchar(120)
 );
 
