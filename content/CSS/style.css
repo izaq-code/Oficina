@@ -1300,24 +1300,27 @@
  #vermais {
     background-color: #f1f1f0;
  }
-
  input[type="checkbox"] {
-     background-color: #dddddd;
-     appearance: none;
-     -webkit-appearance: none;
-     -moz-appearance: none;
-     border: 2px solid #121212;
-     border-radius: 5px;
-     width: 15px;
-     height: 15px;
-     outline: none;
-     cursor: pointer;
-     transition: background-color 0.3s;
- }
+    background-color: #dddddd;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 2px solid #121212;
+    border-radius: 5px;
+    width: 15px;
+    height: 15px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
- input[type="checkbox"]:checked {
-     background-color: #121212;
- }
+input[type="checkbox"]:checked {
+    background-color: #000000;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="white" ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M5 13l4 4L19 7" /></svg>');
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
  #bnt-baixar {
      cursor: pointer;
