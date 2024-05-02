@@ -24,16 +24,15 @@
     <form id="atualizar">
         <div class="foto-container1"><BR></BR>
             <div class="label1">Foto de perfil:</div>
-            <label class="foto" for="foto__input9" tabIndex="0">
-                <span class="foto__image"><i class="bi bi-plus-lg" id="a"></i></span>
+            <label class="foto1" for="foto__input9" tabIndex="0">
+                <span class="foto__image"></span>
                 <input type="file" name="foto__input9" id="foto__input9" class="foto__input" data-index="9" required>
             </label>
             <button id="remover3" class="remover-foto1" data-index="9"><span id="lixo" class="material-symbols-outlined">
                     delete
                 </span></button>
         </div>
-        <div class="input">
-         
+        <div class="input"> 
             <input type="text" class="form-control" id="nome" name="nome" required>
             <label for="nome">Nome:</label> 
         </div>
@@ -41,12 +40,16 @@
             <input type="text" class="form-control" id="email" name="email" required>
             <label for="email">Email:</label>
         </div>
+        <div class="input"> 
+            <input type="text" class="form-control" id="CNPJ" name="CNPJ" required>
+            <label for="CNPJ">CNPJ:</label> 
+        </div>
         <button type="submit" class="enviar-perfil">Enviar</button>
     </form>
 </DIV>
-<script src="../JS/navbarLoad.js"></script>
-    <script src="/content/JS/foto.js"></script>
-    <script src="../JS/perfl-usuario.js"></script>
+    <script src="../JS/foto.js"></script>
+    <script src="../JS/perfl-usuario-seguradora.js"></script>
+    <script src="../JS/perfil-usuario-load.js"></script>
 </body>
 
 </html>
