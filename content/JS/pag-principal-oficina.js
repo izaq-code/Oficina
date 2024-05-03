@@ -246,7 +246,7 @@ $(document).ready(function() {
     var adicionar = (
         "<div class='card-solicitacoes-container'>" +
         "<div class='titulo-solicitacoes'>Solicitações</div>" +
-        "<i id='selecticon' class='bi bi-caret-down-fill'></i>" +
+        "<div class='custom-select'>" +
         "<select id='informacoes'>" +
         "<option value='Padrao'>Todos os Status</option>" +
         "<option value='Aberto'>Aberto</option>" +
@@ -254,6 +254,8 @@ $(document).ready(function() {
         "<option value='Recusado'>Recusado</option>" +
         "<option value='Aceito'>Concluídas</option>" +
         "</select>" +
+        "<i class='bi bi-caret-down-fill'></i>"+
+        "</div>"+
         "<hr>" +
         "<table class='solicitacoes-table'>" +
         "<thead>" +

@@ -830,26 +830,34 @@ form .page .field button:hover {
 /*IAN*/
 /*Estilos página principal*/
 
-#selecticon {
-  position: absolute;
-  pointer-events: none;
-  margin-left: 200px;
-  margin-top: 20px;
+.custom-select {
+  position: relative;
+  display: inline-block;
 }
 
-#informacoes {
-  margin-left: 15px;
+.custom-select select {
   margin-top: 10px;
-  padding-left: 10px;
-  box-shadow: 0 0 1px black;
-  outline: none;
-  border-radius: 10px;
-  height: 40px;
-  width: 210px;
-  font-weight: 500;
+  margin-left: 18px;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  font-weight: 500;
+  width: 200px;
+  padding: 8px 30px 8px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.custom-select i {
+  margin-top: 6px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 table {
