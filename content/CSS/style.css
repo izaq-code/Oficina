@@ -595,7 +595,15 @@ form .page .field button:hover {
 
   .nav.active .navbar-lista li:hover {
     background-color: rgb(255, 255, 255);
-    border-radius: 50px;
+    border-radius: 10px !important;
+    padding-left: 20px;
+    margin-left: 15px;
+    color: rgb(0, 0, 0);
+  }
+
+  .nav .navbar-lista li:hover {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
   }
 
   .nav.active .navbar-lista li:hover::before,
@@ -609,6 +617,14 @@ form .page .field button:hover {
 
   .nav.active .navbar-lista li:hover::after {
     display: none;
+  }
+
+  #iconee {
+    top: 820px !important;
+  }
+
+  #iconee.active {
+    top: 710px !important;
   }
 }
 
@@ -662,21 +678,31 @@ form .page .field button:hover {
 }
 
 #textosair i {
+  cursor: default; 
+  pointer-events: none; 
   position: absolute;
   color: rgb(255, 255, 255);
   font-size: 17px;
   margin-top: -100px;
 }
 
-.nav.active #iconee {
+#iconee {
+  margin-left: 30px;
+  position: absolute;
+  width: 100px;
+  top: 910px;
+  color: white;
+}
+
+#iconee.active {
   padding-left: 5px;
   padding-top: 9px;
   padding-bottom: 9px;
   border-radius: 10px;
-  margin-top: 340px;
+  top: 800px;
   display: block;
   width: 190px;
-  color: black;
+  color: rgb(255, 255, 255);
   background-color: white;
 }
 
@@ -685,11 +711,19 @@ form .page .field button:hover {
 }
 
 .nav.active #textosair a {
-  margin-left: 60px;
+  margin-left: -5px;
   font-weight: 500;
   color: #000;
   display: inline;
+  width: 515px !important;
+  margin-top: -5px !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 80px;
+  padding-right: 80px;
+  text-align: center;
 }
+
 
 .nav.active #textosair i {
   color: rgb(0, 0, 0);
@@ -698,11 +732,26 @@ form .page .field button:hover {
   margin-left: 10px;
 }
 
-.navbar-lista li {
+.nav .navbar-lista li {
   margin-top: 100px;
   color: white;
   position: relative;
-  margin-left: 30px;
+  padding: auto;
+  padding-left: 15px;
+  padding-top: 15px;
+  height: 50px;
+  width: 50px;
+  margin-left: 15px;
+  border-radius: 10px;
+}
+.nav.active .navbar-lista a {
+  width: 215px;
+  height: 45px;
+  margin-left: -35px !important;
+  margin-top: -5px !important;
+  padding: 10px;
+  text-align: center;
+  line-height: 40px;
 }
 
 .navbar-lista li:hover a,
@@ -713,38 +762,23 @@ form .page .field button:hover {
 
 .nav .navbar-lista li:hover {
   background-color: rgb(255, 255, 255);
-  border-radius: 50px 0px 0px 50px;
-  padding-left: 10px;
-}
-
-.nav .navbar-lista li:hover::before,
-.nav .navbar-lista li:hover::after {
-  --border-radius: 1rem;
-  content: "";
-  position: absolute;
-  width: var(--border-radius);
-  height: var(--border-radius);
-  right: 0;
-  border-radius: 100vw;
-  transition: 0.5s all linear;
-}
-
-.nav .navbar-lista li:hover::before {
-  box-shadow: 3px 3px 0 3px white;
-  border-radius: 0 0 100vw 0;
-  top: calc(var(--border-radius) * -1);
-}
-
-.nav .navbar-lista li:hover::after {
-  box-shadow: 3px -3px 0px 3px white;
-  border-radius: 0 100vw 0 0;
-  bottom: calc(var(--border-radius) * -1);
 }
 
 .nav.active .navbar-lista li:hover {
   background-color: rgb(255, 255, 255);
   border-radius: 50px 0px 0px 50px;
-  padding-left: 10px;
+  padding-left: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.nav.active .navbar-lista li {
+  margin-top: 100px;
+  color: rgb(255, 255, 255);
+  position: relative;
+  width: 220px;
+  margin-left: 30px;
+  padding-left: 0;
+  padding-top: 0;
 }
 
 .nav.active .navbar-lista li:hover::before,
@@ -769,14 +803,6 @@ form .page .field button:hover {
   box-shadow: 3px -3px 0px 3px white;
   border-radius: 0 100vw 0 0;
   bottom: calc(var(--border-radius) * -1);
-}
-
-#iconee {
-  margin-left: 30px;
-  position: absolute;
-  width: 100px;
-  margin-top: 500px;
-  color: white;
 }
 
 #sairr {
