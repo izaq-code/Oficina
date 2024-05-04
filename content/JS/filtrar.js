@@ -48,7 +48,7 @@ function preencherTabela(selecionado) {
                 event.preventDefault();
                 var codVeiculo = $(this).data("cod_veiculo");
                 localStorage.setItem("codVeiculo", codVeiculo);
-                window.location.href = "../HTML/vermais.html";
+                window.location.href = "../HTML/vermais-oficina.html";
             });
         }
     });
