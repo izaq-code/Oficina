@@ -525,6 +525,7 @@ form .page .field button:hover {
 }
 
 .enviar-perfil {
+  cursor: pointer;
   margin-left: 90px;
   background: #121212;
   border-radius: 10px;
@@ -1646,7 +1647,7 @@ input[type="checkbox"]:checked {
   scrollbar-color: black;
 }
 
-#atualizar{
+#atualizar1{
   cursor: pointer;
   border: none;
   background: #121212;
