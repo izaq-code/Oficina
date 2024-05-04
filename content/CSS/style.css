@@ -254,22 +254,306 @@ form .page .field button:hover {
   position: absolute;
   content: "";
   bottom: 9px;
-  right: -275px;
+  right: -372px;
   height: 3px;
-  width: 275px;
-  background: #737373;
+  width: 372px;
+  background: #a7a7a7;
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (max-width: 1650px) {
   .progress-bar .step .bullet:before,
   .progress-bar .step .bullet:after {
     position: absolute;
     content: "";
     bottom: 9px;
-    right: -372px;
+    right: -360px;
     height: 3px;
-    width: 372px;
-    background: #737373;
+    width: 360px;
+    background: #a7a7a7;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    right: -345px;
+    height: 3px;
+    width: 345px;
+    background: #a7a7a7;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    right: -338px;
+    height: 3px;
+    width: 338px;
+    background: #a7a7a7;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    right: -325px;
+    height: 3px;
+    width: 325px;
+    background: #a7a7a7;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    right: -305px;
+    height: 3px;
+    width: 305px;
+    background: #a7a7a7;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    right: -300px;
+    height: 3px;
+    width: 300px;
+    background: #a7a7a7;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    right: -285px;
+    height: 3px;
+    width: 285px;
+    background: #a7a7a7;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    right: -270px;
+    height: 3px;
+    width: 270px;
+    background: #a7a7a7;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    right: -260px;
+    height: 3px;
+    width: 260px;
+    background: #a7a7a7;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    right: -245px;
+    height: 3px;
+    width: 245px;
+    background: #a7a7a7;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    right: -235px;
+    height: 3px;
+    width: 235px;
+    background: #a7a7a7;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    right: -225px;
+    height: 3px;
+    width: 225px;
+    background: #a7a7a7;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    right: -210px;
+    height: 3px;
+    width: 210px;
+    background: #a7a7a7;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    right: -198px;
+    height: 3px;
+    width: 198px;
+    background: #a7a7a7;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    right: -185px;
+    height: 3px;
+    width: 185px;
+    background: #a7a7a7;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    right: -170px;
+    height: 3px;
+    width: 170px;
+    background: #a7a7a7;
+  }
+}
+
+
+@media screen and (max-width: 850px) {
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    right: -160px;
+    height: 3px;
+    width: 160px;
+    background: #a7a7a7;
+  }
+}
+@media screen and (max-width: 800px) {
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    right: -150px;
+    height: 3px;
+    width: 150px;
+    background: #a7a7a7;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    right: -135px;
+    height: 3px;
+    width: 135px;
+    background: #a7a7a7;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    right: -120px;
+    height: 3px;
+    width: 120px;
+    background: #a7a7a7;
+  }
+}
+@media screen and (max-width: 650px) {
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    right: -110px;
+    height: 3px;
+    width: 110px;
+    background: #a7a7a7;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    right: -100px;
+    height: 3px;
+    width: 100px;
+    background: #a7a7a7;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 9px;
+    right: -85px;
+    height: 3px;
+    width: 85px;
+    background: #a7a7a7;
   }
 }
 
