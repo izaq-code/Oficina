@@ -793,6 +793,7 @@ form .page .field button:hover {
   border-radius: 10px;
 }
 
+
 #iconee {
   margin-left: 30px;
   position: absolute;
@@ -802,7 +803,7 @@ form .page .field button:hover {
 }
 
 #iconee.active {
-  padding-left: 5px;
+ cursor: pointer;
   padding-top: 9px;
   padding-bottom: 9px;
   border-radius: 10px;
@@ -811,6 +812,10 @@ form .page .field button:hover {
   width: 190px;
   color: rgb(255, 255, 255);
   background-color: white;
+}
+
+#iconee.active i {
+  pointer-events: none;
 }
 
 #textosair a {
