@@ -552,6 +552,25 @@ form .page .field button:hover {
   --tran-all: 0.2s all linear;
 }
 
+#homeIconas {
+  margin-left: -19px;
+  padding: 20px; 
+}
+
+#homeIconof {
+  margin-left: -19px;
+  padding: 20px; 
+}
+
+#formIconas {
+  margin-left: -19px;
+  padding: 20px; 
+}
+
+#formIconof {
+  margin-left: -19px;
+  padding: 20px; 
+}
 .nav {
   border-radius: 10px;
   position: fixed;
@@ -568,23 +587,8 @@ form .page .field button:hover {
   width: 250px;
 }
 
-/* @media screen and (max-width: 1568px) {
+ @media screen and (max-width: 1568px) {
 
-.nav {
-  border-radius: 10px;
-  position: fixed;
-  background-color:red  ;
-  width: 91%;
-  height: 10%;
-  left: 20px;
-  top: 590px;
-  transition: var(--tran-all);
-  z-index: 1;
-}
-
-#bnte{
-display: none;
-}
 
 
   .navbar-lista li:hover a,
@@ -646,9 +650,25 @@ display: none;
   }
 }
 
- */
-
+/* 
 @media screen and (max-width: 768px) {
+
+  .nav {
+    border-radius: 10px;
+    position: fixed;
+    background-color:red  ;
+    width: 91%;
+    height: 10%;
+    left: 20px;
+    top: 590px;
+    transition: var(--tran-all);
+    z-index: 1;
+  }
+  
+  #bnte{
+  display: none;
+  }
+  
   .navbar-lista li:hover a,
   .navbar-lista li:hover {
     display: none;
@@ -699,7 +719,7 @@ display: none;
   #iconee.active {
     top: 710px !important;
   }
-}
+} */
 
 
 #foto-perfil {
@@ -752,8 +772,6 @@ display: none;
 }
 
 #textosair i {
-  cursor: default; 
-  pointer-events: none; 
   position: absolute;
   color: rgb(255, 255, 255);
   font-size: 17px;
@@ -819,7 +837,7 @@ display: none;
   border-radius: 10px;
 }
 .nav.active .navbar-lista a {
-  width: 215px;
+  width: 195px;
   height: 45px;
   margin-left: -35px !important;
   margin-top: -5px !important;
