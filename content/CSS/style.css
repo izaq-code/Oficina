@@ -775,7 +775,22 @@ form .page .field button:hover {
   position: absolute;
   color: rgb(255, 255, 255);
   font-size: 17px;
+  margin-top: -90px;
+}
+
+#textosair i:hover {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  padding-left: 10px;
+  padding-top: 10px;
+  color: rgb(0, 0, 0);
+  font-size: 17px;
   margin-top: -100px;
+  cursor: pointer;
+  margin-left: -10px;
+  border-radius: 10px;
 }
 
 #iconee {
