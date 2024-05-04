@@ -149,6 +149,7 @@ function exibir(data) {
                    link.download = zipNome;
                    link.href = URL.createObjectURL(content);
                    link.click();
+                   window.location.reload();
                });
            });
        });

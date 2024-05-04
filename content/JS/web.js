@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       }).then((result) => {
         if (result.isConfirmed) {
-          window.location.reload();
+          window.location.href = 'pag-principal-oficina.html';
         }
       });
     })
