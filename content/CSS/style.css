@@ -1406,7 +1406,6 @@ input[type="checkbox"]:checked {
 
 #bnt-baixar {
   cursor: pointer;
-  position: absolute;
   border: none;
   background: #121212;
   border-radius: 10px;
@@ -1415,15 +1414,13 @@ input[type="checkbox"]:checked {
   font-weight: bold;
   font-size: 15px;
   padding: 12px;
-  width: 10%;
-  margin-top: 15px;
   left: 390px;
-  margin-top: 700px;
+  margin: 10px;
+  width: 200px;
 }
 
 #download-pdf {
   cursor: pointer;
-  position: absolute;
   border: none;
   background: #121212;
   border-radius: 10px;
@@ -1432,10 +1429,9 @@ input[type="checkbox"]:checked {
   font-weight: bold;
   font-size: 15px;
   padding: 12px;
-  width: 10%;
-  margin-top: 15px;
   left: 600px;
-  margin-top: 700px;
+  margin: 10px;
+  width: 200px;
 }
 
 .img-checkbox {
@@ -1538,11 +1534,30 @@ input[type="checkbox"]:checked {
   scrollbar-color: black;
 }
 
-#texto-titulo-pdf {
-  position: absolute;
+#atualizar{
+  cursor: pointer;
+  border: none;
+  background: #121212;
+  border-radius: 10px;
+  border: none;
+  color: white;
   font-weight: bold;
-  margin-top: 600px;
-  margin-left: 1000px;
+  font-size: 15px;
+  padding: 12px;
+  left: 600px;
+  margin: 10px;
+  width: 200px;
+}
+
+#iframeandre {
+  margin-top: 30px;
+  transform: translate(-35%, -10%);
+}
+
+#texto-titulo-pdf {
+position: absolute;
+  font-weight: bold;
+margin-left: 830px;
 }
 
 #imagens {
@@ -1681,9 +1696,7 @@ input[type="checkbox"]:checked {
   background-color: black !important;
   color: white !important;
   border: 1px solid black !important;
-  /* Define a borda como preta */
   box-shadow: none !important;
-  /* Remove qualquer sombra */
 }
 
 /* EDUARDA */
