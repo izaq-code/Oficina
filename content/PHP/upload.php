@@ -7,6 +7,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nomeArquivos = array();
     $caminhosArquivos = array();
 
+    $busca = "SELECT chassi, hodometro, Frente, Trasseira, lateral_direita, Lateral_esquerda, Motor, Pecas_danificadas, orcamento
+                             FROM carro_fotos WHERE cod_veiculo = '$status'";
+    $resultado = mysqli_query($conexao, $busca);
+    
+    while ($row = mysqli_fetch_assoc($resultado)) {
+        foreach ($row as $key => $value) {
+            if (!empty($value)) {
+                $caminhoCompleto = $diretorio . basename($value);
+                if (file_exists($caminhoCompleto)) {
+                    unlink($caminhoCompleto); 
+                }
+            }
+        }
+    }
+
+    $Delete = "DELETE FROM carro_fotos WHERE cod_veiculo = '$status'";
+    $atualizado = mysqli_query($conexao, $Delete);
+
+    if (!$atualizado) {
+        echo "Erro ao excluir imagens antigas: " . mysqli_error($conexao);
+        exit;
+    }
+
     // Loop para lidar com o upload de todas as imagens
     for ($i = 1; $i <= 8; $i++) {
         $inputName = 'foto__input' . $i;
