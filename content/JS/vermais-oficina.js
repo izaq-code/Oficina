@@ -75,16 +75,16 @@ function exibir(data) {
         }
 
         if (pdf) {
-            pdf= "<div id='iframeandre'><div id='texto-titulo-pdf'>Visulizar o pdf</div><iframe id='pdf' src='" + pdf + "'></iframe></div>";
+            pdf= "<div id='texto-titulo-pdf'>Visulizar o pdf</div><iframe id='pdf' src='" + pdf + "'></iframe>";
            ww.append(pdf); 
        }   
 
        if (status === 'Recusado') {
-       var atualizar = "<button id='atualizar'> Atualizar <i class='bi bi-cloud-arrow-up-fill'></i> </button>";
+       var atualizar = "<button id='atualizar'> Atualizar  <i class='bi bi-file-earmark-pdf'></i> </button>";
        ww.append(atualizar);
 
        $('#atualizar').click(function() {
-        window.location.href = '../HTML/Formulario of.html';
+        window.location.href = '../HTML/Formulario-of-Atualizar.html';
     });
 };
 
