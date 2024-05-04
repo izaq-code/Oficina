@@ -568,7 +568,25 @@ form .page .field button:hover {
   width: 250px;
 }
 
-@media screen and (max-width: 1568px) {
+/* @media screen and (max-width: 1568px) {
+
+.nav {
+  border-radius: 10px;
+  position: fixed;
+  background-color:red  ;
+  width: 91%;
+  height: 10%;
+  left: 20px;
+  top: 590px;
+  transition: var(--tran-all);
+  z-index: 1;
+}
+
+#bnte{
+display: none;
+}
+
+
   .navbar-lista li:hover a,
   .navbar-lista li:hover {
     color: rgb(0, 0, 0);
@@ -627,6 +645,62 @@ form .page .field button:hover {
     top: 710px !important;
   }
 }
+
+ */
+
+@media screen and (max-width: 768px) {
+  .navbar-lista li:hover a,
+  .navbar-lista li:hover {
+    display: none;
+  }
+
+  .nav .navbar-lista li:hover {
+   display: none;
+  }
+
+  .nav .navbar-lista li:hover::before,
+  .nav .navbar-lista li:hover::after {
+    display: none;
+  }
+
+  .nav .navbar-lista li:hover::before {
+    display: none;
+  }
+
+  .nav .navbar-lista li:hover::after {
+    display: none;
+  }
+
+  .nav.active .navbar-lista li:hover {
+  display: none;
+  }
+
+  .nav .navbar-lista li:hover {
+    display: none;
+  }
+
+  .nav.active .navbar-lista li:hover::before,
+  .nav.active .navbar-lista li:hover::after {
+    display: none;
+  }
+
+  .nav.active .navbar-lista li:hover::before {
+    display: none;
+  }
+
+  .nav.active .navbar-lista li:hover::after {
+    display: none;
+  }
+
+  #iconee {
+    top: 820px !important;
+  }
+
+  #iconee.active {
+    top: 710px !important;
+  }
+}
+
 
 #foto-perfil {
   border-radius: 10px;
