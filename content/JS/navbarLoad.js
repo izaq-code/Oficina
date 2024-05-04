@@ -24,7 +24,7 @@ function conclusao (data) {
 
     w = $('#foto-perfil');
     w.empty();
-    var h = "<img style='width: 100%; height: 100%;'src='" + data.foto_perfil + "'>";
+    var h = "<img id='banana'  style='width: 100%; height: 100%;  cursor: pointer; border-radius:10px; 'src='" + data.foto_perfil +  "'>";
     w.append(h);
 
 }

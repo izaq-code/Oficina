@@ -363,7 +363,7 @@ form .page .field button:hover {
   height: 150px;
   aspect-ratio: 16/9;
   background-image: url(../fotos-usuarios/semfoto.png);
-  background-size: cover;
+  background-size: 100% 100% !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -375,6 +375,7 @@ form .page .field button:hover {
   outline: none;
   overflow: hidden;
 }
+
 
 #fto {
   display: grid;
@@ -402,7 +403,10 @@ form .page .field button:hover {
 }
 
 .foto__img {
-  max-width: 100%;
+  width: auto;
+  height: 100%;
+  object-fit: none;
+  object-position: center;
 }
 
 #a {
@@ -552,6 +556,7 @@ form .page .field button:hover {
   --nav-bg: #000000;
   --tran-all: 0.2s all linear;
 }
+
 
 #homeIconas {
   margin-left: -19px;

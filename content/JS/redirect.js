@@ -3,7 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const formIcon = document.getElementById('formIconas');
     const logout = document.getElementById('logout');
     const iconee = document.getElementById('iconee');
+    const foto = document.getElementById('banana');
 
+    if (foto) {
+      foto.addEventListener('click', () => {
+          window.location.href = 'perfil-usuario.html';
+      });
+  }
+  
     if (homeIcon) {
         homeIcon.addEventListener('click', () => {
             window.location.href = 'pag-principal.html';

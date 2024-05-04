@@ -73,7 +73,7 @@ function exibir(data) {
         }
  
         if (pdf) {
-            pdf= "<div id='texto-titulo-pdf'>Visulizar o pdf</div><iframe id='pdf' src='" + pdf + "'></iframe>";
+            pdf= "<div id='iframeandre'><div id='texto-titulo-pdf'>Visulizar o pdf</div><iframe id='pdf' src='" + pdf + "'></iframe></div>";
            ww.append(pdf); 
        }   
 
