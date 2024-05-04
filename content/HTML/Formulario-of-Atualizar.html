@@ -73,7 +73,14 @@
       <form id="uploadImagens" enctype="multipart/form-data" action="../PHP/upload.php" method="POST">
         <div class="page slide-page">
           <div class="title">Informação básica:</div>
-        
+
+          <div class="field">
+            <div class="input">
+              <input type="hidden" id="nome" name="nome" value="">
+            </div>
+          </div>
+
+
           <div class="field">
             <div class="input">
               <input type="text" id="nome_proprietario" name="nome_proprietario" required>
@@ -315,6 +322,5 @@
   <script src="../JS/web.js"></script>
   <script src="../JS/imagens.js"></script>
   <script src="../JS/exibirValores.js"></script>
-  <script src="../JS/tabela.js"></script>
 </body>
 </html>
