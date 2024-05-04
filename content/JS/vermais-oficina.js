@@ -83,7 +83,7 @@ function exibir(data) {
        var atualizar = "<button id='atualizar1'> Atualizar <i class='bi bi-cloud-arrow-up-fill'></i> </button>";
        ww.append(atualizar);
 
-       $('#atualizar').click(function() {
+       $('#atualizar1').click(function() {
         window.location.href = '../HTML/Formulario-of-Atualizar.html';
     });
 };
