@@ -18,19 +18,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $fotoAntiga = $row['foto'];
     }
 
-
-    if (isset($_FILES['foto__input9'])) {
+    if (isset($_POST['foto'])) {
+        $fotoBase64 = $_POST['foto'];
+        // Extrai o tipo da imagem (jpeg, png, gif, etc.)
+        $tipoImagem = explode(';', $fotoBase64)[0];
+        $tipoImagem = explode('/', $tipoImagem)[1];
+        // Decodifica a string base64 em dados binários
+        $fotoBinary = base64_decode(str_replace('data:image/'.$tipoImagem.';base64,', '', $fotoBase64));
 
         $diretorio = '../fotos-usuarios/';
-        $pdfNomeArquivo = $diretorio . basename($_FILES['foto__input9']['name']);
+        $nomeArquivo = 'foto_perfil_'.$cod.'.'.$tipoImagem;
+        $caminhoArquivoPDF = $diretorio . $nomeArquivo;
 
-        if (move_uploaded_file($_FILES['foto__input9']['tmp_name'], $pdfNomeArquivo)) {
-            $caminhoArquivoPDF = mysqli_real_escape_string($conexao, $pdfNomeArquivo);
-        }
-
+        // Salva o arquivo no servidor
+        file_put_contents($caminhoArquivoPDF, $fotoBinary);
     }
 
-    if (!isset($_FILES['foto__input9'])) {
+    if (!isset($_POST['foto'])) {
         if (!$apagou) {
             $caminhoArquivoPDF = $fotoAntiga;
         }
@@ -38,7 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $caminhoArquivoPDF = $semFoto;
         }
     }
-
     if ($isOf == true) {
 
         $sql = "UPDATE login_adm
