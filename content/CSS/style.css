@@ -355,6 +355,8 @@ form .page .field button:hover {
   overflow: hidden;
 }
 
+
+
 .foto1 {
   margin-left: 40px;
   margin-top: 40px;
@@ -374,7 +376,10 @@ form .page .field button:hover {
   transition: color 300ms ease-in-out, background 300ms ease-in-out;
   outline: none;
   overflow: hidden;
+    position: relative; /* Adicionando position: relative; para uso de position:absolute; */
+
 }
+
 
 
 #fto {
@@ -403,12 +408,28 @@ form .page .field button:hover {
 }
 
 .foto__img {
-  width: auto;
+  width: 100%;
   height: 100%;
-  object-fit: none;
+  object-fit: cover; /* Para preencher o espaço mantendo a proporção */
   object-position: center;
+  position: relative; /* Posicionamento absoluto para ocupar todo o espaço do contêiner */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
+.foto__img1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Para preencher o espaço mantendo a proporção */
+  object-position: center;
+  position: absolute; /* Posicionamento absoluto para ocupar todo o espaço do contêiner */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 #a {
   color: rgb(0, 0, 0);
   font-size: 50px;
