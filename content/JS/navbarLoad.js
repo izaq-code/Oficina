@@ -24,7 +24,21 @@ function conclusao (data) {
 
     w = $('#foto-perfil');
     w.empty();
-    var h = "<img id='banana'  style='width: 100%; height: 100%;  cursor: pointer; border-radius:10px; 'src='" + data.foto_perfil +  "'>";
-    w.append(h);
+        
+    var h = "<img id='banana' style='width: 100%; height: 100%; cursor: pointer; border-radius: 10px;' src='" + data.foto_perfil + "'>";
+
+
+    var container = document.getElementById('foto-perfil');
+    container.innerHTML = h; 
+
+    var foto = document.getElementById('banana');
+    if (foto) {
+        foto.addEventListener('click', () => {
+            console.log('Clicou na imagem!');
+            window.location.href = 'perfil-usuario.html';
+        });
+    } else {
+        console.log('Elemento com ID "banana" não encontrado!');
+    }
 
 }
