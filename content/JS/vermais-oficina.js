@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", exibirDados);
 
     var cod_veiculo = localStorage.getItem('codVeiculo');
+    
 function exibirDados() {
 
     $.ajax({
@@ -12,6 +13,7 @@ function exibirDados() {
             cod_veiculo: cod_veiculo
         },
         success: function (data) {
+            console.log(cod_veiculo);
             exibir(data);
         }
     });

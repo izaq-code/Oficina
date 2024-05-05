@@ -212,7 +212,7 @@ function preencherTabela(selecionado) {
                 }
 
                 var redirecionar = (e['status_veiculo'] === 'Aberto') ?
-                "<button class='redirecionar-button'><i class='bi bi-clipboard2'></i></button>" :
+                "<button data-cod_veiculo='" + e['cod_veiculo'] + "' class='redirecionar-button'><i class='bi bi-clipboard2'></i></button>" :
                 // (e['status_veiculo'] === 'Recusado') ?
                 // "<button class='redirecionar-recusado-button'><i class='bi bi-exclamation-triangle'></i></button>" :
                 "";
@@ -236,7 +236,10 @@ function preencherTabela(selecionado) {
                 i++;
             });
            
-            $('.redirecionar-button').click(function() {
+            $('.redirecionar-button').click(function(event){
+              event.preventDefault();
+              var Codredirecionar = $(this).data("cod_veiculo");
+              localStorage.setItem("Codredirecionar", Codredirecionar);
               window.location.href = '../HTML/Formulario-of-red.html';
             });
 

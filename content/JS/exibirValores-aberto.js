@@ -1,16 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    var selecionado = localStorage.getItem('codVeiculo');
+    var Cod_redirecionar = localStorage.getItem('Codredirecionar');
 
     $(document).ready(function () {
         $.ajax({
             type: 'POST',
-            url: '../PHP/exibirValores.php',
+            url: '../PHP/exibirValores-aberto.php',
             data: {
-                selecionado: selecionado
+                Cod_redirecionar: Cod_redirecionar
             },
             dataType: 'json',
             success: function (data) {
+                console.log(Cod_redirecionar)
                 mostrar(data);
             },
             error: function (xhr, status, error) {

@@ -1,3 +1,5 @@
+var cod = localStorage.getItem('Codredirecionar');
+
 $(document).ready(function () {
     $('#uploadImagens').submit(function (e) {
         e.preventDefault();
@@ -23,9 +25,6 @@ $(document).ready(function () {
         if (pdfFile.files.length > 0) {
             formData.append('pdfFile', pdfFile.files[0]);
         }
-
-        var cod = document.getElementById('nome').value;
-        console.log(cod);
 
         formData.append('cod', cod);
 
