@@ -4,6 +4,7 @@ include_once('conexao.php');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $diretorio = '../upload/';
     $status = $_POST['cod'];
+    echo json_encode($status);
     $nomeArquivos = array();
     $caminhosArquivos = array();
 

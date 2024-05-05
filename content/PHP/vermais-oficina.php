@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $filtro = $row['Status da solicitação'];
     }
 
-    
+    if ($filtro) {
         $sim = true;
         $segunda_consulta = mysqli_query($conexao, "SELECT 
         chassi,
@@ -51,24 +51,21 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     FROM carro_fotos
     WHERE cod_veiculo = '$cod_veiculo';");
 
-        
+     
             $sim = true;
             $terceira_consulta = mysqli_query($conexao, "SELECT Orcamento
     FROM carro_fotos
     WHERE cod_veiculo = '$cod_veiculo';");
-
-
-
-            $sim = true;
-            $quarta_consulta = mysqli_query($conexao, "SELECT  status_veiculo
+        
+        $sim = true;
+        $quarta_consulta = mysqli_query($conexao, "SELECT  status_veiculo
     FROM carro
     WHERE cod_veiculo = '$cod_veiculo';");
 
-        
-
-        while ($row = mysqli_fetch_array($quarta_consulta)) {
-            $status = $row['status_veiculo'];
-       }
+    
+    while ($row = mysqli_fetch_array($quarta_consulta)) {
+        $status = $row['status_veiculo'];
+   }
 
         while ($row = mysqli_fetch_array($terceira_consulta)) {
              $pdf = $row['Orcamento'];
@@ -78,14 +75,19 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $fotos[] = $row;
         }
 
+        if(!isset($pdf)){
+            $pdf = 1;
+        }
+
         $eu = array(
             'carro' => $carro,
             'sim' => $sim,
             'fotos' => $fotos,
             'pdf' => $pdf,
-            'status' => $status,
-
+            'status' => $status
         );
+    
+
     } else {
         $eu = array(
             'carro' => $carro,
@@ -95,6 +97,5 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 
     echo json_encode($eu, JSON_UNESCAPED_SLASHES);
-
-
+}
 ?>
