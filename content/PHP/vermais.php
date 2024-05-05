@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $filtro = $row['Status da solicitação'];
     }
 
-    if ($filtro !== 'Aberto') {
+    if ($filtro != 'Aberto') {
         $sim = true;
         $segunda_consulta = mysqli_query($conexao, "SELECT 
         chassi,
@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     FROM carro_fotos
     WHERE cod_veiculo = '$cod_veiculo';");
 
-        if ($filtro === 'Finalizado') {
+        if ($filtro != 'Aberto') {
             $sim = true;
             $terceira_consulta = mysqli_query($conexao, "SELECT Orcamento
     FROM carro_fotos
@@ -66,12 +66,18 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $fotos[] = $row;
         }
 
+        if(!isset($pdf)){
+            $pdf = 1;
+        }
+
         $eu = array(
             'carro' => $carro,
             'sim' => $sim,
             'fotos' => $fotos,
             'pdf' => $pdf
         );
+    
+
     } else {
         $eu = array(
             'carro' => $carro,
