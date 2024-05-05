@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     var selecionado = localStorage.getItem('codVeiculo');
-    
-    document.getElementById('nome').value = selecionado;
 
     $(document).ready(function () {
         $.ajax({
