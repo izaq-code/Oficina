@@ -213,8 +213,8 @@ function preencherTabela(selecionado) {
 
                 var redirecionar = (e['status_veiculo'] === 'Aberto') ?
                 "<button class='redirecionar-button'><i class='bi bi-clipboard2'></i></button>" :
-                (e['status_veiculo'] === 'Recusado') ?
-                "<button class='redirecionar-recusado-button'><i class='bi bi-exclamation-triangle'></i></button>" :
+                // (e['status_veiculo'] === 'Recusado') ?
+                // "<button class='redirecionar-recusado-button'><i class='bi bi-exclamation-triangle'></i></button>" :
                 "";
           
             var row = (
@@ -240,9 +240,9 @@ function preencherTabela(selecionado) {
               window.location.href = '../HTML/Formulario-of-red.html';
             });
 
-            $('.redirecionar-recusado-button').click(function() {
-               window.location.href = '../HTML/Formulario-of-Atualizar.html';
-            });
+            // $('.redirecionar-recusado-button').click(function() {
+            //    window.location.href = '../HTML/Formulario-of-Atualizar.html';
+            // });
 
             // Adicionar evento de clique para detalhes de solicitação
             $(".solicitacao-detalhes").click(function(event) {
