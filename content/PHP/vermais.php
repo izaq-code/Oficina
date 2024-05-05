@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $filtro = $row['Status da solicitação'];
     }
 
-    if ($filtro === 'Finalizado') {
+    if ($filtro !== 'Aberto') {
         $sim = true;
         $segunda_consulta = mysqli_query($conexao, "SELECT 
         chassi,
