@@ -211,22 +211,37 @@ function preencherTabela(selecionado) {
                     statusClass = 'status_recusado';
                 }
 
-                var row = (
-                    "<tr class='card-solicitacoes' id='" + e['cod_veiculo'] + "'>" +
-                    "<td><div class='solicitacao-icone'>" + getIcon(e['status_veiculo']) + "</div></td>" +
-                    "<td class='solicitacao-texto'>" +
-                    "<div class='solicitacao-id'>" + e['id_personalizado'] + "</div>" +
-                    "<div class='solicitacao-numero'>Solicitação " + i + "</div>" +
-                    "</td>" +
-                    "<td class='solicitacao-texto'>" + e['modelo'] + "</td>" +
-                    "<td><div class='" + statusClass + "'>" + mapStatus(e['status_veiculo']) + "</div></td>" +
-                    "<td>" + e['sinistro'] + "</td>" +
-                    "<td class='solicitacao-detalhes' data-cod_veiculo='" + e['cod_veiculo'] + "'>Detalhes</td>" +
-                    "</tr>"
-                );
-
+                var redirecionar = (e['status_veiculo'] === 'Aberto') ?
+                "<button class='redirecionar-button'><i class='bi bi-clipboard2'></i></button>" :
+                (e['status_veiculo'] === 'Recusado') ?
+                "<button class='redirecionar-recusado-button'><i class='bi bi-exclamation-triangle'></i></button>" :
+                "";
+          
+            var row = (
+                "<tr class='card-solicitacoes' id='" + e['cod_veiculo'] + "'>" +
+                "<td><div class='solicitacao-icone'>" + getIcon(e['status_veiculo']) + "</div></td>" +
+                "<td class='solicitacao-texto'>" +
+                "<div class='solicitacao-id'>" + e['id_personalizado'] + "</div>" +
+                "<div class='solicitacao-numero'>Solicitação " + i + "</div>" +
+                "</td>" +
+                "<td class='solicitacao-texto'>" + e['modelo'] + "</td>" +
+                "<td><div class='" + statusClass + "'>" + mapStatus(e['status_veiculo']) + "</div></td>" +
+                "<td>" + e['sinistro'] + "</td>" +
+                "<td class='solicitacao-detalhes' data-cod_veiculo='" + e['cod_veiculo'] + "'>Detalhes</td>" +
+                "<td>" + redirecionar + "</td>" +
+                "</tr>"
+            );
+            
                 tbody.append(row); // Adicionar a linha à tabela
                 i++;
+            });
+           
+            $('.redirecionar-button').click(function() {
+              window.location.href = '../HTML/Formulario-of-red.html';
+            });
+
+            $('.redirecionar-recusado-button').click(function() {
+               window.location.href = '../HTML/Formulario-of-Atualizar.html';
             });
 
             // Adicionar evento de clique para detalhes de solicitação
