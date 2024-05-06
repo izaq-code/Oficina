@@ -11,7 +11,7 @@ function preencher() {
                 console.log(data.isOf);
 
 
-                data.isOf == true ? exibir2(data) : exibir(data.resultado);
+                data.isOf == true ? exibir2(data) : exibir(data);
 
                 // alert('descansar né');
                 exibir(data);
