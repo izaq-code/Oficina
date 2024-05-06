@@ -22,7 +22,7 @@ var cod_veiculo = localStorage.getItem('codVeiculo');
         reverseButtons: true
       }).then((result) => {
         if (result.isConfirmed) {
-            mudar();
+            mudar1();
           swalWithBootstrapButtons.fire({
             title: "Recusado!",
             text: "Sua responsta foi enviada.",
@@ -43,7 +43,7 @@ var cod_veiculo = localStorage.getItem('codVeiculo');
    });
 
 
-function mudar() {
+function mudar1() {
 
  
         $.ajax({
