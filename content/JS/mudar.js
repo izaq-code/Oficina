@@ -25,17 +25,17 @@ var cod_veiculo = localStorage.getItem('codVeiculo');
             mudar();
           swalWithBootstrapButtons.fire({
             title: "Atualizado!",
-            text: "Sua solicitação foi deletada.",
+            text: "Sua solicitação foi atualizada.",
             icon: "success"
           });
-          window.location.href = '../HTML/pag-principal.html';
+        //   window.location.href = '../HTML/pag-principal.html';
         } else if (
           /* Read more about handling dismissals below */
           result.dismiss === Swal.DismissReason.cancel
         ) {
           swalWithBootstrapButtons.fire({
             title: "Cancelado",
-            text: "Você cancelou a exclusão da solicitação",
+            text: "Você cancelou a atualização da solicitação",
             icon: "error"
           });
         }
@@ -56,7 +56,7 @@ function mudar() {
                 console.log('Resposta do servidor:', response); // Verifica a resposta do servidor
                 Swal.fire({
                     icon: 'success',
-                    title: 'deletado com sucesso!',
+                    title: 'atualizado com sucesso!',
                     customClass: {
                         confirmButton: 'swal-button'
                     }
@@ -72,7 +72,7 @@ function mudar() {
                 console.error('Erro ao enviar o formulário:', error);
                 Swal.fire({
                     icon: 'error',
-                    title: 'Erro ao deletar',
+                    title: 'Erro ao atualizar',
                     text: 'Por favor, tente novamente mais tarde.',
                     customClass: {
                         confirmButton: 'swal-button'
