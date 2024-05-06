@@ -32,12 +32,12 @@ function exibir(data) {
     e = $('#informacao-recusada');
     e.empty();
 
-    e.append(solicitacao[0][3] ? solicitacao[0][3] : '0');
+    e.append(solicitacao[0][2] ? solicitacao[0][2] : '0');
 
     i = $('#informacao-concluida');
     i.empty();
 
-    i.append(solicitacao[0][2] ? solicitacao[0][2] : '0');
+    i.append(solicitacao[0][3] ? solicitacao[0][3] : '0');
 
     //grafico
 
