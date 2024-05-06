@@ -58,6 +58,19 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     WHERE cod_veiculo = '$cod_veiculo';");
         }
 
+
+
+        $sim = true;
+        $quarta_consulta = mysqli_query($conexao, "SELECT  status_veiculo
+    FROM carro
+    WHERE cod_veiculo = '$cod_veiculo';");
+
+    
+    while ($row = mysqli_fetch_array($quarta_consulta)) {
+        $status = $row['status_veiculo'];
+   }
+
+
         while ($row = mysqli_fetch_array($terceira_consulta)) {
              $pdf = $row['Orcamento'];
         }
@@ -74,7 +87,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             'carro' => $carro,
             'sim' => $sim,
             'fotos' => $fotos,
-            'pdf' => $pdf
+            'pdf' => $pdf,
+            'status' => $status
         );
     
 

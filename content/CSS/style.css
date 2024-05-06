@@ -1843,6 +1843,32 @@ transform: translate(500%, -20%);
 cursor: pointer;
 }
 
+#aceitar{
+ background-color: rgb(126, 172, 104) ;
+border: none;
+border-radius: 50%;
+padding: 10px;
+padding-left: 15px;
+padding-top: 13px;
+padding-right: 15px;
+cursor: pointer;
+position: absolute;
+  transform: translate(-60%, 700%);
+}
+
+#recusar{
+border: none;
+border-radius: 50%;
+  background-color: rgb(153, 44, 51);
+  padding: 10px;
+  padding-left: 15px;
+  padding-top: 13px;
+  padding-right: 15px;
+  cursor: pointer;
+  position: absolute;
+  transform: translate(70%, 700%);
+}
+
 .excluir{
   cursor: pointer;
   border: none;
@@ -1851,6 +1877,7 @@ cursor: pointer;
   width: 50px;
   height: 50px;
   border-radius: 50px;
+  position: relative;
   transform: translate(500%, -20%);
 }
 

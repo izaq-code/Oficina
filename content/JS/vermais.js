@@ -52,6 +52,7 @@ function exibir(data) {
         ww.empty();
         var fotos = data.fotos;
         var pdf = data.pdf;
+        var status = data.status;
         var pdfCaminho = '../upload/' + pdf;
 
 
@@ -76,6 +77,13 @@ function exibir(data) {
             pdf= "<div id='iframeandre'><div id='texto-titulo-pdf'>Visulizar o pdf</div><iframe id='pdf' src='" + pdf + "'></iframe></div>";
            ww.append(pdf); 
        }   
+
+       if (status === 'Finalizado') {
+        var aceitar = "<button id='aceitar'> <i class='bi bi-check2'></i> </button>";
+        var recusar = "<button id='recusar'> <i class='bi bi-x-lg'></i> </button>";
+        ww.append(aceitar);
+        ww.append(recusar);
+ };
 
        var download = "<button id='download-pdf'> Download PDF  <i class='bi bi-file-earmark-pdf'></i> </button>";
        ww.append(download);
