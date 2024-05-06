@@ -14,18 +14,18 @@ var cod_veiculo = localStorage.getItem('codVeiculo');
       });
       swalWithBootstrapButtons.fire({
         title: "Tem certeza que deseja recusar?",
-        text: "concordando com isso você estará deletando a solicitação!",
+        text: "concordando com isso você estará recusando o orçamento!",
         icon: "question",
         showCancelButton: true,
-        confirmButtonText: "Sim, deletar!",
+        confirmButtonText: "Sim, Recusar!",
         cancelButtonText: "Não, cancelar!",
         reverseButtons: true
       }).then((result) => {
         if (result.isConfirmed) {
             mudar();
           swalWithBootstrapButtons.fire({
-            title: "Atualizado!",
-            text: "Sua solicitação foi atualizada.",
+            title: "Recusado!",
+            text: "Sua responsta foi enviada.",
             icon: "success"
           });
         //   window.location.href = '../HTML/pag-principal.html';
