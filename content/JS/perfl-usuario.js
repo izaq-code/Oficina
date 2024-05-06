@@ -2,17 +2,6 @@ var apagou = false;
 
 $("#lixo").click(function (event) {
     apagou = true;
-
-    var elementos = document.querySelectorAll('.foto1');
-
-    // Itera sobre cada elemento
-    elementos.forEach(function (elemento) {
-        // Altera o background do elemento
-        elemento.style.background = 'url(../fotos-usuarios/semfoto.png)';
-        elemento.style.backgroundSize = "cover";
-
-    });
-
 });
 
 $(document).ready(function () {
