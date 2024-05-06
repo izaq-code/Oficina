@@ -42,8 +42,8 @@ function exibir(data) {
 
   var aberta = parseInt(solicitacao[0][0]);
   var emAnalise = parseInt(solicitacao[0][1]);
-  var concluida = parseInt(solicitacao[0][2]);
-  var recusada = parseInt(solicitacao[0][3]);
+  var recusada = parseInt(solicitacao[0][2]);
+  var concluida = parseInt(solicitacao[0][3]);
 
   var labels = ["Aberta", "Em análise", "Concluida", "Recusada"];
 
