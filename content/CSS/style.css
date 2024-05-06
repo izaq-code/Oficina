@@ -1853,7 +1853,7 @@ padding-top: 13px;
 padding-right: 15px;
 cursor: pointer;
 position: absolute;
-  transform: translate(-60%, 700%);
+  transform: translate(-60%, -80%);
 }
 
 #recusar{
@@ -1866,7 +1866,7 @@ border-radius: 50%;
   padding-right: 15px;
   cursor: pointer;
   position: absolute;
-  transform: translate(70%, 700%);
+  transform: translate(50%, -80%);
 }
 
 .excluir{
