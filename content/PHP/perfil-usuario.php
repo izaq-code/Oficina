@@ -22,17 +22,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $fotoAntiga = $row['foto'];
         }
 
-        
+
     }
 
-    if(!$isOf){
-        
+    if (!$isOf) {
+
         $consulta = mysqli_query($conexao, "SELECT foto from login_seguradora where cod_seguradora = '$cod'");
 
         while ($row = mysqli_fetch_array($consulta)) {
             $fotoAntiga = $row['foto'];
         }
-        
+
     }
 
     if (isset($_POST['foto'])) {
@@ -56,10 +56,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $caminhoArquivoPDF = $fotoAntiga;
         }
         if ($apagou) {
-            if($caminhoArquivoPDF != $fotoAntiga){
-            $caminhoArquivoPDF = $semFoto;
+
+            if ($fotoAntiga == $semFoto) {
+                $caminhoArquivoPDF = $semFoto;
+
             } else {
-            $caminhoArquivoPDF = $fotoAntiga;
+                $caminhoArquivoPDF = $fotoAntiga;
             }
         }
     }
