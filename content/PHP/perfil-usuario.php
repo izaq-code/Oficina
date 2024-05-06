@@ -8,14 +8,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $caminhoArquivoPDF;
     $fotoAntiga;
     $semFoto = '../fotos-usuarios/semfoto.png';
+    $caminhoArquivoPDF = $semFoto;
     $cod = $_SESSION['id_usuario'];
     $isOf = $_SESSION['isOf'];
     $apagou = $_POST['apagou'];
+    $consulta;
 
-    $consulta = mysqli_query($conexao, "SELECT foto from login_seguradora where cod_seguradora = '$cod'");
+    if ($isOf) {
 
-    while ($row = mysqli_fetch_array($consulta)) {
-        $fotoAntiga = $row['foto'];
+        $consulta = mysqli_query($conexao, "SELECT foto from login_adm where cod_adm = '$cod'");
+
+        while ($row = mysqli_fetch_array($consulta)) {
+            $fotoAntiga = $row['foto'];
+        }
+
+        
+    }
+
+    if(!$isOf){
+        
+        $consulta = mysqli_query($conexao, "SELECT foto from login_seguradora where cod_seguradora = '$cod'");
+
+        while ($row = mysqli_fetch_array($consulta)) {
+            $fotoAntiga = $row['foto'];
+        }
+        
     }
 
     if (isset($_POST['foto'])) {
@@ -24,10 +41,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $tipoImagem = explode(';', $fotoBase64)[0];
         $tipoImagem = explode('/', $tipoImagem)[1];
         // Decodifica a string base64 em dados binários
-        $fotoBinary = base64_decode(str_replace('data:image/'.$tipoImagem.';base64,', '', $fotoBase64));
+        $fotoBinary = base64_decode(str_replace('data:image/' . $tipoImagem . ';base64,', '', $fotoBase64));
 
         $diretorio = '../fotos-usuarios/';
-        $nomeArquivo = 'foto_perfil_'.$cod.'.'.$tipoImagem;
+        $nomeArquivo = 'foto_perfil_' . $cod . '.' . $tipoImagem;
         $caminhoArquivoPDF = $diretorio . $nomeArquivo;
 
         // Salva o arquivo no servidor
@@ -39,7 +56,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $caminhoArquivoPDF = $fotoAntiga;
         }
         if ($apagou) {
+            if($caminhoArquivoPDF != $fotoAntiga){
             $caminhoArquivoPDF = $semFoto;
+            } else {
+            $caminhoArquivoPDF = $fotoAntiga;
+            }
         }
     }
     if ($isOf == true) {
@@ -55,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             echo "Erro na inserção: " . $conexao->error;
         }
-        
+
         exit();
     }
 
