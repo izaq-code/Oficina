@@ -136,7 +136,7 @@ function exibir(data) {
     function preencherTabela(selecionado) {
         $.ajax({
             type: 'POST',
-            url: '../PHP/filtrar.php',
+            url: '../PHP/filtro.php',
             data: {
                 selecionado: selecionado
             },
