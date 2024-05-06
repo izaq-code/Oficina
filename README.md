@@ -1,38 +1,38 @@
 # OFICINA
 
-Bem-vindo ao OFICINA - Aqui, seu carro está em boas mãos.
+Bem-vindo à OFICINA - Aqui seu carro está em boas mãos.
 
 ## Visão Geral
 
-OFICINA é um site dedicado a oferecer uma experiência completa para as seguradoras e oficinas, fornecendo nossos serviços de alta qualidade e permitindo o o fornecimento de dados para as empresas.
+A OFICINA é um site dedicado a oferecer uma experiência completa para seguradoras e oficinas, fornecendo serviços de alta qualidade e facilitando o intercâmbio de dados entre as empresas.
 
-Este repositório contém o código-fonte do site OFICINA. Você pode visualizar o site em (sem dominio ainda).
+Este repositório contém o código-fonte do site OFICINA. Você pode visualizar o site em (ainda sem domínio definido).
 
-## Formularios 
+## Formulários
 
-- **Formularios**: Explore nosso vasto formulario de seleção de informações
+- **Formulários**: Explore nossa ampla seleção de formulários para coleta de informações.
 
-## Perfil de usuario
+## Perfil de Usuário
 
-- **perfil de usuario**: nosso site conta com perfil de usuario para identificar quem esta logado ao sistema voçê pode personalisar seu perfil a qualquer momento
+- **Perfil de Usuário**: Nosso site oferece perfis de usuário para identificar quem está logado no sistema e permite personalização a qualquer momento.
 
-## Status de solicitação 
+## Status de Solicitação
 
-- **Status**: as solicitaçôes são atribuidas a elas status que vão influenciar o que a oficina vai fazer assim gerando maior organização
+- **Status**: As solicitações são atribuídas a diferentes estados que influenciam as ações da oficina, garantindo maior organização.
 
-## Graficos personalizados 
+## Gráficos Personalizados
 
-- **graficos de solicitaçoes**: Nossas telas contam com graficos para auxiliar nosso cliente na hora da produtividade para saber quantas solicitações em aberto, analise, recusadas ou concluidas que tem no sistema assim acaba ajudando na hora de se organizar
+- **Gráficos de Solicitações**: Nossas telas incluem gráficos para auxiliar nossos clientes na gestão da produtividade, mostrando a quantidade de solicitações em aberto, em análise, recusadas ou concluídas no sistema, facilitando o planejamento.
 
-## Etapas de segurança de cadastro e login
+## Etapas de Segurança no Cadastro e Login
 
-- **encriptação**: Nosso sistema conta com funções de criptografia de senhas para maior segurança de nossos usuario.
+- **Criptografia**: Nosso sistema utiliza funções avançadas de criptografia de senhas para garantir a segurança dos usuários.
 
-- **Validador de campos**: Nosso sistema tambem tem funções para validar se a informação inserida no campo e valida por exemplo: CNPJ ou EMAIL.
+- **Validação de Campos**: Também implementamos validadores de campos para verificar a precisão das informações inseridas, como CNPJ ou e-mail.
 
 ## Como Contribuir
 
-Se você gostaria de contribuir para o projeto OFICINA, sinta-se à vontade para fazer um fork deste repositório, fazer suas alterações e enviar uma solicitação pull. Seu feedback e contribuições são sempre bem-vindos!
+Se você deseja contribuir com o projeto OFICINA, fique à vontade para fazer um fork deste repositório, implementar suas alterações e enviar uma solicitação pull. Seu feedback e contribuições são sempre bem-vindos!
 
 ## Tecnologias Utilizadas
 
@@ -41,7 +41,7 @@ Se você gostaria de contribuir para o projeto OFICINA, sinta-se à vontade para
 - JavaScript
 - PHP
 
-## Autor
+## Autores
 
 - Andre Cardoso Pereira
 - Eduarda Vieira Gonçalves
