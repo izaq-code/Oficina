@@ -4,7 +4,7 @@ Bem-vindo ao OFICINA - Aqui, seu carro está em boas mãos.
 
 ## Visão Geral
 
-OFICINA é um site dedicado a oferecer uma experiência completa para as asseguradoras e oficinas, fornecendo nossos serviços de alta qualidade e permitindo o o fornecimento de dados para as empresas.
+OFICINA é um site dedicado a oferecer uma experiência completa para as seguradoras e oficinas, fornecendo nossos serviços de alta qualidade e permitindo o o fornecimento de dados para as empresas.
 
 Este repositório contém o código-fonte do site OFICINA. Você pode visualizar o site em (sem dominio ainda).
 
