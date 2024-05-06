@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if(!$isOf){
     $sql = mysqli_query($conexao, "SELECT 
-                                    nome, email, foto 
+                                    nome, email, foto, cnpj 
                                     FROM login_seguradora
                                     WHERE cod_seguradora = '$cod'");
 
