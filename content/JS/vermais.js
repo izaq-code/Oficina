@@ -166,44 +166,4 @@ function exibir(data) {
        window.location.href = '../HTML/atualizar-seg.html';
    });
 
-   //excluir
-   $(".excluir").click(function (event) {
-       event.preventDefault();
-
-       localStorage.setItem('codVeiculo', cod_veiculo);
-
-       const swalWithBootstrapButtons = Swal.mixin({
-        customClass: {
-          confirmButton: "btn btn-success",
-          cancelButton: "btn btn-danger"
-        },
-     
-      });
-      swalWithBootstrapButtons.fire({
-        title: "Tem certeza que deseja deletar?",
-        text: "concordando com isso você estará deletando a solicitação!",
-        icon: "question",
-        showCancelButton: true,
-        confirmButtonText: "Sim, deletar!",
-        cancelButtonText: "Não, cancelar!",
-        reverseButtons: true
-      }).then((result) => {
-        if (result.isConfirmed) {
-          swalWithBootstrapButtons.fire({
-            title: "Deletado!",
-            text: "Sua solicitação foi deletada.",
-            icon: "success"
-          });
-        } else if (
-          /* Read more about handling dismissals below */
-          result.dismiss === Swal.DismissReason.cancel
-        ) {
-          swalWithBootstrapButtons.fire({
-            title: "Cancelado",
-            text: "Você cancelou a exclusão da solicitação",
-            icon: "error"
-          });
-        }
-      });
-   });
 }
