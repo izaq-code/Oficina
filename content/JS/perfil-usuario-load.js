@@ -26,6 +26,8 @@ function exibir(data) {
     var nome = data.resultado[0];
     var email = data.resultado[1];
     var foto = data.resultado[2];
+    var cnpj = data.resultado[3];
+
 
     //fim da iteração
 
@@ -56,6 +58,9 @@ function exibir(data) {
 
     //email
     $('#email').val(email);
+
+    //cnpj
+    $('#CNPJ').val(cnpj);
 
 }
 function exibir2(data) {
