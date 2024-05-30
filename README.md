@@ -52,3 +52,48 @@ Se você deseja contribuir com o projeto OFICINA, fique à vontade para fazer um
 ## Licença
 
 Este projeto está licenciado sob a [Licença MIT](LICENSE).
+
+## Hospedagem Local com XAMPP
+
+Para hospedar o site localmente e testar suas funcionalidades, siga estas etapas:
+
+1. **Instalação do XAMPP**:
+   - Faça o download do XAMPP no site oficial e siga as instruções de instalação para o seu sistema operacional.
+
+2. **Configuração do Apache**:
+   - No painel de controle do XAMPP, inicie o Apache para começar a hospedar seu site localmente.
+
+3. **Colocando os arquivos do site**:
+   - Coloque os arquivos do seu site na pasta `htdocs` dentro do diretório de instalação do XAMPP.
+
+4. **Importando o Banco de Dados**:
+   - Na pasta "content", você encontrará a pasta "bd" que contém um arquivo de texto com o banco de dados necessário para o site.
+  
+   - ## Estrutura do Projeto
+
+```plaintext
+Oficina
+├── content
+│   └── BD   # Arquivo do banco de dados
+|   └── CSS  # Arquivo onde esta as estilizaçãoes
+|   └── HTML # Arquivo da estrutura html
+|   └── JS   # Arquivo de funcionalidades JavaScript
+|   └── PHP  # Arquivo de crud com php
+|   └── fotos-usuario  # pasta onde gurda as fotos de usuario
+|   └── img     # imagens do site
+|   └── upload  # pasta onde fica alocada as fortos postadas no formulario 
+└── README.md   # Arquivo de documentação
+└── Index.html  # pagina inicial
+```
+   - Abra o phpMyAdmin no seu navegador digitando `http://localhost/phpmyadmin`.
+   - Crie um novo banco de dados com o nome que preferir.
+   - Selecione o banco de dados recém-criado e clique na aba "Importar".
+   - Selecione o arquivo de texto do banco de dados na pasta "bd" e clique em "Executar" para importá-lo.
+
+5. **Testando o site**:
+   - Abra o navegador e digite `http://localhost/OFICINA` para acessar o site localmente e testar suas funcionalidades.
+
+6. **Parando o servidor**:
+   - Quando terminar de usar o site, pare o servidor Apache no painel de controle do XAMPP.
+
+Certifique-se de que os arquivos do site estão corretamente configurados e que não há erros de caminho nos links e referências.
