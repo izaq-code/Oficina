@@ -88,7 +88,6 @@ Para hospedar o site localmente e testar suas funcionalidades, siga estas etapas
 4. **Importando o Banco de Dados**:
    - Na pasta "content", você encontrará a pasta "bd" que contém um arquivo de texto com o banco de dados necessário para o site.
    - Abra o phpMyAdmin no seu navegador digitando `http://localhost/phpmyadmin`.
-   - Crie um novo banco de dados com o nome que preferir.
 
 5. **Testando o site**:
    - Abra o navegador e digite `http://localhost/OFICINA` para acessar o site localmente e testar suas funcionalidades.
