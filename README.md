@@ -1,3 +1,5 @@
+
+```markdown
 # OFICINA
 
 Bem-vindo à OFICINA - Aqui seu carro está em boas mãos.
@@ -7,6 +9,23 @@ Bem-vindo à OFICINA - Aqui seu carro está em boas mãos.
 A OFICINA é um site dedicado a oferecer uma experiência completa para seguradoras e oficinas, fornecendo serviços de alta qualidade e facilitando o intercâmbio de dados entre as empresas.
 
 Este repositório contém o código-fonte do site OFICINA. Você pode visualizar o site em (ainda sem domínio definido).
+
+## Estrutura do Projeto
+
+```plaintext
+OFICINA
+├── content
+│   ├── BD               # Arquivo do banco de dados
+│   ├── CSS              # Arquivo onde estão as estilizações
+│   ├── HTML             # Arquivo da estrutura HTML
+│   ├── JS               # Arquivo de funcionalidades JavaScript
+│   ├── PHP              # Arquivo de CRUD com PHP
+│   ├── fotos-usuario    # Pasta onde guarda as fotos de usuário
+│   ├── img              # Imagens do site
+│   └── upload           # Pasta onde fica alocada as fotos postadas no formulário
+├── README.md            # Arquivo de documentação
+└── index.html           # Página inicial
+```
 
 ## Formulários
 
@@ -68,23 +87,6 @@ Para hospedar o site localmente e testar suas funcionalidades, siga estas etapas
 
 4. **Importando o Banco de Dados**:
    - Na pasta "content", você encontrará a pasta "bd" que contém um arquivo de texto com o banco de dados necessário para o site.
-  
-   - ## Estrutura do Projeto
-
-```plaintext
-Oficina
-├── content
-│   └── BD   # Arquivo do banco de dados
-|   └── CSS  # Arquivo onde esta as estilizaçãoes
-|   └── HTML # Arquivo da estrutura html
-|   └── JS   # Arquivo de funcionalidades JavaScript
-|   └── PHP  # Arquivo de crud com php
-|   └── fotos-usuario  # pasta onde gurda as fotos de usuario
-|   └── img     # imagens do site
-|   └── upload  # pasta onde fica alocada as fortos postadas no formulario 
-└── README.md   # Arquivo de documentação
-└── Index.html  # pagina inicial
-```
    - Abra o phpMyAdmin no seu navegador digitando `http://localhost/phpmyadmin`.
    - Crie um novo banco de dados com o nome que preferir.
    - Selecione o banco de dados recém-criado e clique na aba "Importar".
@@ -97,3 +99,6 @@ Oficina
    - Quando terminar de usar o site, pare o servidor Apache no painel de controle do XAMPP.
 
 Certifique-se de que os arquivos do site estão corretamente configurados e que não há erros de caminho nos links e referências.
+
+Para uma demonstração visual do sistema OFICINA, confira este vídeo no YouTube: [OFICINA - Demonstração do Sistema](https://www.youtube.com/watch?v=poyHcR9BDFg).
+```
